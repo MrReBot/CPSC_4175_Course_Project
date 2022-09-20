@@ -3,25 +3,33 @@ import os
 
 class Course:
     name = ""
-    req = []
+    prereq = []
     section = ""
     id = ""
-    credits = 999
-    def __init__(self,  template = None, **kwargs):
-        if template == None:
-            self.__dict__.update(kwargs)
-        else:
+    credits = -1
+    def __init__(self,  template = None):
+        if template != None:
             self.__dict__.update(template)
 
     def toJSON(self):
-        keys = ["name","prereq","credits"]
-        temp = {k:v for k,v in self.__dict__.items() if k in keys}
+        ignore = ["section","id"]
+        temp = {k:v for k,v in self.__dict__.items() if k  not in ignore}
         return temp
     def __str__(self): # String version of object
-        return f"{self.section} {self.id}: {self.name}" # e.g
+        return f"{self.section} {self.id}: {self.name} ({self.credits})" # e.g
 
     def __lt__(self, other): # Makes the object sortable
         return self.credits < other.credits
+
+    def get_prereq(self):
+        return self.prereq
+
+    # Check if a course list makes you eligable for a course
+    def check_eligible(self, course_list=[]):
+        for prereq in self.get_prereq():
+            if prereq not in course_list:
+                return False
+        return True
 
 
 
@@ -66,9 +74,6 @@ class Database:
         if section not in self.all_sections():
             self.data[section] = {}
 
-    def get_default_course(self):
-        return {"req":[],"name":""}
-
     def add_course(self, course, name=None, prereq=[], credits=0):
         section, id = course.split(" ")
         template = {}
@@ -86,14 +91,6 @@ class Database:
         "id":id
         }
         self.data[section][id] = Course(template=template)
-
-        # Add the prerequisites
-        #if prereq is not None: # If a list of prereqs were provided
-        #    self.add_prereq(course, prereq)
-        #if name is not None: # If a name was provided
-        #    template[section][id].name = name
-        #if credits is not None:
-        #    self.data[section][id].credits = credits
 
     # Add a list of prereqs to a course
     def add_prereq(self, course, prereq):
@@ -124,16 +121,6 @@ class Database:
         if self.course_exist(course):
             section, c_number = course.split(" ")
             return self.data[section][c_number]
-
-    def get_prereq(self, course):
-        return self.get_course(course)["req"]
-
-    # Check if a course list makes you eligable for a course
-    def check_eligible(self, course, course_list):
-        for prereq in self.get_prereq(course):
-            if prereq not in course_list:
-                return False
-        return True
 
     """Get a specific section from the database e.g 'CPSC' for all the computer science classes"""
     def get_sections(self, section):
