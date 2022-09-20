@@ -131,7 +131,7 @@ class Database:
             return self.data[section][c_number]
 
     """Get a specific section from the database e.g 'CPSC' for all the computer science classes"""
-    def get_sections(self, section):
+    def get_section(self, section):
         if section in self.data.keys():
             return self.data[section]
         else:
