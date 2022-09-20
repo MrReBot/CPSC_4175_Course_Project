@@ -12,7 +12,7 @@ class Course:
             self.__dict__.update(template)
 
     def toJSON(self):
-        ignore = ["section","id"]
+        ignore = ["section","id"] # Attributes to not be included in dump
         temp = {k:v for k,v in self.__dict__.items() if k  not in ignore}
         return temp
     def __str__(self): # String version of object
@@ -21,10 +21,11 @@ class Course:
     def __lt__(self, other): # Makes the object sortable
         return self.credits < other.credits
 
+    """Get the list of Prerequisites"""
     def get_prereq(self):
         return self.prereq
 
-    # Check if a course list makes you eligable for a course
+    """Check if a given course_list makes you eligible"""
     def check_eligible(self, course_list=[]):
         for prereq in self.get_prereq():
             if prereq not in course_list:
@@ -60,7 +61,7 @@ class Database:
             if self.pretty_print:
                 f.write(json.dumps(self.data, indent=4, default=lambda x: x.toJSON()))
             else:
-                f.write(json.dumps(self.data))
+                f.write(json.dumps(self.data, default=lambda x: x.toJSON()))
 
     # This is just for testing def remove this later
     def reset(self):
