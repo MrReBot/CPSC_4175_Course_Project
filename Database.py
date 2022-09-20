@@ -70,6 +70,14 @@ class Database:
     def all_sections(self):
         return list(self.data.keys())
 
+    def all_courses(self, sort=False):
+        temp = []
+        for section in self.all_sections():
+            temp += list(self.data[section].values())
+        if sort:
+            temp.sort()
+        return temp
+
     def add_section(self, section):
         if section not in self.all_sections():
             self.data[section] = {}
