@@ -11,6 +11,7 @@ class Course:
         if template != None:
             self.__dict__.update(template)
 
+    """Create a dictionary representation of the course"""
     def toJSON(self):
         ignore = ["section","id"] # Attributes to not be included in dump
         temp = {k:v for k,v in self.__dict__.items() if k  not in ignore}
@@ -24,7 +25,7 @@ class Course:
     """Get the list of Prerequisites"""
     def get_prereq(self):
         return self.prereq
-
+        
     """Check if a given course_list makes you eligible"""
     def check_eligible(self, course_list=[]):
         for prereq in self.get_prereq():
@@ -56,6 +57,8 @@ class Database:
                         self.data[section][course].id = course
         else:
             self.data = {}
+            
+    """Save Any Changes to disk"""
     def save(self):
         with open(self.filename,"w") as f:
             if self.pretty_print:
@@ -71,6 +74,7 @@ class Database:
     def all_sections(self):
         return list(self.data.keys())
 
+    """Return a list of all courses. Optionally sorted by credit hours"""
     def all_courses(self, sort=False):
         temp = []
         for section in self.all_sections():
@@ -101,7 +105,7 @@ class Database:
         }
         self.data[section][id] = Course(template=template)
 
-    # Add a list of prereqs to a course
+    """" Add a list of prerequisites to a course"""
     def add_prereq(self, course, prereq):
         for req in prereq:
             if req == course: # Don't add a course to itself
@@ -121,6 +125,7 @@ class Database:
         except KeyError:
             #print(f"ERROR: {course} doesn't exist")
             return False
+            
     """Check if a section is a valid name"""
     def section_exist(self, section):
         return section.upper() in self.all_sections()
@@ -139,7 +144,7 @@ class Database:
             return {}
 
     """Search for a course in the database"""
-    def search(self, query, max_size=20, sort=False):
+    def search(self, query, min_credits=0 ,max_size=20, sort=False):
         found = []
         if query in [""," "]: # If the query is "" or " "
             return []
@@ -147,10 +152,10 @@ class Database:
             if query in section:
                 found.append(f"Section: {section}")
             for course in self.data[section]:
-                if query.lower() in self.data[section][course].name.lower():
-                    #temp = self.data[section][course].name
-                    found.append(self.data[section][course])
-                    #found.append(f"{section} {course}: {temp}")
+                found_course = self.data[section][course]
+                if query.lower() in found_course.name.lower():
+                    if int(found_course.credits) >= min_credits:
+                        found.append(found_course)
         if sort:
             found.sort()
         return list(dict.fromkeys(found))[:max_size]
