@@ -11,8 +11,8 @@ class Course:
         if template != None:
             self.__dict__.update(template)
 
-    """Create a dictionary representation of the course"""
     def toJSON(self):
+        """Create a dictionary representation of the course. Mainly for exporting to disk"""
         ignore = ["section","id"] # Attributes to not be included in dump
         temp = {k:v for k,v in self.__dict__.items() if k  not in ignore}
         return temp
@@ -22,12 +22,12 @@ class Course:
     def __lt__(self, other): # Makes the object sortable
         return self.credits < other.credits
 
-    """Get the list of Prerequisites"""
     def get_prereq(self):
+        """Get the list of Prerequisites"""
         return self.prereq
         
-    """Check if a given course_list makes you eligible"""
     def check_eligible(self, course_list=[]):
+        """Check if a given course_list makes you eligible"""
         for prereq in self.get_prereq():
             if prereq not in course_list:
                 return False
@@ -58,8 +58,8 @@ class Database:
         else:
             self.data = {}
             
-    """Save Any Changes to disk"""
     def save(self):
+        """Save Any Changes to disk"""
         with open(self.filename,"w") as f:
             if self.pretty_print:
                 f.write(json.dumps(self.data, indent=4, default=lambda x: x.toJSON()))
@@ -70,12 +70,12 @@ class Database:
     def reset(self):
         self.data = {}
 
-    """Get a list of every available course section"""
     def all_sections(self):
+        """Get a list of every available course section"""
         return list(self.data.keys())
 
-    """Return a list of all courses. Optionally sorted by credit hours"""
     def all_courses(self, sort=False):
+        """Return a list of all courses. Optionally sorted by credit hours"""
         temp = []
         for section in self.all_sections():
             temp += list(self.data[section].values())
@@ -84,10 +84,12 @@ class Database:
         return temp
 
     def add_section(self, section):
+        """If a section does not exist add it"""
         if section not in self.all_sections():
             self.data[section] = {}
 
     def add_course(self, course, name=None, prereq=[], credits=0):
+        """Add a course to the course list"""
         section, id = course.split(" ")
         template = {}
         if self.course_exist(course):
@@ -105,8 +107,8 @@ class Database:
         }
         self.data[section][id] = Course(template=template)
 
-    """" Add a list of prerequisites to a course"""
     def add_prereq(self, course, prereq):
+        """" Add a list of prerequisites to a course"""
         for req in prereq:
             if req == course: # Don't add a course to itself
                 print(f"ERROR: Not adding {req} to itself")
@@ -116,8 +118,8 @@ class Database:
                 section, c_number = course.split(" ")
                 self.data[section][c_number]["req"].append(req)
 
-    """Check if a course exists in the database"""
     def course_exist(self, course):
+        """Check if a course exists in the database"""
         try:
             section, c_number = course.split(" ")
             self.data[section][c_number] # This will throw a key error if the course doesn't exist
@@ -126,25 +128,25 @@ class Database:
             #print(f"ERROR: {course} doesn't exist")
             return False
             
-    """Check if a section is a valid name"""
     def section_exist(self, section):
+        """Check if a section is a valid name"""
         return section.upper() in self.all_sections()
 
-    """If a course exists return it's data"""
     def get_course(self, course):
+        """If a course exists return it's data"""
         if self.course_exist(course):
             section, c_number = course.split(" ")
             return self.data[section][c_number]
 
-    """Get a specific section from the database e.g 'CPSC' for all the computer science classes"""
     def get_section(self, section):
+        """Get a specific section from the database e.g 'CPSC' for all the computer science classes"""
         if section in self.data.keys():
             return self.data[section]
         else:
             return {}
 
-    """Search for a course in the database"""
     def search(self, query, min_credits=0 ,max_size=20, sort=False):
+        """Search for a course or section in the database"""
         found = []
         if query in [""," "]: # If the query is "" or " "
             return []
