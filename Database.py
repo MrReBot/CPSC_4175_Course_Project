@@ -148,14 +148,13 @@ class Database:
         found = []
         if query in [""," "]: # If the query is "" or " "
             return []
-        for section in self.data:
+        for section in self.all_sections(): #Search for Specific section
             if query in section:
                 found.append(f"Section: {section}")
-            for course in self.data[section]:
-                found_course = self.data[section][course]
-                if query.lower() in found_course.name.lower():
-                    if int(found_course.credits) >= min_credits:
-                        found.append(found_course)
+        for course in self.all_courses(): # Search through all the courses
+            if query.lower() in course.name.lower():
+                if int(course.credits) >= min_credits:
+                    found.append(course)
         if sort:
             found.sort()
         return list(dict.fromkeys(found))[:max_size]
