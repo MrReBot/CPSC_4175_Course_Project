@@ -1054,5 +1054,15 @@
             ],
             "credits": "4"
         }
+    },
+    "TAGS": {
+        "FINE-ARTS": [
+            "ARTH 1100",
+            "ITDS 1145",
+            "MUSC 1100",
+            "THEA 1100",
+            "ARTH 2125",
+            "ARTH 2126"
+        ]
     }
 }

@@ -38,6 +38,7 @@ class Course:
 
 class Database:
     data = {}
+    tags = {}
     #default_course = {"req":[],"name":""} # Default template for all courses
     pretty_print = True
 
@@ -49,6 +50,9 @@ class Database:
         if os.path.exists(self.filename) and os.path.getsize(self.filename) != 0: #If it exists and is not empty
             with open(self.filename,"r") as f:
                 temp_data = json.loads(f.read())
+                if "TAGS" in temp_data.keys():
+                    self.tags = temp_data["TAGS"]
+                    del temp_data["TAGS"]
                 for section in temp_data:
                     for course in temp_data[section]:
                         self.add_section(section)
@@ -58,14 +62,36 @@ class Database:
         else:
             self.data = {}
             
+    def all_tags(self):
+        """Get every tag"""
+        return self.tags
+        
+    def tag_exist(self, tag):
+        """Check if a given tag exists"""
+        return tag in self.all_tags().keys()
+        
+    def get_tag(self, tag):
+        """If a tag exists return it"""
+        if self.tag_exist(tag):
+            return self.tags[tag]
+        
+        
+    def add_tag(self, tag, classes=None):
+        """Add a new tag or update an already existing tag"""
+        if not self.tag_exist(tag):
+            self.tags[tag] = []
+        if classes != None:
+            self.tags[tag] = classes
+        
     def save(self):
         """Save Any Changes to disk"""
+        self.data["TAGS"] = self.tags
         with open(self.filename,"w") as f:
             if self.pretty_print:
                 f.write(json.dumps(self.data, indent=4, default=lambda x: x.toJSON()))
             else:
                 f.write(json.dumps(self.data, default=lambda x: x.toJSON()))
-
+        del self.data["TAGS"]
     # This is just for testing def remove this later
     def reset(self):
         self.data = {}
