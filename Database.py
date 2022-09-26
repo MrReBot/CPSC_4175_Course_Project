@@ -16,8 +16,12 @@ class Course:
         ignore = ["section","id"] # Attributes to not be included in dump
         temp = {k:v for k,v in self.__dict__.items() if k  not in ignore}
         return temp
+    
+    def format(self):
+        return f"{self.section} {self.id}: {self.name} ({self.credits})"
+        
     def __str__(self): # String version of object
-        return f"{self.section} {self.id}: {self.name} ({self.credits})" # e.g
+        return f"{self.section} {self.id}" # e.g
 
     def __lt__(self, other): # Makes the object sortable
         return self.credits < other.credits
