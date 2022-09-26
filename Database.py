@@ -7,9 +7,12 @@ class Course:
     section = ""
     id = ""
     credits = -1
-    def __init__(self,  template = None):
+    db = {}
+    def __init__(self,  template = None, db=None):
         if template != None:
             self.__dict__.update(template)
+        if db != None:
+            self.db = db
 
     def toJSON(self):
         """Create a dictionary representation of the course. Mainly for exporting to disk"""
@@ -24,7 +27,7 @@ class Course:
         return f"{self.section} {self.id}" # e.g
 
     def __lt__(self, other): # Makes the object sortable
-        return self.credits < other.credits
+        return self.get_value() < other.get_value()
 
     def get_prereq(self):
         """Get the list of Prerequisites"""
@@ -36,6 +39,20 @@ class Course:
             if prereq not in course_list:
                 return False
         return True
+        
+    def get_value(self, last_course=None, req_list=[]):
+        i = 0
+        if last_course == None:
+            last_course = [self]
+        #print(str(self), last_course)
+        for c in self.db.all_courses(sort=False):
+            if str(self) in c.get_prereq() and str(c) not in last_course:
+                i+= 1
+                last_course.append(str(c))
+                i += c.get_value(last_course[-2:], req_list)
+                if c in req_list:
+                    i += 1
+        return i
 
 
 
@@ -60,7 +77,7 @@ class Database:
                 for section in temp_data:
                     for course in temp_data[section]:
                         self.add_section(section)
-                        self.data[section][course] = Course(template=temp_data[section][course])
+                        self.data[section][course] = Course(template=temp_data[section][course],db=self)
                         self.data[section][course].section = section
                         self.data[section][course].id = course
         else:
@@ -104,13 +121,13 @@ class Database:
         """Get a list of every available course section"""
         return list(self.data.keys())
 
-    def all_courses(self, sort=False):
-        """Return a list of all courses. Optionally sorted by credit hours"""
+    def all_courses(self, sort=False, reverse=False):
+        """Return a list of all courses. Optionally sorted by course value"""
         temp = []
         for section in self.all_sections():
             temp += list(self.data[section].values())
         if sort:
-            temp.sort()
+            temp.sort(reverse=reverse)
         return temp
 
     def add_section(self, section):
@@ -135,7 +152,7 @@ class Database:
         "section":section,
         "id":id
         }
-        self.data[section][id] = Course(template=template)
+        self.data[section][id] = Course(template=template, db=self)
 
     def add_prereq(self, course, prereq):
         """" Add a list of prerequisites to a course"""
@@ -186,7 +203,7 @@ class Database:
         for course in self.all_courses(): # Search through all the courses
             if query.lower() in course.name.lower():
                 if int(course.credits) >= min_credits:
-                    found.append(course)
+                    found.append(course.format())
         if sort:
             found.sort()
         return list(dict.fromkeys(found))[:max_size]
