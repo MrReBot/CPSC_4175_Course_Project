@@ -16,7 +16,7 @@ class Course:
 
     def toJSON(self):
         """Create a dictionary representation of the course. Mainly for exporting to disk"""
-        ignore = ["section","id"] # Attributes to not be included in dump
+        ignore = ["section","id","db"] # Attributes to not be included in dump
         temp = {k:v for k,v in self.__dict__.items() if k  not in ignore}
         return temp
     
@@ -201,6 +201,8 @@ class Database:
             if query in section:
                 found.append(f"Section: {section}")
         for course in self.all_courses(): # Search through all the courses
+            if self.course_exist(query):
+                found.append(self.get_course(query))
             if query.lower() in course.name.lower():
                 if int(course.credits) >= min_credits:
                     found.append(course.format())

@@ -1055,6 +1055,13 @@
             "credits": "4"
         }
     },
+    "STAT": {
+        "1401": {
+            "name": "Elementary Statistics",
+            "prereq": [],
+            "credits": "3"
+        }
+    },
     "TAGS": {
         "FINE-ARTS": [
             "ARTH 1100",
