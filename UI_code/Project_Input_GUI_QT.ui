@@ -239,7 +239,7 @@
     <string>Input File Path Below:</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="InputFilePath_lineEdit">
    <property name="geometry">
     <rect>
      <x>50</x>
