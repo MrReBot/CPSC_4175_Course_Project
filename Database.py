@@ -35,8 +35,12 @@ class Course:
         
     def check_eligible(self, course_list=[]):
         """Check if a given course_list makes you eligible"""
+        temp_course = course_list.copy()
+        for i in range(len(temp_course)): # Convert course objects into their course name
+            if type(temp_course[i]) == Course:
+                temp_course[i] = str(temp_course[i])
         for prereq in self.get_prereq():
-            if prereq not in course_list:
+            if prereq not in temp_course:
                 return False
         return True
         
