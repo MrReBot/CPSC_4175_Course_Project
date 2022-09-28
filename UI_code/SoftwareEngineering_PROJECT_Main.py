@@ -1,8 +1,14 @@
 from PyQt5 import QtWidgets as qtw
 from PyQt5 import QtCore as qtc
+
+#This imports the UI Layout code from the Input and Output Python files
 from Project_Input_GUI import Ui_Input_window_frm
 from Project_Output_GUI import Ui_Output_window_frm
 
+import sys
+
+# This allows this program to access Execel files
+import openpyxl
 
 class InputWindow(qtw.QWidget):
 
