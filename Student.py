@@ -1,13 +1,17 @@
 import Database
+import os
 
 class Student:
     name = ""
     remaining_courses = []
     completed_courses = []
     db = None
-    def __init__(self, db, remaining_courses):
-        if remaining_courses != None:
+    def __init__(self, db, remaining_courses=None, filename=None):
+        if remaining_courses != None and type(remaining_courses) == list:
             self.remaining_courses = remaining_courses
+        elif filename != None and os.path.exists(filename):
+            with open(filename,"r") as f:
+                self.remaining_courses = f.read().splitlines()
         self.db = db
         self.generate_completed()
 
@@ -20,6 +24,7 @@ class Student:
                 print(f"{course} doesn't exist")
 
     def check_credits(self, courses):
+        """Check how many credits a given list, dir or course object has"""
         i = 0
         if type(courses) == list:
             for course in courses:
@@ -32,7 +37,6 @@ class Student:
         return i
 
     def generate_semester(self, course_list, completed, credits=15):
-        temp_completed = []
         not_completed = course_list.copy() # Make a copy of the course list
         semester = []
         for course in course_list:
@@ -79,11 +83,11 @@ class Student:
 def main():
     db = Database.Database("database.txt")
 
-    needed_courses = ['ENVS 1205', 'STAT 1401', 'CPSC 1302', 'CPSC 2105', 'CPSC 2108',
-    'CPSC 3125', 'CPSC 3131', 'CPSC 3165', 'CPSC 3175', 'CPSC 4000', 'MATH 5125',
-    'CPSC 3121', 'CPSC 4115', 'CPSC 4135', 'CPSC 4148', 'CPSC 4155', 'CPSC 4157', 'CPSC 4175', 'CPSC 4176']
+    #needed_courses = ['ENVS 1205', 'STAT 1401', 'CPSC 1302', 'CPSC 2105', 'CPSC 2108',
+    #'CPSC 3125', 'CPSC 3131', 'CPSC 3165', 'CPSC 3175', 'CPSC 4000', 'MATH 5125',
+    #'CPSC 3121', 'CPSC 4115', 'CPSC 4135', 'CPSC 4148', 'CPSC 4155', 'CPSC 4157', 'CPSC 4175', 'CPSC 4176']
 
-    st = Student(db, needed_courses)
+    st = Student(db, filename="Test Files/Input1.txt")
     state, schedule = st.generate_course_list(credits=15)
     i = 0
     for semester in schedule:
