@@ -19,10 +19,10 @@ class Course:
         ignore = ["section","id","db"] # Attributes to not be included in dump
         temp = {k:v for k,v in self.__dict__.items() if k  not in ignore}
         return temp
-    
+
     def format(self):
         return f"{self.section} {self.id}: {self.name} ({self.credits})"
-        
+
     def __str__(self): # String version of object
         return f"{self.section} {self.id}" # e.g
 
@@ -32,7 +32,7 @@ class Course:
     def get_prereq(self):
         """Get the list of Prerequisites"""
         return self.prereq
-        
+
     def check_eligible(self, course_list=[]):
         """Check if a given course_list makes you eligible"""
         temp_course = course_list.copy()
@@ -43,7 +43,7 @@ class Course:
             if prereq not in temp_course:
                 return False
         return True
-        
+
     def get_value(self, last_course=None, req_list=[]):
         i = 0
         if last_course == None:
@@ -66,6 +66,7 @@ class Database:
     tags = {}
     #default_course = {"req":[],"name":""} # Default template for all courses
     pretty_print = True
+    credit_hours = -1
 
     def __init__(self, filename):
         self.filename = filename
@@ -84,30 +85,32 @@ class Database:
                         self.data[section][course] = Course(template=temp_data[section][course],db=self)
                         self.data[section][course].section = section
                         self.data[section][course].id = course
+                        if int(self.data[section][course].credits) > self.credit_hours:
+                            self.credit_hours = int(self.data[section][course].credits)
         else:
             self.data = {}
-            
+
     def all_tags(self):
         """Get every tag"""
         return self.tags
-        
+
     def tag_exist(self, tag):
         """Check if a given tag exists"""
         return tag in self.all_tags().keys()
-        
+
     def get_tag(self, tag):
         """If a tag exists return it"""
         if self.tag_exist(tag):
             return self.tags[tag]
-        
-        
+
+
     def add_tag(self, tag, classes=None):
         """Add a new tag or update an already existing tag"""
         if not self.tag_exist(tag):
             self.tags[tag] = []
         if classes != None:
             self.tags[tag] = classes
-        
+
     def save(self):
         """Save Any Changes to disk"""
         self.data["TAGS"] = self.tags
@@ -166,8 +169,8 @@ class Database:
                 continue
             #if self.course_exist(req) and req not in self.get_prereq(course):
             if req not in self.get_prereq(course):
-                section, c_number = course.split(" ")
-                self.data[section][c_number]["req"].append(req)
+                course = self.get_course(course)
+                course.prereq.append(req)
 
     def course_exist(self, course):
         """Check if a course exists in the database"""
@@ -178,7 +181,10 @@ class Database:
         except KeyError:
             #print(f"ERROR: {course} doesn't exist")
             return False
-            
+        except ValueError:
+            print(f"ERROR: '{course}' isn't a valid course name")
+            return False
+
     def section_exist(self, section):
         """Check if a section is a valid name"""
         return section.upper() in self.all_sections()
