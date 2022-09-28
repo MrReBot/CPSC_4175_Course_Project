@@ -181,12 +181,12 @@
     <string>Welcome to the Class Scheduler Application</string>
    </property>
   </widget>
-  <widget class="QLabel" name="InputStudentID_lbl">
+  <widget class="QLabel" name="InputFilePath_lbl">
    <property name="geometry">
     <rect>
-     <x>170</x>
-     <y>230</y>
-     <width>308</width>
+     <x>210</x>
+     <y>260</y>
+     <width>217</width>
      <height>24</height>
     </rect>
    </property>
@@ -236,73 +236,15 @@
     </font>
    </property>
    <property name="text">
-    <string>Input Student Cougar ID (909#)</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="SelectDegree_lbl">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>300</y>
-     <width>322</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="palette">
-    <palette>
-     <active>
-      <colorrole role="WindowText">
-       <brush brushstyle="SolidPattern">
-        <color alpha="255">
-         <red>255</red>
-         <green>255</green>
-         <blue>255</blue>
-        </color>
-       </brush>
-      </colorrole>
-     </active>
-     <inactive>
-      <colorrole role="WindowText">
-       <brush brushstyle="SolidPattern">
-        <color alpha="255">
-         <red>255</red>
-         <green>255</green>
-         <blue>255</blue>
-        </color>
-       </brush>
-      </colorrole>
-     </inactive>
-     <disabled>
-      <colorrole role="WindowText">
-       <brush brushstyle="SolidPattern">
-        <color alpha="255">
-         <red>120</red>
-         <green>120</green>
-         <blue>120</blue>
-        </color>
-       </brush>
-      </colorrole>
-     </disabled>
-    </palette>
-   </property>
-   <property name="font">
-    <font>
-     <family>Arial</family>
-     <pointsize>16</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>Select Student Degree Program:</string>
+    <string>Input File Path Below:</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>260</y>
-     <width>241</width>
+     <x>50</x>
+     <y>300</y>
+     <width>541</width>
      <height>31</height>
     </rect>
    </property>
@@ -314,35 +256,6 @@
      <bold>true</bold>
     </font>
    </property>
-  </widget>
-  <widget class="QComboBox" name="SelectDegree_cbx">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>330</y>
-     <width>241</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Arial</family>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="currentText">
-    <string>Computer Science - Games Track</string>
-   </property>
-   <item>
-    <property name="text">
-     <string>Computer Science - Games Track</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Computer Science - CyberSecurity</string>
-    </property>
-   </item>
   </widget>
   <widget class="QPushButton" name="Clear_btn">
    <property name="geometry">
