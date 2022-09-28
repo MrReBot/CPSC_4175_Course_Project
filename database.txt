@@ -146,7 +146,7 @@
         },
         "4000": {
             "name": "Baccalaureate Survey",
-            "prereq": [],
+            "prereq": ["LAST-YEAR"],
             "credits": "0"
         },
         "4111": {
@@ -249,8 +249,7 @@
         "4148": {
             "name": "Theory of Computation",
             "prereq": [
-                "CPSC 4115",
-                "CPSC 5115"
+                "CPSC 4115"
             ],
             "credits": "3"
         },
