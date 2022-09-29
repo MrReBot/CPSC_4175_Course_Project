@@ -11,6 +11,7 @@ class InputWindow(qtw.QWidget):
 
         self.ui = Ui_Input_window_frm()
         self.ui.setupUi(self)
+        self.show()
 
 class OutputWindow(qtw.QWidget):
 
@@ -19,14 +20,15 @@ class OutputWindow(qtw.QWidget):
 
         self.ui = Ui_Output_window_frm()
         self.ui.setupUi(self)
+        self.show()
 
 
 if __name__ == '__main__':
     app = qtw.QApplication([])
 
     inputWindow = InputWindow()
-    inputWindow.show()
+    #inputWindow.show()
     outputWindow = OutputWindow()
-    outputWindow.show()
+    #outputWindow.show()
 
     app.exec_()
