@@ -1,7 +1,7 @@
 import re
 import json
 import sys
-sys.path.insert(1, '../..') # Makes it so we can access Database.py 
+sys.path.insert(1, '../..') # Makes it so we can access Database.py
 import Database
 
 def get_course(unfiltered_course):
@@ -68,7 +68,7 @@ def get_credits(data):
     return re.findall("[0-9]\)",data)[0][0]
 
 def main():
-    db = Database.Database("database.txt")
+    db = Database.Database("../../database.txt")
     #with open("data.txt","r",encoding="utf8") as f:
     #    text = f.read().splitlines()
     

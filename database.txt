@@ -146,7 +146,7 @@
         },
         "4000": {
             "name": "Baccalaureate Survey",
-            "prereq": [],
+            "prereq": ["LAST-YEAR"],
             "credits": "0"
         },
         "4111": {
@@ -249,8 +249,7 @@
         "4148": {
             "name": "Theory of Computation",
             "prereq": [
-                "CPSC 4115",
-                "CPSC 5115"
+                "CPSC 4115"
             ],
             "credits": "3"
         },
@@ -910,6 +909,166 @@
                 "ENGL 1101"
             ],
             "credits": "3"
+        },
+        "2111": {
+            "name": "World Literature I",
+            "prereq": [
+                "ENGL 1102"
+            ],
+            "credits": "3"
+        },
+        "2112": {
+            "name": "World Literature II",
+            "prereq": [
+                "ENGL 1102"
+            ],
+            "credits": "3"
         }
+    },
+    "COMM": {
+        "1110": {
+            "name": "Public Speaking",
+            "prereq": [],
+            "credits": "3"
+        }
+    },
+    "LEAD": {
+        "1705": {
+            "name": "Introduction to Servant Leadership",
+            "prereq": [],
+            "credits": "2"
+        }
+    },
+    "ITDS": {
+        "1145": {
+            "name": "Comparative Arts",
+            "prereq": [],
+            "credits": "3"
+        },
+        "1155": {
+            "name": "The Western Intellectual Tradition",
+            "prereq": [],
+            "credits": "3"
+        },
+        "2125": {
+            "name": "Historical Perspectives on the Philosophy of Science and Mathematics",
+            "prereq": [],
+            "credits": "3"
+        }
+    },
+    "PHIL": {
+        "2010": {
+            "name": "Introduction to Philosophy",
+            "prereq": [],
+            "credits": "3"
+        }
+    },
+    "ARTH": {
+        "2125": {
+            "name": "Introduction to the History of Art I- Prehistoric through Gothic",
+            "prereq": [],
+            "credits": "3"
+        },
+        "2126": {
+            "name": "Introduction to the History of Art II- Renaissance through Modern",
+            "prereq": [],
+            "credits": "3"
+        }
+    },
+    "THEA": {
+        "1100": {
+            "name": "Theatre Appreciation",
+            "prereq": [],
+            "credits": "3"
+        }
+    },
+    "MUSC": {
+        "1100": {
+            "name": "Music Appreciation",
+            "prereq": [],
+            "credits": "3"
+        }
+    },
+    "BIOL": {
+        "1215": {
+            "name": "Principles of Biology",
+            "prereq": [],
+            "credits": "4"
+        }
+    },
+    "POLS": {
+        "1101": {
+            "name": "American Government",
+            "prereq": [],
+            "credits": "3"
+        }
+    },
+    "KINS": {
+        "1106": {
+            "name": "Lifetime Wellness",
+            "prereq": [],
+            "credits": "2"
+        }
+    },
+    "PHED": {
+        "1205": {
+            "name": "Concepts of Fitness",
+            "prereq": [],
+            "credits": "2"
+        }
+    },
+    "MATH": {
+        "5125": {
+            "name": "Discrete Mathematics",
+            "prereq": [
+                "MATH 2125"
+            ],
+            "credits": "3"
+        },
+        "2125": {
+            "name": "Introduction to Discrete Mathematics",
+            "prereq": [
+                "MATH 1113"
+            ],
+            "credits": "3"
+        },
+        "1113": {
+            "name": "Pre-Calculus",
+            "prereq": [
+                "MATH 1111"
+            ],
+            "credits": "4"
+        },
+        "1111": {
+            "name": "College Algebra",
+            "prereq": [
+                ""
+            ],
+            "credits": "3"
+        },
+        "1131": {
+            "name": "Calculus with Analytic Geometry I",
+            "prereq": [
+                "MATH 1113"
+            ],
+            "credits": "4"
+        }
+    },
+    "STAT": {
+        "1401": {
+            "name": "Elementary Statistics",
+            "prereq": [],
+            "credits": "3"
+        }
+    },
+    "TAGS": {
+        "FINE-ARTS": [
+            "ARTH 1100",
+            "ITDS 1145",
+            "MUSC 1100",
+            "THEA 1100",
+            "ARTH 2125",
+            "ARTH 2126"
+        ]
     }
 }
