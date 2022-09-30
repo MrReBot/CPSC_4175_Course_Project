@@ -13,7 +13,7 @@ class ExcelWriter:
 
         shutil.copy(templateFileName, newfilename)
 
-    def savetofile(self, classDictionary, newFileName, templateFileName):
+    def savetofile(self, classDictionary, classList, newFileName, templateFileName):
         ew=ExcelWriter()
         todays_date = date.today()
         # Workbook() takes one, non-optional, argument
@@ -67,6 +67,20 @@ class ExcelWriter:
                 #    worksheet.write('A1',str(classdictionary[semester]))
                #     classnum=0
                #
+            cellNum = 3
+            for number, classinfo in enumerate(classList):
+                partofclassinfo = number%3
+                   
+                if(partofclassinfo == 0):
+                    ws2['H'+str(cellNum)]= classinfo
+                if(partofclassinfo == 1):
+                    ws2['I'+str(cellNum)] = int(classinfo)
+                if(partofclassinfo==2):
+                    ws2['J'+str(cellNum)] = classinfo
+                    cellNum = cellNum + 1
+                        
+                      
+                       
             wb2.save(filename1)
             errorcheck = False
         else:
@@ -83,7 +97,8 @@ def main():
                            'Fall 2023' : ['A General Elective', '3'],
                            'Fall 2024' : ['CPSC3125','3']
             }
-    errorcheck = ew.savetofile(classdict,"Path to graduate_Grantham.xlsx","Path To Graduati.xlsx" )
+    classlist= ['CPSC1201',"3","",'HIST2112','3',"",'CPSC1203', "3","",'CPSC1204','4',"",'MATH1131',"4","CLASS NUM", 'A General Elective', '3',""]
+    errorcheck = ew.savetofile(classdict,classlist,"Path to graduate_Test.xlsx","Path To Graduation.xlsx" )
     if(errorcheck == True):
         print("Error, excel sheet does not exist")
     else:
