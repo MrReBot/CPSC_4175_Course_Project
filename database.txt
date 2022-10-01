@@ -146,7 +146,9 @@
         },
         "4000": {
             "name": "Baccalaureate Survey",
-            "prereq": ["LAST-YEAR"],
+            "prereq": [
+                "LAST-YEAR"
+            ],
             "credits": "0"
         },
         "4111": {
@@ -160,8 +162,7 @@
         "4112": {
             "name": "Game Programming II",
             "prereq": [
-                "CPSC 4111",
-                "CPSC 4113"
+                "CPSC 4111"
             ],
             "credits": "3"
         },
@@ -923,6 +924,13 @@
                 "ENGL 1102"
             ],
             "credits": "3"
+        },
+        "5195": {
+            "name": "Technical and Scientific Writing",
+            "prereq": [
+                "ENGL 1102"
+            ],
+            "credits": "3"
         }
     },
     "COMM": {
@@ -954,6 +962,11 @@
             "name": "Historical Perspectives on the Philosophy of Science and Mathematics",
             "prereq": [],
             "credits": "3"
+        },
+        "1779": {
+            "name": "Scholarship Across the Disciplines",
+            "prereq": [],
+            "credits": "2"
         }
     },
     "PHIL": {
@@ -994,6 +1007,11 @@
             "name": "Principles of Biology",
             "prereq": [],
             "credits": "4"
+        },
+        "1125": {
+            "name": "Contemporary Issues in Biology Non-Lab",
+            "prereq": [],
+            "credits": "3"
         }
     },
     "POLS": {
@@ -1059,6 +1077,463 @@
             "name": "Elementary Statistics",
             "prereq": [],
             "credits": "3"
+        },
+        "0996": {
+            "name": "Support for Elementary Statistics",
+            "prereq": [
+                "STAT 1401"
+            ],
+            "credits": "3"
+        },
+        "3127": {
+            "name": "Statistical Computing",
+            "prereq": [
+                "STAT 1401",
+                "BUSA 3115"
+            ],
+            "credits": "3"
+        },
+        "5117": {
+            "name": "Applied Multivariate Analysis",
+            "prereq": [
+                "STAT 3127"
+            ],
+            "credits": "3"
+        },
+        "5118": {
+            "name": "Applied Nonparametric Methods",
+            "prereq": [
+                "STAT 3127"
+            ],
+            "credits": "3"
+        },
+        "5119": {
+            "name": "Applied Categorical Data Analysis",
+            "prereq": [
+                "STAT 3127"
+            ],
+            "credits": "3"
+        },
+        "5176": {
+            "name": "Statistical Design and Analysis of Experiments",
+            "prereq": [
+                "STAT 3127"
+            ],
+            "credits": "3"
+        },
+        "5177": {
+            "name": "Applied Regression Analysis",
+            "prereq": [
+                "STAT 3127"
+            ],
+            "credits": "3"
+        },
+        "5555": {
+            "name": "Selected Topics in Statistics",
+            "prereq": [
+                "STAT 3127"
+            ],
+            "credits": "3"
+        }
+    },
+    "CYBR": {
+        "2159": {
+            "name": "Fundamentals of Computer Networks",
+            "prereq": [
+                "CPSC 1301"
+            ],
+            "credits": "3"
+        },
+        "2160": {
+            "name": "Intro to Information Security",
+            "prereq": [
+                "CYBR 2159"
+            ],
+            "credits": "3"
+        },
+        "3106": {
+            "name": "Cybersecurity Risk Management",
+            "prereq": [
+                "CYBR 2160"
+            ],
+            "credits": "3"
+        },
+        "3108": {
+            "name": "Defensive Programming",
+            "prereq": [
+                "CPSC 2108"
+            ],
+            "credits": "3"
+        },
+        "3115": {
+            "name": "Programming for Data Science",
+            "prereq": [
+                "CPSC 1301"
+            ],
+            "credits": "3"
+        },
+        "3119": {
+            "name": "Fundamentals of Digital Forensics",
+            "prereq": [
+                "CYBR 2160"
+            ],
+            "credits": "3"
+        },
+        "3126": {
+            "name": "Client / Server Security",
+            "prereq": [
+                "CYBR 3135"
+            ],
+            "credits": "3"
+        },
+        "3128": {
+            "name": "Cybersecurity Management",
+            "prereq": [
+                "MISM 3115",
+                "MISM 3109"
+            ],
+            "credits": "3"
+        },
+        "3135": {
+            "name": "Infrastructure Security",
+            "prereq": [
+                "CYBR 2159"
+            ],
+            "credits": "3"
+        },
+        "3136": {
+            "name": "Wireless, IoT and Mobile Security",
+            "prereq": [
+                "CYBR 2159",
+                "CYBR 2160"
+            ],
+            "credits": "3"
+        },
+        "4125": {
+            "name": "Global Perspectives on Cybersecurity",
+            "prereq": [],
+            "credits": "3"
+        },
+        "4128": {
+            "name": "Penetration Testing and Countermeasures",
+            "prereq": [
+                "CYBR 2160"
+            ],
+            "credits": "3"
+        },
+        "4137": {
+            "name": "Security Policies & Implementation Security",
+            "prereq": [
+                "CYBR 2160"
+            ],
+            "credits": "3"
+        },
+        "4138": {
+            "name": "Security Auditing for Compliance",
+            "prereq": [
+                "CYBR 2160"
+            ],
+            "credits": "3"
+        },
+        "4139": {
+            "name": "Security Issues in Legal Context",
+            "prereq": [
+                "CYBR 2160"
+            ],
+            "credits": "3"
+        },
+        "4145": {
+            "name": "Security for Web Applications & Social Networking",
+            "prereq": [],
+            "credits": "3"
+        },
+        "4146": {
+            "name": "Network, Virtualization & Cloud Communication Infrastructure",
+            "prereq": [
+                "CYBR 2160"
+            ],
+            "credits": "3"
+        },
+        "4160": {
+            "name": "Applied Cryptography",
+            "prereq": [
+                "CPSC 2108"
+            ],
+            "credits": "3"
+        },
+        "4166": {
+            "name": "Intrusion Detection and Prevention",
+            "prereq": [
+                "CPSC 4127"
+            ],
+            "credits": "3"
+        },
+        "4416": {
+            "name": "Cybersecurity Practicum",
+            "prereq": [],
+            "credits": "1"
+        }
+    },
+    "MISM": {
+        "3109": {
+            "name": "Principles of Information Technology Management for Non-Business Majors",
+            "prereq": [
+                "CPSC 1301"
+            ],
+            "credits": "3"
+        },
+        "3115": {
+            "name": "Principles of Information Systems Management",
+            "prereq": [
+                "ENGL 1101",
+                "ENGL 1102",
+                "ACCT 2101",
+                "ACCT 2102",
+                "BUSA 2115",
+                "ECON 2105"
+            ],
+            "credits": "3"
+        },
+        "3116": {
+            "name": "Business Analytics II",
+            "prereq": [
+                "BUSA 3115",
+                "MISM 3109"
+            ],
+            "credits": "3"
+        },
+        "3118": {
+            "name": "Global e-Business",
+            "prereq": [
+                "MISM 3109",
+                "MISM 3115"
+            ],
+            "credits": "3"
+        },
+        "3126": {
+            "name": "Business Process Management Design",
+            "prereq": [
+                "MISM 3115",
+                "MISM 3109"
+            ],
+            "credits": "3"
+        },
+        "3136": {
+            "name": "Database Design",
+            "prereq": [
+                "CPSC 1301"
+            ],
+            "credits": "3"
+        },
+        "3145": {
+            "name": "Business Data Networks and Security",
+            "prereq": [
+                "MISM 3115",
+                "MISM 3109"
+            ],
+            "credits": "3"
+        },
+        "3146": {
+            "name": "Data Visualization",
+            "prereq": [
+                "MISM 3115",
+                "MISM 3109"
+            ],
+            "credits": "3"
+        },
+        "4126": {
+            "name": "Business Process Management Development",
+            "prereq": [
+                "MISM 3109",
+                "MISM 3115"
+            ],
+            "credits": "3"
+        },
+        "4128": {
+            "name": "Business Intelligence",
+            "prereq": [
+                "MISM 3136"
+            ],
+            "credits": "3"
+        },
+        "4165": {
+            "name": "Project Management",
+            "prereq": [
+                "MISM 3115",
+                "MISM 3109"
+            ],
+            "credits": "3"
+        },
+        "4168": {
+            "name": "Systems Analysis & Design",
+            "prereq": [
+                "CPSC 1301K"
+            ],
+            "credits": "3"
+        },
+        "4899": {
+            "name": "Independent Study",
+            "prereq": [],
+            "credits": "3"
+        }
+    },
+    "DATA": {
+        "1501": {
+            "name": "Introduction to Data Science",
+            "prereq": [],
+            "credits": "3"
+        },
+        "3111": {
+            "name": "Data Mining I",
+            "prereq": [
+                "STAT 3127"
+            ],
+            "credits": "3"
+        },
+        "3112": {
+            "name": "Data Mining II",
+            "prereq": [
+                "DSCI 3111"
+            ],
+            "credits": "3"
+        },
+        "3116": {
+            "name": "Ethics and Data Analytics",
+            "prereq": [
+                "DSCI 3112"
+            ],
+            "credits": "3"
+        },
+        "3215": {
+            "name": "Data Analytics Project",
+            "prereq": [
+                "DSCI 3112"
+            ],
+            "credits": "3"
+        },
+        "4698": {
+            "name": "Data Analytics Internship",
+            "prereq": [
+                "DSCI 3112"
+            ],
+            "credits": "6"
+        }
+    },
+    "DSCI": {
+        "3111": {
+            "name": "Data Mining I",
+            "prereq": [
+                "STAT 3127"
+            ],
+            "credits": "3"
+        },
+        "3112": {
+            "name": "Data Mining II",
+            "prereq": [
+                "DSCI 3111"
+            ],
+            "credits": "3"
+        },
+        "3116": {
+            "name": "Ethics and Data Analytics",
+            "prereq": [
+                "DSCI 3112"
+            ],
+            "credits": "3"
+        },
+        "3215": {
+            "name": "Data Analytics Project",
+            "prereq": [
+                "DSCI 3112"
+            ],
+            "credits": "3"
+        },
+        "4111": {
+            "name": "Predictive Models and Analytics I",
+            "prereq": [
+                "DSCI 3112",
+                "DSCI 4127"
+            ],
+            "credits": "3"
+        },
+        "4112": {
+            "name": "Predictive Models and Analytics II",
+            "prereq": [
+                "DSCI 4111"
+            ],
+            "credits": "3"
+        },
+        "4119": {
+            "name": "Machine Learning",
+            "prereq": [
+                "MATH 2115",
+                "MATH 3175"
+            ],
+            "credits": "3"
+        },
+        "4127": {
+            "name": "Advanced Statistical Programming",
+            "prereq": [
+                "STAT 3127",
+                "CPSC 1301"
+            ],
+            "credits": "3"
+        },
+        "4698": {
+            "name": "Data Analytics Internship",
+            "prereq": [
+                "DSCI 3112"
+            ],
+            "credits": "6"
+        }
+    },
+    "FTA": {
+        "4001": {
+            "name": "Foundations of FinTech",
+            "prereq": [],
+            "credits": "3"
+        },
+        "4002": {
+            "name": "FinTech Technologies",
+            "prereq": [],
+            "credits": "3"
+        },
+        "4003": {
+            "name": "Commercial Banking and Fintech",
+            "prereq": [],
+            "credits": "3"
+        },
+        "4004": {
+            "name": "COBOL Programming",
+            "prereq": [],
+            "credits": "3"
+        },
+        "4005": {
+            "name": "Introduction to Financial Data Analytics",
+            "prereq": [],
+            "credits": "3"
+        },
+        "4100": {
+            "name": "Introduction to Information Security for FinTech",
+            "prereq": [],
+            "credits": "3"
+        },
+        "4698": {
+            "name": "Fintech Internship",
+            "prereq": [],
+            "credits": "3"
+        }
+    },
+    "PERS": {
+        "1506": {
+            "name": "Perspectives 1-hour",
+            "prereq": [],
+            "credits": "1"
+        },
+        "1507": {
+            "name": "Perspectives 2-hour",
+            "prereq": [],
+            "credits": "2"
         }
     },
     "TAGS": {

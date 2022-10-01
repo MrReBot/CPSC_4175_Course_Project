@@ -1,5 +1,4 @@
-# This File is from Sample Input1
-ENVS 1205
+# This File is from Sample Input2
 STAT 1401
 CPSC 1302
 CPSC 2105
@@ -12,6 +11,7 @@ CPSC 4000
 MATH 5125
 CPSC 3121
 CPSC 4115
+#CPSC 5115 This isn't a real class
 CPSC 4135
 CPSC 4148
 CPSC 4155
