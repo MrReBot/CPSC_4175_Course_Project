@@ -18,7 +18,7 @@ def get_course(unfiltered_course):
 def get_course_name(unfiltered_course):
     course = get_course(unfiltered_course)
     start = unfiltered_course.index(course)+len(course)
-    
+
     end = len(unfiltered_course)
     if unfiltered_course[start+1] == " ":
             start += 2
@@ -49,7 +49,7 @@ def process_prereq(data, course):
         split_data = data.split("or")
         output.append(get_course(split_data[0]))
         output.append(get_course(split_data[1]))
-    
+
     for item in output.copy():
         if item.startswith("CSCI") or item == "REMOVE-ME":
             output.remove(item)
@@ -71,7 +71,7 @@ def main():
     db = Database.Database("../../database.txt")
     #with open("data.txt","r",encoding="utf8") as f:
     #    text = f.read().splitlines()
-    
+
     text = get_input()
     template = get_course(text[0]).split(" ")[0]
     if input(f"Template is {template} type 'y' to continue: ") != "y":
@@ -89,7 +89,7 @@ def main():
                     prereq = process_prereq(sub_line, course)
             db.add_course(course, course_name, prereq, credits)
     db.save()
-    
+
 while True:
     main()
     if input("Enter y to add another course: ") != "y":

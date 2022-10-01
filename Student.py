@@ -44,7 +44,7 @@ class Student:
     def generate_course_list(self, credits=[-1]):
         """Generate a course schedule using the given ammount of credit hours. You can also do -1 credits for no limit"""
         for i in range(len(credits)):
-            if credits[i] == -1: credits = 1000
+            if credits[i] == -1: credits[i] = 1000
             #if credits[i] < self.db.credit_hours: return False, []
         not_completed = []
         schedule = []
@@ -88,7 +88,10 @@ class Student:
         classlist = []
         if os.path.exists(filename):
             with open(filename,"r") as f:
-                self.remaining_courses = f.read().splitlines()
+                for line in f.read().splitlines():
+                    if not line.startswith("#"):
+                        self.remaining_courses.append(line.strip())
+        self.remaining_courses = list(dict.fromkeys(self.remaining_courses)) # Dedupe the list
         self.generate_completed()
         credits = list(template.values())
         seasons = list(template.keys())
@@ -118,10 +121,10 @@ def main():
     schedule_template = {
     "Fall": 15,
     "Spring": 15,
-    "Summer": 3
+    "Summer": 6
     }
     st = Student(db)
-    schedule, classlist = st.generate_schedule("Test Files/Input1.txt", schedule_template)
+    schedule, classlist = st.generate_schedule("Test Files/Input2.txt", schedule_template)
 
 if __name__ == "__main__":
     main()

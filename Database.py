@@ -40,8 +40,12 @@ class Course:
             if type(temp_course[i]) == Course:
                 temp_course[i] = str(temp_course[i])
         for prereq in self.get_prereq():
-            if prereq not in temp_course:
-                return False
+            if self.db.course_exist(prereq):
+                if prereq not in temp_course:
+                    return False
+            else:
+                print(f"'{prereq}' cannot be found in the database. Assuming it has already been taken")
+                return True
         return True
 
     def get_value(self, last_course=None, req_list=[]):
@@ -225,7 +229,7 @@ def main():
     db = Database("database.txt")
     #db.save()
     #print(type(db.search("Computer")[0]))
-    while True:
+    while False:
         query = input("What do you want to search for? (or enter quit to quit): ")
         if query == "quit":
             break
