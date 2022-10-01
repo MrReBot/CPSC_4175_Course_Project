@@ -50,12 +50,15 @@ class Student:
         schedule = []
         completed = []
         last_year_courses = []
-        for course in self.remaining_courses:
-            course = self.db.get_course(course)
-            if "LAST-YEAR" in course.get_prereq():
-                last_year_courses.append(course)
+        for course_name in self.remaining_courses:
+            course = self.db.get_course(course_name)
+            if course != None:
+                if "LAST-YEAR" in course.get_prereq():
+                    last_year_courses.append(course)
+                else:
+                    not_completed.append(course)
             else:
-                not_completed.append(course)
+                print(f"Skipping {course_name} Since it doesn't exist")
         not_completed.sort(reverse=True)
         count = 0 # How many times the while loop has ran
         place = 0 # Which credit to use
@@ -108,7 +111,7 @@ class Student:
             output_schedule[key] = []
             for course in schedule.pop(0): # Removes the first semester from the list and formats it
                 output_schedule[key] += [str(course), course.credits]
-                classlist += [str(course), course.credits, ""]
+                classlist += [course.format(), course.credits, ""]
         return output_schedule, classlist
 
 
@@ -124,7 +127,7 @@ def main():
     "Summer": 6
     }
     st = Student(db)
-    schedule, classlist = st.generate_schedule("Test Files/Input2.txt", schedule_template)
+    schedule, classlist = st.generate_schedule("Test Files/Input3.txt", schedule_template)
 
 if __name__ == "__main__":
     main()

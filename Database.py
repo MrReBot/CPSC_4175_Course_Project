@@ -21,7 +21,7 @@ class Course:
         return temp
 
     def format(self):
-        return f"{self.section} {self.id}: {self.name} ({self.credits})"
+        return f"{self.section} {self.id} - {self.name}"
 
     def __str__(self): # String version of object
         return f"{self.section} {self.id}" # e.g
