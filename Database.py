@@ -45,6 +45,7 @@ class Course:
         return True
 
     def get_value(self, last_course=None, req_list=[]):
+        """Get a single courses's value in relation to the other courses"""
         i = 0
         if last_course == None:
             last_course = [self]

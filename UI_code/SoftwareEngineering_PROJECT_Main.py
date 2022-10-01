@@ -16,7 +16,8 @@ import Student
 # Import Eriq's Finalized EXCEL document so it can be displayed in UI
 #sys.path.insert(1, '..') # Makes it so we can access Eriq's Excel File
 excelOutputFilePath = ("../Sandbox/Path to graduate_Grantham.xlsx")
-
+sys.path.insert(1, '../Sandbox') # Makes it so we can access Database.py
+import excelwriter
 
 #   This allows this program to access Excel files
 import pandas as pd
@@ -61,8 +62,16 @@ class InputWindow(qtw.QWidget):
         inputFilePath = self.ui.InputFilePath_lineEdit.text()
         outputWindow.show()
         inputWindow.hide()
-        st =  Student.Student(db, filename = inputFilePath)
+        ew=excelwriter.ExcelWriter()
+        st =  Student.Student(db)
+        schedule_template = {
+        "Fall": 15,
+        "Spring": 15,
+        "Summer": 3
+        }
+        schedule, classlist = st.generate_schedule("Test Files/Input1.txt", schedule_template)
 
+        errorcheck = ew.savetofile(schedule,classlist,"Test.xlsx",excelOutputFilePath ) # Not sure about what the output filename should be
         print(inputFilePath)
         print(inputStudentID)
 
