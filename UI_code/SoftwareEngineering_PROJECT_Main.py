@@ -15,10 +15,10 @@ import Student
 
 # Import Eriq's Finalized EXCEL document so it can be displayed in UI
 #sys.path.insert(1, '..') # Makes it so we can access Eriq's Excel File
-excelOutputFilePath = ("../Sandbox/Path to graduate_Grantham.xlsx")
+excelOutputFilePath = "" # Path to the output file
+excelTemplateFilePath = "../Sandbox/Path To Graduation Template.xlsx" # Template file to base outputs on
 sys.path.insert(1, '../Sandbox') # Makes it so we can access Database.py
 import excelwriter
-
 #   This allows this program to access Excel files
 import pandas as pd
 import openpyxl
@@ -57,6 +57,9 @@ class InputWindow(qtw.QWidget):
     #---This defines the functionality of the 'Continue_btn'
     def storeInputForm(self):
 
+        global excelOutputFilePath
+        # Making these global so this function can modify them
+
         # Stores Input for Student ID and Excel Output File Path
         inputStudentID = self.ui.InputStudentID_lineEdit.text()
         inputFilePath = self.ui.InputFilePath_lineEdit.text()
@@ -69,9 +72,9 @@ class InputWindow(qtw.QWidget):
         "Spring": 15,
         "Summer": 3
         }
-        schedule, classlist = st.generate_schedule("Test Files/Input1.txt", schedule_template)
-
-        errorcheck = ew.savetofile(schedule,classlist,"Test.xlsx",excelOutputFilePath ) # Not sure about what the output filename should be
+        schedule, classlist = st.generate_schedule(inputFilePath, schedule_template)
+        excelOutputFilePath = f"Path to Graduation {inputStudentID}.xlsx"
+        errorcheck = ew.savetofile(schedule,classlist,excelOutputFilePath,excelTemplateFilePath ) # Not sure about what the output filename should be
         print(inputFilePath)
         print(inputStudentID)
 

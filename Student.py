@@ -3,7 +3,6 @@ import os
 import datetime
 
 class Student:
-    name = ""
     remaining_courses = []
     completed_courses = []
     db = None
@@ -83,6 +82,8 @@ class Student:
 
     def generate_schedule(self, filename, template):
         """Takes a file and a template and returns a schedule and classlist"""
+        self.remaining_courses = []
+        self.completed_courses = []
         output_schedule = {}
         classlist = []
         if os.path.exists(filename):
@@ -105,7 +106,6 @@ class Student:
             for course in schedule.pop(0): # Removes the first semester from the list and formats it
                 output_schedule[key] += [str(course), course.credits]
                 classlist += [str(course), course.credits, ""]
-
         return output_schedule, classlist
 
 
