@@ -3,31 +3,36 @@
         "1105": {
             "name": "Introduction to Computing Principles and Technology",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "1301": {
             "name": "Computer Science I",
             "prereq": [],
-            "credits": "4"
+            "credits": "4",
+            "value": 75
         },
         "1302": {
             "name": "Computer Science II",
             "prereq": [
                 "CPSC 1301"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 35
         },
         "1555": {
             "name": "Selected Topics in Computer Science",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "2105": {
             "name": "Computer Organization",
             "prereq": [
                 "CPSC 1301"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 3
         },
         "2108": {
             "name": "Data Structures",
@@ -35,61 +40,70 @@
                 "CPSC 1302",
                 "MATH 2125"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 19
         },
         "2115": {
             "name": "Information Technology Fundamentals",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "2125": {
             "name": "Internet Programming",
             "prereq": [
                 "CPSC 1301"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 3
         },
         "2555": {
             "name": "Selected Topics in Computer Science",
             "prereq": [
                 "CPSC 1302"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3105": {
             "name": "Digital Multimedia Development",
             "prereq": [
                 "CPSC 2125"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3111": {
             "name": "COBOL Programming",
             "prereq": [
                 "CPSC 1302"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 1
         },
         "3116": {
             "name": "z/OS and JCL",
             "prereq": [
                 "CPSC 1302"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3118": {
             "name": "Graphical User Interface Development",
             "prereq": [
                 "CPSC 1302"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 4
         },
         "3121": {
             "name": "Assembly Language Programming I",
             "prereq": [
                 "CPSC 2105"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 1
         },
         "3125": {
             "name": "Operating Systems",
@@ -97,59 +111,68 @@
                 "CPSC 2105",
                 "CPSC 2108"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3131": {
             "name": "Database Systems I",
             "prereq": [
                 "CPSC 1302"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 3
         },
         "3137": {
             "name": "Natural Language Processing and Text Mining",
             "prereq": [
                 "CPSC 1301"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3156": {
             "name": "Transaction Processing",
             "prereq": [
                 "CPSC 3111"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3165": {
             "name": "Professionalism in Computing",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3175": {
             "name": "Object-Oriented Design",
             "prereq": [
                 "CPSC 2108"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 8
         },
         "3415": {
             "name": "Information Technology",
             "prereq": [],
-            "credits": "1"
+            "credits": "1",
+            "value": 0
         },
         "3555": {
             "name": "Selected Topics in Computer Science",
             "prereq": [
                 "CPSC 2108"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4000": {
             "name": "Baccalaureate Survey",
             "prereq": [
                 "LAST-YEAR"
             ],
-            "credits": "0"
+            "credits": "0",
+            "value": 0
         },
         "4111": {
             "name": "Game Programming I",
@@ -157,14 +180,16 @@
                 "CPSC 3118",
                 "CPSC 3175"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 3
         },
         "4112": {
             "name": "Game Programming II",
             "prereq": [
                 "CPSC 4111"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 1
         },
         "4113": {
             "name": "Game Jam",
@@ -172,7 +197,8 @@
                 "CPSC 4111",
                 "CPSC 4112"
             ],
-            "credits": "1"
+            "credits": "1",
+            "value": 0
         },
         "4115": {
             "name": "Algorithms",
@@ -180,21 +206,24 @@
                 "CPSC 2108",
                 "MATH 5125"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 1
         },
         "4121": {
             "name": "Robotics Programming I",
             "prereq": [
                 "CPSC 1302"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 1
         },
         "4122": {
             "name": "Robotics Programming II",
             "prereq": [
                 "CPSC 4121"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4125": {
             "name": "Server-Side Web Development",
@@ -202,14 +231,16 @@
                 "CPSC 2125",
                 "CPSC 3131"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 1
         },
         "4126": {
             "name": "Web Development Projects",
             "prereq": [
                 "CPSC 4125"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4127": {
             "name": "Computer and Network Security",
@@ -217,317 +248,372 @@
                 "CYBR 2160",
                 "CYBR 2159"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 1
         },
         "4130": {
             "name": "Mobile Computing",
             "prereq": [
                 "CPSC 3175"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4135": {
             "name": "Programming Languages",
             "prereq": [
                 "CPSC 3175"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4138": {
             "name": "Advanced Database Systems",
             "prereq": [
                 "CPSC 3131"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4145": {
             "name": "Computer Graphics",
             "prereq": [
                 "CPSC 2108"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4148": {
             "name": "Theory of Computation",
             "prereq": [
                 "CPSC 4115"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4155": {
             "name": "Computer Architecture",
             "prereq": [
                 "CPSC 3121"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4157": {
             "name": "Computer Networks",
             "prereq": [
                 "CPSC 2108"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4175": {
             "name": "Software Engineering",
             "prereq": [
                 "CPSC 3175"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 1
         },
         "4176": {
             "name": "Senior Software Engineering Project",
             "prereq": [
                 "CPSC 4175"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4185": {
             "name": "Artificial Intelligence and Machine Learning",
             "prereq": [
                 "CPSC 2108"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4205": {
             "name": "IT Senior Capstone",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4505": {
             "name": "Undergraduate Research",
             "prereq": [
                 "CPSC 2108"
             ],
-            "credits": "6"
+            "credits": "6",
+            "value": 0
         },
         "4555": {
             "name": "Selected Topics in Computer Science",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4698": {
             "name": "Internship",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4899": {
             "name": "Independent Study",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6000": {
             "name": "Graduate Exit Examination",
             "prereq": [],
-            "credits": "0"
+            "credits": "0",
+            "value": 0
         },
         "6103": {
             "name": "Computer Science Principles for Teachers",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6105": {
             "name": "Fundamental Principles of Computer Science",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6106": {
             "name": "Fundamentals of Computer Programming and Data Structures",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 1
         },
         "6107": {
             "name": "Survey of Modeling and Simulation",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6109": {
             "name": "Algorithms Analysis and Design",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6114": {
             "name": "Fundamentals of Machine Learning",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 2
         },
         "6118": {
             "name": "Human-Computer Interface Development",
             "prereq": [
                 "CPSC 6114"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6119": {
             "name": "Object-Oriented Development",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 1
         },
         "6124": {
             "name": "Advanced Machine Learning",
             "prereq": [
                 "CPSC 6114"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6125": {
             "name": "Operating Systems Design and Implementation",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6126": {
             "name": "Introduction to Cybersecurity",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 4
         },
         "6127": {
             "name": "Contemporary Issues in Database Management Systems",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6128": {
             "name": "Network Security",
             "prereq": [
                 "CPSC 6126"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6129": {
             "name": "Computer Language Design and Interpretation",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6136": {
             "name": "Human Aspects of Cybersecurity",
             "prereq": [
                 "CPSC 6126"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6138": {
             "name": "Mobile Systems and Applications",
             "prereq": [
                 "CPSC 6119"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6147": {
             "name": "Data Visualization and Presentation",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6155": {
             "name": "Advanced Computer Architecture",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6157": {
             "name": "Network and Cloud Management",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6159": {
             "name": "Digital Forensics",
             "prereq": [
                 "CPSC 6126"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6167": {
             "name": "Cybersecurity Risk Management",
             "prereq": [
                 "CPSC 6126"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6175": {
             "name": "Web Engineering and Technologies",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6177": {
             "name": "Software Design and Development",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6178": {
             "name": "Software Testing and Quality Assurance",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6179": {
             "name": "Software Project Planning and Management",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6180": {
             "name": "Software Estimation and Measurement",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6185": {
             "name": "Intelligent Systems",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6190": {
             "name": "Applied Cryptography",
             "prereq": [
                 "CPSC 6106"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6555": {
             "name": "Selected Topics in Computer Science",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6698": {
             "name": "Graduate Internship in Computer Science",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6899": {
             "name": "Independent Study",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6985": {
             "name": "Research and Thesis",
             "prereq": [],
-            "credits": "4"
+            "credits": "4",
+            "value": 0
         },
         "6986": {
             "name": "Thesis Defense",
             "prereq": [],
-            "credits": "0"
+            "credits": "0",
+            "value": 0
         }
     },
     "HIST": {
         "1000": {
             "name": "History Convocation",
             "prereq": [],
-            "credits": "0"
+            "credits": "0",
+            "value": 0
         },
         "1111": {
             "name": "World History to 1500",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 19
         },
         "1112": {
             "name": "World History since 1500",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 19
         },
         "2111": {
             "name": "U. S. History to 1865",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "2112": {
             "name": "U. S. History since 1865",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3101": {
             "name": "Introduction to Native American History",
@@ -535,7 +621,8 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3105": {
             "name": "History of Georgia",
@@ -543,7 +630,8 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3120": {
             "name": "Introduction to Public History",
@@ -551,12 +639,14 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3125": {
             "name": "Historical Methods",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 5
         },
         "3126": {
             "name": "History in Film",
@@ -564,7 +654,8 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3130": {
             "name": "Introduction to Modern Ireland",
@@ -572,7 +663,8 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3135": {
             "name": "Introduction to Latin American History",
@@ -580,7 +672,8 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3137": {
             "name": "Latin America and the United States",
@@ -588,7 +681,8 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3138": {
             "name": "Introduction to Asian History",
@@ -596,12 +690,14 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3139": {
             "name": "Introduction to African American History",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3146": {
             "name": "Introduction to US Military History",
@@ -609,7 +705,8 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3149": {
             "name": "Women and Gender in American History",
@@ -617,7 +714,8 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3156": {
             "name": "Early Modern Europe, 1500-1789",
@@ -625,7 +723,8 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3157": {
             "name": "Modern Europe, 1789-Present",
@@ -633,12 +732,14 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3158": {
             "name": "Military History of Early Modern Europe",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3165": {
             "name": "The Making of the Islamic World, ca. 600-1100",
@@ -646,7 +747,8 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3176": {
             "name": "Fall of Rome",
@@ -654,7 +756,8 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3555": {
             "name": "History Topics",
@@ -662,7 +765,8 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3556": {
             "name": "Topics in World History",
@@ -670,7 +774,8 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3557": {
             "name": "Topics in European History",
@@ -678,7 +783,8 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3559": {
             "name": "Topics in United States History",
@@ -686,102 +792,120 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4698": {
             "name": "Internship",
             "prereq": [],
-            "credits": "6"
+            "credits": "6",
+            "value": 0
         },
         "4795": {
             "name": "Senior Research Seminar",
             "prereq": [
                 "HIST 3125"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4899": {
             "name": "Independent Study",
             "prereq": [
                 "HIST 3125"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "5111": {
             "name": "New South",
             "prereq": [
                 "HIST 6101"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "5112": {
             "name": "American Slavery and Emancipation, 1619-1877",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "5115": {
             "name": "The Civil War",
             "prereq": [
                 "HIST 3125"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "5116": {
             "name": "World War II",
             "prereq": [
                 "HIST 3125"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "5118": {
             "name": "The Age of Revolutions",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "5135": {
             "name": "Race and Ethnicity in Latin Am",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "5136": {
             "name": "Slavery in Latin America",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "5165": {
             "name": "Jacksonian America, 1820 to 1850",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "5176": {
             "name": "US in the Twentieth Century",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "5195": {
             "name": "Historiography",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "5525": {
             "name": "Topics Med/Early Mod Europe",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "5535": {
             "name": "Selected Topics in Latin American History",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "5546": {
             "name": "Selected Topics in African History",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "5555": {
             "name": "Selected Topics in World History",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "5557": {
             "name": "Selected Topics in British History",
@@ -789,250 +913,292 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "5559": {
             "name": "Selected Topics in United States History",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "5566": {
             "name": "Selected Topics in Race and U.S. History",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "5575": {
             "name": "Selected Topics in European History",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "5576": {
             "name": "History Topics",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "5577": {
             "name": "Selected Topics in Film and History",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "5707": {
             "name": "Commodities and Consumption in World History",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "5708": {
             "name": "The United States in the 1960s",
             "prereq": [
                 "HIST 3125"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "5715": {
             "name": "The Crusades",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "5716": {
             "name": "The Caliphate: The Islamic State, Medieval to Modern",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6015": {
             "name": "Graduate History Convocation",
             "prereq": [],
-            "credits": "0"
+            "credits": "0",
+            "value": 0
         },
         "6025": {
             "name": "Thesis Defense",
             "prereq": [
                 "HIST 6999"
             ],
-            "credits": "0"
+            "credits": "0",
+            "value": 0
         },
         "6555": {
             "name": "Selected Topics in United States History",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6556": {
             "name": "Selected Topics in European History",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6557": {
             "name": "Selected Topics in Latin American History",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6558": {
             "name": "Selected Topics in African History",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6559": {
             "name": "Selected Topics in World History",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6745": {
             "name": "Graduate Colloquium",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "6999": {
             "name": "Thesis Research and Writing",
             "prereq": [],
-            "credits": "6"
+            "credits": "6",
+            "value": 1
         },
         "7899": {
             "name": "Independent Study",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         }
     },
     "ENVS": {
         "1205": {
             "name": "Sustainability and the Environment",
             "prereq": [],
-            "credits": "4"
+            "credits": "4",
+            "value": 0
         }
     },
     "ENGL": {
         "1101": {
             "name": "English Composition I",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 20
         },
         "1102": {
             "name": "English Composition II",
             "prereq": [
                 "ENGL 1101"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 11
         },
         "2111": {
             "name": "World Literature I",
             "prereq": [
                 "ENGL 1102"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "2112": {
             "name": "World Literature II",
             "prereq": [
                 "ENGL 1102"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "5195": {
             "name": "Technical and Scientific Writing",
             "prereq": [
                 "ENGL 1102"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         }
     },
     "COMM": {
         "1110": {
             "name": "Public Speaking",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         }
     },
     "LEAD": {
         "1705": {
             "name": "Introduction to Servant Leadership",
             "prereq": [],
-            "credits": "2"
+            "credits": "2",
+            "value": 0
         }
     },
     "ITDS": {
         "1145": {
             "name": "Comparative Arts",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "1155": {
             "name": "The Western Intellectual Tradition",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "2125": {
             "name": "Historical Perspectives on the Philosophy of Science and Mathematics",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "1779": {
             "name": "Scholarship Across the Disciplines",
             "prereq": [],
-            "credits": "2"
+            "credits": "2",
+            "value": 0
         }
     },
     "PHIL": {
         "2010": {
             "name": "Introduction to Philosophy",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         }
     },
     "ARTH": {
         "2125": {
             "name": "Introduction to the History of Art I- Prehistoric through Gothic",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "2126": {
             "name": "Introduction to the History of Art II- Renaissance through Modern",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         }
     },
     "THEA": {
         "1100": {
             "name": "Theatre Appreciation",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         }
     },
     "MUSC": {
         "1100": {
             "name": "Music Appreciation",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         }
     },
     "BIOL": {
         "1215": {
             "name": "Principles of Biology",
             "prereq": [],
-            "credits": "4"
+            "credits": "4",
+            "value": 0
         },
         "1125": {
             "name": "Contemporary Issues in Biology Non-Lab",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         }
     },
     "POLS": {
         "1101": {
             "name": "American Government",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         }
     },
     "KINS": {
         "1106": {
             "name": "Lifetime Wellness",
             "prereq": [],
-            "credits": "2"
+            "credits": "2",
+            "value": 0
         }
     },
     "PHED": {
         "1205": {
             "name": "Concepts of Fitness",
             "prereq": [],
-            "credits": "2"
+            "credits": "2",
+            "value": 0
         }
     },
     "MATH": {
@@ -1041,49 +1207,56 @@
             "prereq": [
                 "MATH 2125"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 2
         },
         "2125": {
             "name": "Introduction to Discrete Mathematics",
             "prereq": [
                 "MATH 1113"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 23
         },
         "1113": {
             "name": "Pre-Calculus",
             "prereq": [
                 "MATH 1111"
             ],
-            "credits": "4"
+            "credits": "4",
+            "value": 25
         },
         "1111": {
             "name": "College Algebra",
             "prereq": [
                 ""
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 26
         },
         "1131": {
             "name": "Calculus with Analytic Geometry I",
             "prereq": [
                 "MATH 1113"
             ],
-            "credits": "4"
+            "credits": "4",
+            "value": 0
         }
     },
     "STAT": {
         "1401": {
             "name": "Elementary Statistics",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 23
         },
         "0996": {
             "name": "Support for Elementary Statistics",
             "prereq": [
                 "STAT 1401"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3127": {
             "name": "Statistical Computing",
@@ -1091,49 +1264,56 @@
                 "STAT 1401",
                 "BUSA 3115"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 21
         },
         "5117": {
             "name": "Applied Multivariate Analysis",
             "prereq": [
                 "STAT 3127"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "5118": {
             "name": "Applied Nonparametric Methods",
             "prereq": [
                 "STAT 3127"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "5119": {
             "name": "Applied Categorical Data Analysis",
             "prereq": [
                 "STAT 3127"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "5176": {
             "name": "Statistical Design and Analysis of Experiments",
             "prereq": [
                 "STAT 3127"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "5177": {
             "name": "Applied Regression Analysis",
             "prereq": [
                 "STAT 3127"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "5555": {
             "name": "Selected Topics in Statistics",
             "prereq": [
                 "STAT 3127"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         }
     },
     "CYBR": {
@@ -1142,49 +1322,56 @@
             "prereq": [
                 "CPSC 1301"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 14
         },
         "2160": {
             "name": "Intro to Information Security",
             "prereq": [
                 "CYBR 2159"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 8
         },
         "3106": {
             "name": "Cybersecurity Risk Management",
             "prereq": [
                 "CYBR 2160"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3108": {
             "name": "Defensive Programming",
             "prereq": [
                 "CPSC 2108"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3115": {
             "name": "Programming for Data Science",
             "prereq": [
                 "CPSC 1301"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3119": {
             "name": "Fundamentals of Digital Forensics",
             "prereq": [
                 "CYBR 2160"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3126": {
             "name": "Client / Server Security",
             "prereq": [
                 "CYBR 3135"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3128": {
             "name": "Cybersecurity Management",
@@ -1192,14 +1379,16 @@
                 "MISM 3115",
                 "MISM 3109"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3135": {
             "name": "Infrastructure Security",
             "prereq": [
                 "CYBR 2159"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 1
         },
         "3136": {
             "name": "Wireless, IoT and Mobile Security",
@@ -1207,71 +1396,82 @@
                 "CYBR 2159",
                 "CYBR 2160"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4125": {
             "name": "Global Perspectives on Cybersecurity",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4128": {
             "name": "Penetration Testing and Countermeasures",
             "prereq": [
                 "CYBR 2160"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4137": {
             "name": "Security Policies & Implementation Security",
             "prereq": [
                 "CYBR 2160"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4138": {
             "name": "Security Auditing for Compliance",
             "prereq": [
                 "CYBR 2160"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4139": {
             "name": "Security Issues in Legal Context",
             "prereq": [
                 "CYBR 2160"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4145": {
             "name": "Security for Web Applications & Social Networking",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4146": {
             "name": "Network, Virtualization & Cloud Communication Infrastructure",
             "prereq": [
                 "CYBR 2160"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4160": {
             "name": "Applied Cryptography",
             "prereq": [
                 "CPSC 2108"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4166": {
             "name": "Intrusion Detection and Prevention",
             "prereq": [
                 "CPSC 4127"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4416": {
             "name": "Cybersecurity Practicum",
             "prereq": [],
-            "credits": "1"
+            "credits": "1",
+            "value": 0
         }
     },
     "MISM": {
@@ -1280,7 +1480,8 @@
             "prereq": [
                 "CPSC 1301"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 8
         },
         "3115": {
             "name": "Principles of Information Systems Management",
@@ -1292,7 +1493,8 @@
                 "BUSA 2115",
                 "ECON 2105"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 7
         },
         "3116": {
             "name": "Business Analytics II",
@@ -1300,7 +1502,8 @@
                 "BUSA 3115",
                 "MISM 3109"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3118": {
             "name": "Global e-Business",
@@ -1308,7 +1511,8 @@
                 "MISM 3109",
                 "MISM 3115"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3126": {
             "name": "Business Process Management Design",
@@ -1316,14 +1520,16 @@
                 "MISM 3115",
                 "MISM 3109"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3136": {
             "name": "Database Design",
             "prereq": [
                 "CPSC 1301"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 1
         },
         "3145": {
             "name": "Business Data Networks and Security",
@@ -1331,7 +1537,8 @@
                 "MISM 3115",
                 "MISM 3109"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3146": {
             "name": "Data Visualization",
@@ -1339,7 +1546,8 @@
                 "MISM 3115",
                 "MISM 3109"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4126": {
             "name": "Business Process Management Development",
@@ -1347,14 +1555,16 @@
                 "MISM 3109",
                 "MISM 3115"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4128": {
             "name": "Business Intelligence",
             "prereq": [
                 "MISM 3136"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4165": {
             "name": "Project Management",
@@ -1362,61 +1572,70 @@
                 "MISM 3115",
                 "MISM 3109"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4168": {
             "name": "Systems Analysis & Design",
             "prereq": [
                 "CPSC 1301K"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4899": {
             "name": "Independent Study",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         }
     },
     "DATA": {
         "1501": {
             "name": "Introduction to Data Science",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3111": {
             "name": "Data Mining I",
             "prereq": [
                 "STAT 3127"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3112": {
             "name": "Data Mining II",
             "prereq": [
                 "DSCI 3111"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3116": {
             "name": "Ethics and Data Analytics",
             "prereq": [
                 "DSCI 3112"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3215": {
             "name": "Data Analytics Project",
             "prereq": [
                 "DSCI 3112"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4698": {
             "name": "Data Analytics Internship",
             "prereq": [
                 "DSCI 3112"
             ],
-            "credits": "6"
+            "credits": "6",
+            "value": 0
         }
     },
     "DSCI": {
@@ -1425,28 +1644,32 @@
             "prereq": [
                 "STAT 3127"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 10
         },
         "3112": {
             "name": "Data Mining II",
             "prereq": [
                 "DSCI 3111"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 8
         },
         "3116": {
             "name": "Ethics and Data Analytics",
             "prereq": [
                 "DSCI 3112"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "3215": {
             "name": "Data Analytics Project",
             "prereq": [
                 "DSCI 3112"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4111": {
             "name": "Predictive Models and Analytics I",
@@ -1454,14 +1677,16 @@
                 "DSCI 3112",
                 "DSCI 4127"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 1
         },
         "4112": {
             "name": "Predictive Models and Analytics II",
             "prereq": [
                 "DSCI 4111"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4119": {
             "name": "Machine Learning",
@@ -1469,7 +1694,8 @@
                 "MATH 2115",
                 "MATH 3175"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4127": {
             "name": "Advanced Statistical Programming",
@@ -1477,63 +1703,74 @@
                 "STAT 3127",
                 "CPSC 1301"
             ],
-            "credits": "3"
+            "credits": "3",
+            "value": 2
         },
         "4698": {
             "name": "Data Analytics Internship",
             "prereq": [
                 "DSCI 3112"
             ],
-            "credits": "6"
+            "credits": "6",
+            "value": 0
         }
     },
     "FTA": {
         "4001": {
             "name": "Foundations of FinTech",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4002": {
             "name": "FinTech Technologies",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4003": {
             "name": "Commercial Banking and Fintech",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4004": {
             "name": "COBOL Programming",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4005": {
             "name": "Introduction to Financial Data Analytics",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4100": {
             "name": "Introduction to Information Security for FinTech",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         },
         "4698": {
             "name": "Fintech Internship",
             "prereq": [],
-            "credits": "3"
+            "credits": "3",
+            "value": 0
         }
     },
     "PERS": {
         "1506": {
             "name": "Perspectives 1-hour",
             "prereq": [],
-            "credits": "1"
+            "credits": "1",
+            "value": 0
         },
         "1507": {
             "name": "Perspectives 2-hour",
             "prereq": [],
-            "credits": "2"
+            "credits": "2",
+            "value": 0
         }
     },
     "TAGS": {

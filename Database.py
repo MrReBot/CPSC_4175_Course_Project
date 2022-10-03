@@ -7,6 +7,7 @@ class Course:
     section = ""
     id = ""
     credits = -1
+    value = -1
     db = {}
     def __init__(self,  template = None, db=None):
         if template != None:
@@ -51,16 +52,20 @@ class Course:
     def get_value(self, last_course=None, req_list=[]):
         """Get a single courses's value in relation to the other courses"""
         i = 0
-        if last_course == None:
-            last_course = [self]
-        #print(str(self), last_course)
-        for c in self.db.all_courses(sort=False):
-            if str(self) in c.get_prereq() and str(c) not in last_course:
-                i+= 1
-                last_course.append(str(c))
-                i += c.get_value(last_course[-2:], req_list)
-                if c in req_list:
-                    i += 1
+        if self.value == -1:
+            if last_course == None:
+                last_course = [self]
+            #print(str(self), last_course)
+            for c in self.db.all_courses(sort=False):
+                if str(self) in c.get_prereq() and str(c) not in last_course:
+                    i+= 1
+                    last_course.append(str(c))
+                    i += c.get_value(last_course[-2:], req_list)
+                    if c in req_list:
+                        i += 1
+            self.value = i
+        else:
+            return self.value
         return i
 
 
@@ -165,6 +170,8 @@ class Database:
         "id":id
         }
         self.data[section][id] = Course(template=template, db=self)
+        for course in self.all_courses():
+            course.value = -1
 
     def add_prereq(self, course, prereq):
         """" Add a list of prerequisites to a course"""
