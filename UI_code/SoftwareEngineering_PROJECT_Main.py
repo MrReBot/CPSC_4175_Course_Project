@@ -1,5 +1,5 @@
 from PyQt5 import QtWidgets as qtw
-from PyQt5.QtWidgets import QTableWidgetItem
+from PyQt5.QtWidgets import QTableWidgetItem, QMessageBox
 from PyQt5 import QtCore as qtc
 
 #This imports the UI Layout code from the Input and Output Python files
@@ -23,6 +23,8 @@ import excelwriter
 import pandas as pd
 import openpyxl
 from openpyxl.formula.translate import Translator
+#   This allows a File Path check
+import os.path as fp
 
 
 #---------------------------------------------------------------------------------
@@ -63,20 +65,27 @@ class InputWindow(qtw.QWidget):
         # Stores Input for Student ID and Excel Output File Path
         inputStudentID = self.ui.InputStudentID_lineEdit.text()
         inputFilePath = self.ui.InputFilePath_lineEdit.text()
-        outputWindow.show()
-        inputWindow.hide()
-        ew=excelwriter.ExcelWriter()
-        st =  Student.Student(db)
-        schedule_template = {
-        "Fall": 15,
-        "Spring": 15,
-        "Summer": 3
-        }
-        schedule, classlist = st.generate_schedule(inputFilePath, schedule_template)
-        excelOutputFilePath = f"Path to Graduation {inputStudentID}.xlsx"
-        errorcheck = ew.savetofile(schedule,classlist,excelOutputFilePath,excelTemplateFilePath ) # Not sure about what the output filename should be
-        print(inputFilePath)
-        print(inputStudentID)
+
+        # Checks if File Path exists and runs program if TRUE
+        filePath_exists = fp.exists(inputFilePath)
+        if filePath_exists:
+            outputWindow.show()
+            inputWindow.hide()
+            ew=excelwriter.ExcelWriter()
+            st =  Student.Student(db)
+            schedule_template = {
+            "Fall": 15,
+            "Spring": 15,
+            "Summer": 3
+            }
+            schedule, classlist = st.generate_schedule(inputFilePath, schedule_template)
+            excelOutputFilePath = f"Path to Graduation {inputStudentID}.xlsx"
+            errorcheck = ew.savetofile(schedule,classlist,excelOutputFilePath,excelTemplateFilePath ) # Not sure about what the output filename should be
+            print(inputFilePath)
+            print(inputStudentID)
+        else:
+            # Displays Error Message
+            qtw.QMessageBox.warning(self, "Error", "File Not Found")
 
     #   This defines the functionality for the "Clear_btn"
     def clearInputForm(self):
