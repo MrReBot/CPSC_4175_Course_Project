@@ -30,18 +30,18 @@ class Student:
             i = int(courses.credits)
         return i
 
-    def generate_semester(self, course_list, completed, credits=15):
+    def generate_semester(self, course_list, completed, season, credits=15):
         not_completed = course_list.copy() # Make a copy of the course list
         semester = []
         for course in course_list:
-            if course.check_eligible(self.completed_courses+completed):
+            if course.check_eligible(self.completed_courses+completed, season):
                 if self.check_credits(semester+[course]) <= credits: # If current course does not put us over the credit limit
                     semester.append(course)
         for course in semester:
             not_completed.remove(course)
         return semester, not_completed
 
-    def generate_course_list(self, credits=[-1]):
+    def generate_course_list(self, seasons, credits=[-1]):
         """Generate a course schedule using the given ammount of credit hours. You can also do -1 credits for no limit"""
         for i in range(len(credits)):
             if credits[i] == -1: credits[i] = 1000
@@ -62,12 +62,14 @@ class Student:
         not_completed.sort(reverse=True)
         count = 0 # How many times the while loop has ran
         place = 0 # Which credit to use
+        season = seasons[0]
+        seasons.append(seasons.pop(0))
         while len(not_completed) > 0:
             try:
                 credits[place]
             except IndexError:
                 place = 0
-            semester, not_completed = self.generate_semester(not_completed, completed, credits[place])
+            semester, not_completed = self.generate_semester(not_completed, completed, season, credits[place])
             completed += semester
             schedule.append(semester)
             self.completed_courses += semester
@@ -77,7 +79,8 @@ class Student:
                 print("Infinite Loop?")
                 return False, []
             place += 1
-
+            season = seasons[0]
+            seasons.append(seasons.pop(0))
         for course in last_year_courses: # Add anything that must be taken in last semester
             schedule[-1].append(course)
         #for course in course_list: # Begin Inital adding to course_schedule
@@ -98,7 +101,7 @@ class Student:
         self.generate_completed()
         credits = list(template.values())
         seasons = list(template.keys())
-        state, schedule = self.generate_course_list(credits=credits) # This does the actual schedule generation the rest is just formatting
+        state, schedule = self.generate_course_list(seasons, credits=credits) # This does the actual schedule generation the rest is just formatting
         year = datetime.date.today().year # Get the starting year as a int
 
         while len(schedule) > 0:
@@ -127,7 +130,7 @@ def main():
     "Summer": 6
     }
     st = Student(db)
-    schedule, classlist = st.generate_schedule("Test Files/Input3.txt", schedule_template)
+    schedule, classlist = st.generate_schedule("Test Files/CyberBS.txt", schedule_template)
 
 if __name__ == "__main__":
     main()

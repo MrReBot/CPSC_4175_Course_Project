@@ -8,18 +8,33 @@ class Course:
     id = ""
     credits = -1
     value = -1
+    seasons = [] # Seasons that class is avaliabe in can be Fa, Sp, or Su
+    valid_seasons = {"Fall":"Fa","Spring":"Sp","Summer":"Su"}
     db = {}
     def __init__(self,  template = None, db=None):
+        self.seasons = []
         if template != None:
             self.__dict__.update(template)
         if db != None:
             self.db = db
 
+    def add_season(self, season):
+        if season in ["Fa", "Sp", "Su"] and season not in self.get_seasons():
+            self.seasons.append(season)
+            
+    def get_seasons(self):
+        return self.seasons
+        
     def toJSON(self):
         """Create a dictionary representation of the course. Mainly for exporting to disk"""
-        ignore = ["section","id","db"] # Attributes to not be included in dump
-        temp = {k:v for k,v in self.__dict__.items() if k  not in ignore}
-        return temp
+        template = {
+            "name":self.name,
+            "prereq":self.prereq,
+            "credits":self.credits,
+            "value": self.get_value(),
+            "seasons":self.get_seasons()
+            }
+        return template
 
     def format(self):
         return f"{self.section} {self.id} - {self.name}"
@@ -34,9 +49,14 @@ class Course:
         """Get the list of Prerequisites"""
         return self.prereq
 
-    def check_eligible(self, course_list=[]):
+    def check_eligible(self, course_list=[], season=None):
         """Check if a given course_list makes you eligible"""
         temp_course = course_list.copy()
+        if season != None and self.seasons != []:
+            if season not in self.valid_seasons.values():
+                season = self.valid_seasons[season]
+            if season not in self.seasons:
+                return False
         for i in range(len(temp_course)): # Convert course objects into their course name
             if type(temp_course[i]) == Course:
                 temp_course[i] = str(temp_course[i])
@@ -55,6 +75,8 @@ class Course:
         if self.value == -1:
             if last_course == None:
                 last_course = [self]
+            if self.seasons != []:
+                i += (3 - len(self.seasons)) * 10
             #print(str(self), last_course)
             for c in self.db.all_courses(sort=False):
                 if str(self) in c.get_prereq() and str(c) not in last_course:
@@ -130,6 +152,7 @@ class Database:
             else:
                 f.write(json.dumps(self.data, default=lambda x: x.toJSON()))
         del self.data["TAGS"]
+        
     # This is just for testing def remove this later
     def reset(self):
         self.data = {}
@@ -235,7 +258,9 @@ class Database:
 def main():
     db = Database("database.txt")
     #db.save()
-    #print(type(db.search("Computer")[0]))
+    #db.save()
+    for course in db.all_courses(sort=True, reverse=True):
+        print(course, course.get_value())
     while False:
         query = input("What do you want to search for? (or enter quit to quit): ")
         if query == "quit":
