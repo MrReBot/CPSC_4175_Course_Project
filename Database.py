@@ -8,6 +8,7 @@ class Course:
     id = ""
     credits = -1
     value = -1
+    concurrent = []
     seasons = [] # Seasons that class is avaliabe in can be Fa, Sp, or Su
     valid_seasons = {"Fall":"Fa","Spring":"Sp","Summer":"Su"}
     db = {}
@@ -21,7 +22,15 @@ class Course:
     def add_season(self, season):
         if season in ["Fa", "Sp", "Su"] and season not in self.get_seasons():
             self.seasons.append(season)
-            
+
+    def add_concurrent(self, course):
+        if self.db.course_exist(course) and course not in self.concurrent:
+            self.concurrent.append(course)
+
+    def get_concurrent(self):
+        """Return a list of all classes that may be taken concurrently"""
+        return self.concurrent
+
     def get_seasons(self):
         return self.seasons
         
@@ -32,7 +41,8 @@ class Course:
             "prereq":self.prereq,
             "credits":self.credits,
             "value": self.get_value(),
-            "seasons":self.get_seasons()
+            "seasons":self.get_seasons(),
+            "concurrent": self.concurrent
             }
         return template
 
@@ -49,10 +59,11 @@ class Course:
         """Get the list of Prerequisites"""
         return self.prereq
 
-    def check_eligible(self, course_list=[], season=None):
+
+    def check_eligible(self, course_list, semester, season):
         """Check if a given course_list makes you eligible"""
         temp_course = course_list.copy()
-        if season != None and self.seasons != []:
+        if season != None and self.seasons != []: # If a season was provided check if the course is in season
             if season not in self.valid_seasons.values():
                 season = self.valid_seasons[season]
             if season not in self.seasons:
@@ -60,6 +71,10 @@ class Course:
         for i in range(len(temp_course)): # Convert course objects into their course name
             if type(temp_course[i]) == Course:
                 temp_course[i] = str(temp_course[i])
+        for course in self.get_concurrent():
+            if self.db.get_course(course) in semester:
+                #print(f"Taking {self} concurrently with {course}")
+                return True
         for prereq in self.get_prereq():
             if self.db.course_exist(prereq):
                 if prereq not in temp_course:

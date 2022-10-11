@@ -34,7 +34,7 @@ class Student:
         not_completed = course_list.copy() # Make a copy of the course list
         semester = []
         for course in course_list:
-            if course.check_eligible(self.completed_courses+completed, season):
+            if course.check_eligible(self.completed_courses+completed, semester, season):
                 if self.check_credits(semester+[course]) <= credits: # If current course does not put us over the credit limit
                     semester.append(course)
         for course in semester:
@@ -101,7 +101,7 @@ class Student:
         self.generate_completed()
         credits = list(template.values())
         seasons = list(template.keys())
-        state, schedule = self.generate_course_list(seasons, credits=credits) # This does the actual schedule generation the rest is just formatting
+        state, schedule = self.generate_course_list(seasons.copy(), credits=credits) # This does the actual schedule generation the rest is just formatting
         year = datetime.date.today().year # Get the starting year as a int
 
         while len(schedule) > 0:
