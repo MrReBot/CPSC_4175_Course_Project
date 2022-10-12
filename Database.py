@@ -19,7 +19,10 @@ class Course:
             self.__dict__.update(template)
         if db != None:
             self.db = db
-
+    
+    def reset_value(self):
+        self.value = -1
+    
     def add_season(self, season):
         if season in ["Fa", "Sp", "Su"] and season not in self.get_seasons():
             self.seasons.append(season)
@@ -92,9 +95,11 @@ class Course:
             if last_course == None:
                 last_course = [self]
             if self.seasons != []:
-                i += (3 - len(self.seasons)) * 10
+                i += (3 - len(self.seasons)) * 2
             #print(str(self), last_course)
             for c in self.db.all_courses(sort=False):
+                if type(c) == list: # This skips over any tags that may be in the database
+                    continue
                 if str(self) in c.get_prereq() and str(c) not in last_course:
                     i+= 1
                     last_course.append(str(c))
@@ -137,7 +142,12 @@ class Database:
                             self.credit_hours = int(self.data[section][course].credits)
         else:
             self.data = {}
-
+        
+    def reset_values(self):
+        for course in self.all_courses():
+            course.reset_value()
+        
+        
     def all_tags(self):
         """Get every tag"""
         return self.tags
@@ -173,7 +183,7 @@ class Database:
         else:
             with open(self.filename,"w") as f:
                 f.write(data)
-        del self.data["TAGS"]
+        self.data.pop("TAGS",None)
         
     # This is just for testing def remove this later
     def reset(self):
@@ -279,25 +289,8 @@ class Database:
 
 def main():
     db = Database("database.txt")
-    #db.save()
-    #db.save()
-    for course in db.all_courses(sort=True, reverse=True):
-        print(course, course.get_value())
-    while False:
-        query = input("What do you want to search for? (or enter quit to quit): ")
-        if query == "quit":
-            break
-        results = db.search(query, sort=True)
-
-        print(f"Found {len(results)} result(s)")
-        print("\n".join([str(i) for i in results]),"\n")
-    #print(db.check_eligible("CPSC 1302", [])) # I Can't take CPSC 1302
-    #print(db.check_eligible("CPSC 1302", ["CPSC 1301"])) # I Can
-    #db.add_course("CPSC 1301","Computer Science 1", credits=4)
-    #db.add_course("CPSC 1302","Computer Science 2", ["CPSC 1301"], credits=3)
-    #db.add_course("CPSC 1303","Computer Science 3", ["CPSC 1302"], credits=3)
-    #print(type(db.get_course("CPSC 1301")))
-    #db.save()
+    db.reset_values()
+    db.save()
 
 if __name__ == "__main__":
     main()
