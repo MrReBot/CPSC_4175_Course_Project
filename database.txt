@@ -288,7 +288,8 @@
         "4112": {
             "name": "Game Programming II",
             "prereq": [
-                "CPSC 4111"
+                "CPSC 4111",
+                "CPSC 4113"
             ],
             "credits": "3",
             "value": 9,
@@ -1705,6 +1706,14 @@
                 "Sp"
             ],
             "concurrent": []
+        },
+        "1100": {
+            "name": "Art Appreciation",
+            "prereq": [],
+            "credits": "3",
+            "value": 0,
+            "seasons": [],
+            "concurrent": []
         }
     },
     "THEA": {
@@ -1823,7 +1832,7 @@
                 "MATH 1111"
             ],
             "credits": "4",
-            "value": 109,
+            "value": 159,
             "seasons": [
                 "Fa",
                 "Sp"
@@ -1836,7 +1845,7 @@
                 ""
             ],
             "credits": "3",
-            "value": 112,
+            "value": 162,
             "seasons": [
                 "Fa",
                 "Sp"
@@ -1849,7 +1858,7 @@
                 "MATH 1113"
             ],
             "credits": "4",
-            "value": 2,
+            "value": 39,
             "seasons": [
                 "Fa",
                 "Sp"
@@ -2616,6 +2625,200 @@
                 "Fa",
                 "Sp"
             ],
+            "concurrent": []
+        }
+    },
+    "PHYS": {
+        "1111": {
+            "name": "Introductory Physics I",
+            "prereq": [
+                "MATH 1113",
+                "PHYS 1311"
+            ],
+            "credits": "3",
+            "value": 7,
+            "seasons": [],
+            "concurrent": [
+                "PHYS 1311"
+            ]
+        },
+        "1112": {
+            "name": "Introductory Physics II",
+            "prereq": [
+                "PHYS 1111",
+                "PHYS 1311"
+            ],
+            "credits": "3",
+            "value": 0,
+            "seasons": [],
+            "concurrent": []
+        },
+        "1125": {
+            "name": "Physics of Color and Sound",
+            "prereq": [],
+            "credits": "3",
+            "value": 0,
+            "seasons": [],
+            "concurrent": []
+        },
+        "1211": {
+            "name": "Principles of Physics I",
+            "prereq": [
+                "MATH 1501"
+            ],
+            "credits": "4",
+            "value": 0,
+            "seasons": [],
+            "concurrent": []
+        },
+        "1212": {
+            "name": "Principles of Physics II and Lab",
+            "prereq": [],
+            "credits": "4",
+            "value": 0,
+            "seasons": [],
+            "concurrent": []
+        },
+        "1311": {
+            "name": "Introductory Physics I Lab",
+            "prereq": [
+                "MATH 1113",
+                "PHYS 1111"
+            ],
+            "credits": "1",
+            "value": 4,
+            "seasons": [],
+            "concurrent": [
+            ]
+        },
+        "1312": {
+            "name": "Introductory Physics II Lab",
+            "prereq": [
+                "PHYS 1111",
+                "PHYS 1311"
+            ],
+            "credits": "1",
+            "value": 0,
+            "seasons": [],
+            "concurrent": []
+        },
+        "1325": {
+            "name": "Physics of Color and Sound Lab",
+            "prereq": [],
+            "credits": "1",
+            "value": 0,
+            "seasons": [],
+            "concurrent": []
+        },
+        "2211": {
+            "name": "Principles of Physics I",
+            "prereq": [
+                "MATH 1131",
+                "PHYS 2311"
+            ],
+            "credits": "3",
+            "value": 22,
+            "seasons": [],
+            "concurrent": [
+            ]
+        },
+        "2212": {
+            "name": "Principles of Physics II",
+            "prereq": [
+                "PHYS 2211",
+                "PHYS 2311"
+            ],
+            "credits": "3",
+            "value": 3,
+            "seasons": [],
+            "concurrent": []
+        },
+        "2311": {
+            "name": "Principles of Physics I Lab",
+            "prereq": [
+                "MATH 1131",
+                "PHYS 2211"
+            ],
+            "credits": "1",
+            "value": 13,
+            "seasons": [],
+            "concurrent": [
+            ]
+        },
+        "2312": {
+            "name": "Principles of Physics II Lab",
+            "prereq": [
+                "PHYS 2211",
+                "PHYS 2311"
+            ],
+            "credits": "1",
+            "value": 3,
+            "seasons": [],
+            "concurrent": []
+        },
+        "3100": {
+            "name": "Waves and Optics",
+            "prereq": [
+                "PHYS 2212",
+                "PHYS 2312"
+            ],
+            "credits": "3",
+            "value": 0,
+            "seasons": [],
+            "concurrent": []
+        },
+        "3200": {
+            "name": "Twentieth Century Physics",
+            "prereq": [
+                "PHYS 2212",
+                "PHYS 2312"
+            ],
+            "credits": "4",
+            "value": 0,
+            "seasons": [],
+            "concurrent": []
+        },
+        "4100": {
+            "name": "Survey of Quantum Mechanics",
+            "prereq": [
+                "PHYS 2212",
+                "PHYS 2312"
+            ],
+            "credits": "3",
+            "value": 0,
+            "seasons": [],
+            "concurrent": []
+        },
+        "4899": {
+            "name": "Undergraduate Research in Physics",
+            "prereq": [],
+            "credits": "3",
+            "value": 0,
+            "seasons": [],
+            "concurrent": []
+        },
+        "5555": {
+            "name": "Selected Introductory Topics in Teaching Physics",
+            "prereq": [],
+            "credits": "3",
+            "value": 0,
+            "seasons": [],
+            "concurrent": []
+        },
+        "7110": {
+            "name": "Conceptual Physics I",
+            "prereq": [],
+            "credits": "3",
+            "value": 0,
+            "seasons": [],
+            "concurrent": []
+        },
+        "7120": {
+            "name": "Conceptual Physics II",
+            "prereq": [],
+            "credits": "3",
+            "value": 0,
+            "seasons": [],
             "concurrent": []
         }
     },
