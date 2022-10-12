@@ -14,13 +14,14 @@ def main():
     for file in os.listdir(path):
         print(f"{path}/{file}: ",end="")
         schedule_template = {
-        "Fall": 15,
-        "Spring": 15,
+        "Fall": 16,
+        "Spring": 16,
         "Summer": 3
         }
         try:
             schedule, classlist = st.generate_schedule(f"{path}/{file}", schedule_template)
             print(f"SUCCESS, {len(schedule)} Semester(s), {len(classlist)} Classe(s)")
+            print(f"{schedule}\n")
         except:
             print("FAILED")
     print("Tests cases Finsihed")
