@@ -40,6 +40,9 @@ def main():
     #print(db.all_sections())
     #with open("fall2022.txt","r") as f:
     #    fall = json.loads(f.read())
+    #data = get_subject("202208","CPSC")
+    #with open("tempdata.txt","w") as f:
+    #    f.write(json.dumps(data))
     for subject in db.all_sections():
         season = get_subject(seasons["Summer"], subject)
         for course in season:
