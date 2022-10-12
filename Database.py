@@ -1,5 +1,6 @@
 import json
 import os
+import traceback
 
 class Course:
     name = ""
@@ -161,11 +162,17 @@ class Database:
     def save(self):
         """Save Any Changes to disk"""
         self.data["TAGS"] = self.tags
-        with open(self.filename,"w") as f:
+        try:
             if self.pretty_print:
-                f.write(json.dumps(self.data, indent=4, default=lambda x: x.toJSON()))
+                data = json.dumps(self.data, indent=4, default=lambda x: x.toJSON())
             else:
-                f.write(json.dumps(self.data, default=lambda x: x.toJSON()))
+                data = json.dumps(self.data, default=lambda x: x.toJSON())
+        except AttributeError:
+            print("An error occured while saving")
+            traceback.print_exc()
+        else:
+            with open(self.filename,"w") as f:
+                f.write(data)
         del self.data["TAGS"]
         
     # This is just for testing def remove this later
