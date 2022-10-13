@@ -25,6 +25,7 @@ class Course:
     def add_season(self, season):
         if season in ["Fa", "Sp", "Su"] and season not in self.get_seasons():
             self.seasons.append(season)
+            self.reset_value()
 
     def get_seasons(self):
         return self.seasons
@@ -41,12 +42,15 @@ class Course:
         return template
 
     def format(self):
+        """Fancy formatted version of course e.g 'CPSC 1301 - Computer Science I'"""
         return f"{self.section} {self.id} - {self.name}"
 
-    def __str__(self): # String version of object
-        return f"{self.section} {self.id}" # e.g
+    def __str__(self):
+        """Printed version of a course e.g 'CPSC 1301'"""
+        return f"{self.section} {self.id}"
 
-    def __lt__(self, other): # Makes the object sortable
+    def __lt__(self, other):
+        """This allows a list of course objects to be sorted and represents the less than operator"""
         return self.get_value() < other.get_value()
 
     def get_prereq(self):
@@ -132,6 +136,7 @@ class Database:
             self.data = {}
         
     def reset_values(self):
+        """Clear all stored values so they can be recalculated. Mainly used when the value system is modified"""
         for course in self.all_courses():
             course.reset_value()
         
@@ -277,8 +282,6 @@ class Database:
 
 def main():
     db = Database("database.txt")
-    db.reset_values()
-    db.save()
 
 if __name__ == "__main__":
     main()
