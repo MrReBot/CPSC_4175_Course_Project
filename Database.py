@@ -18,7 +18,7 @@ class Course:
             self.__dict__.update(template)
         if db != None:
             self.db = db
-    
+
     def reset_value(self):
         self.value = -1
     
@@ -242,7 +242,7 @@ class Database:
             #print(f"ERROR: {course} doesn't exist")
             return False
         except ValueError:
-            print(f"ERROR: '{course}' isn't a valid course name")
+            #print(f"ERROR: '{course}' isn't a valid course name")
             return False
 
     def section_exist(self, section):
@@ -274,7 +274,7 @@ class Database:
             if self.course_exist(query):
                 found.append(self.get_course(query))
             if query.lower() in course.name.lower():
-                if int(course.credits) >= min_credits:
+                if course.credits >= min_credits:
                     found.append(course.format())
         if sort:
             found.sort()

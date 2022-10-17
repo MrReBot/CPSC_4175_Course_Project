@@ -1,19 +1,27 @@
 import Database
 import os
 import datetime
+import random
 
 class Student:
     remaining_courses = []
     completed_courses = []
     db = None
+    tags = []
     def __init__(self, db):
         self.db = db
 
     def generate_completed(self):
         self.completed_courses = self.db.all_courses()
+        self.tags=[]
         for course in self.remaining_courses:
             if self.db.course_exist(course):
-                self.completed_courses.remove(self.db.get_course(course))
+                try:
+                    self.completed_courses.remove(self.db.get_course(course))
+                except ValueError:
+                    pass
+            elif self.db.tag_exist(course):
+                self.tags.append(self.db.get_tag(course))
             else:
                 print(f"{course} doesn't exist")
 
@@ -41,6 +49,21 @@ class Student:
             not_completed.remove(course)
         return semester, not_completed
 
+    def get_tag_courses(self):
+        """Auto Select courses to satisfy tag"""
+        temp = []
+        count = 0
+        for tag in self.tags:
+            course = random.choice(tag)
+            while course in temp:
+                course = random.choice(tag)
+                if count > len(self.tags) * 100:
+                    print(f"Error occured getting course for {tag}")
+                    break
+            if course not in temp:
+                temp.append(course)
+        return temp
+
     def generate_course_list(self, seasons, credits=[-1]):
         """Generate a course schedule using the given ammount of credit hours. You can also do -1 credits for no limit"""
         for i in range(len(credits)):
@@ -50,8 +73,12 @@ class Student:
         schedule = []
         completed = []
         last_year_courses = []
+        self.remaining_courses += self.get_tag_courses()
         for course_name in self.remaining_courses:
-            course = self.db.get_course(course_name)
+            if self.db.course_exist(course_name):
+                course = self.db.get_course(course_name)
+            elif self.db.tag_exist(course_name):
+                continue
             if course != None:
                 if "LAST-YEAR" in course.get_prereq():
                     last_year_courses.append(course)
@@ -97,7 +124,7 @@ class Student:
                 for line in f.read().splitlines():
                     if not line.startswith("#"):
                         self.remaining_courses.append(line.strip())
-        self.remaining_courses = list(dict.fromkeys(self.remaining_courses)) # Dedupe the list
+        #self.remaining_courses = list(dict.fromkeys(self.remaining_courses)) # Dedupe the list
         self.generate_completed()
         credits = list(template.values())
         seasons = list(template.keys())
@@ -130,7 +157,6 @@ def main():
     "Summer": 6
     }
     st = Student(db)
-    schedule, classlist = st.generate_schedule("Test Files/CyberBS.txt", schedule_template)
-
+    schedule, classlist = st.generate_schedule("Test Files/CompGamesProgramming.txt", schedule_template)
 if __name__ == "__main__":
     main()

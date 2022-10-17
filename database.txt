@@ -2564,6 +2564,14 @@
             "THEA 1100",
             "ARTH 2125",
             "ARTH 2126"
+        ],
+        "WELL-NESS": [
+            "KINS 1106",
+            "PHED 1205"
+        ],
+        "HIST-ORYY": [
+            "HIST 2111",
+            "HIST 2112"
         ]
     }
 }
