@@ -3,7 +3,7 @@
         "1105": {
             "name": "Introduction to Computing Principles and Technology",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -13,7 +13,7 @@
         "1301": {
             "name": "Computer Science I",
             "prereq": [],
-            "credits": "4",
+            "credits": 4,
             "value": 295,
             "seasons": [
                 "Fa",
@@ -25,7 +25,7 @@
             "prereq": [
                 "CPSC 1301"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 151,
             "seasons": [
                 "Fa",
@@ -35,7 +35,7 @@
         "1555": {
             "name": "Selected Topics in Computer Science",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -44,7 +44,7 @@
             "prereq": [
                 "CPSC 1301"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 15,
             "seasons": [
                 "Fa",
@@ -57,7 +57,7 @@
                 "CPSC 1302",
                 "MATH 2125"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 87,
             "seasons": [
                 "Fa",
@@ -67,7 +67,7 @@
         "2115": {
             "name": "Information Technology Fundamentals",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Fa"
@@ -78,7 +78,7 @@
             "prereq": [
                 "CPSC 1301"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 19,
             "seasons": [
                 "Fa"
@@ -89,7 +89,7 @@
             "prereq": [
                 "CPSC 1302"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -98,7 +98,7 @@
             "prereq": [
                 "CPSC 2125"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -109,7 +109,7 @@
             "prereq": [
                 "CPSC 1302"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 9,
             "seasons": [
                 "Fa"
@@ -120,7 +120,7 @@
             "prereq": [
                 "CPSC 1302"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Fa"
@@ -131,7 +131,7 @@
             "prereq": [
                 "CPSC 1302"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 24,
             "seasons": [
                 "Sp"
@@ -142,7 +142,7 @@
             "prereq": [
                 "CPSC 2105"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 9,
             "seasons": [
                 "Sp"
@@ -154,7 +154,7 @@
                 "CPSC 2105",
                 "CPSC 2108"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -166,7 +166,7 @@
             "prereq": [
                 "CPSC 1302"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 13,
             "seasons": [
                 "Fa",
@@ -178,7 +178,7 @@
             "prereq": [
                 "CPSC 1301"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -187,7 +187,7 @@
             "prereq": [
                 "CPSC 3111"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -196,7 +196,7 @@
         "3165": {
             "name": "Professionalism in Computing",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -208,7 +208,7 @@
             "prereq": [
                 "CPSC 2108"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 38,
             "seasons": [
                 "Fa",
@@ -218,7 +218,7 @@
         "3415": {
             "name": "Information Technology",
             "prereq": [],
-            "credits": "1",
+            "credits": 1,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -230,7 +230,7 @@
             "prereq": [
                 "CPSC 2108"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -242,7 +242,7 @@
             "prereq": [
                 "LAST-YEAR"
             ],
-            "credits": "0",
+            "credits": 0,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -255,7 +255,7 @@
                 "CPSC 3118",
                 "CPSC 3175"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 19,
             "seasons": [
                 "Fa"
@@ -267,7 +267,7 @@
                 "CPSC 4111",
                 "CPSC 4113"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 9,
             "seasons": [
                 "Sp"
@@ -279,7 +279,7 @@
                 "CPSC 4111",
                 "CPSC 4112"
             ],
-            "credits": "1",
+            "credits": 1,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -291,7 +291,7 @@
                 "CPSC 2108",
                 "MATH 5125"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 9,
             "seasons": [
                 "Fa"
@@ -302,7 +302,7 @@
             "prereq": [
                 "CPSC 1302"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 5,
             "seasons": [
                 "Fa"
@@ -313,7 +313,7 @@
             "prereq": [
                 "CPSC 4121"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -323,7 +323,7 @@
                 "CPSC 2125",
                 "CPSC 3131"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 9,
             "seasons": [
                 "Fa"
@@ -334,7 +334,7 @@
             "prereq": [
                 "CPSC 4125"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -346,7 +346,7 @@
                 "CYBR 2160",
                 "CYBR 2159"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 9,
             "seasons": [
                 "Fa"
@@ -357,7 +357,7 @@
             "prereq": [
                 "CPSC 3175"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -366,7 +366,7 @@
             "prereq": [
                 "CPSC 3175"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -377,7 +377,7 @@
             "prereq": [
                 "CPSC 3131"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -386,7 +386,7 @@
             "prereq": [
                 "CPSC 2108"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Fa"
@@ -397,7 +397,7 @@
             "prereq": [
                 "CPSC 4115"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -408,7 +408,7 @@
             "prereq": [
                 "CPSC 3121"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Fa"
@@ -419,7 +419,7 @@
             "prereq": [
                 "CPSC 2108"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Fa"
@@ -430,7 +430,7 @@
             "prereq": [
                 "CPSC 3175"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 9,
             "seasons": [
                 "Fa"
@@ -441,7 +441,7 @@
             "prereq": [
                 "CPSC 4175"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -452,7 +452,7 @@
             "prereq": [
                 "CPSC 2108"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -461,7 +461,7 @@
         "4205": {
             "name": "IT Senior Capstone",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -473,7 +473,7 @@
             "prereq": [
                 "CPSC 2108"
             ],
-            "credits": "6",
+            "credits": 6,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -482,7 +482,7 @@
         "4555": {
             "name": "Selected Topics in Computer Science",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Fa"
@@ -491,7 +491,7 @@
         "4698": {
             "name": "Internship",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Fa"
@@ -500,7 +500,7 @@
         "4899": {
             "name": "Independent Study",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Fa"
@@ -509,7 +509,7 @@
         "6000": {
             "name": "Graduate Exit Examination",
             "prereq": [],
-            "credits": "0",
+            "credits": 0,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -519,7 +519,7 @@
         "6103": {
             "name": "Computer Science Principles for Teachers",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -528,7 +528,7 @@
         "6105": {
             "name": "Fundamental Principles of Computer Science",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -538,7 +538,7 @@
         "6106": {
             "name": "Fundamentals of Computer Programming and Data Structures",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 3,
             "seasons": [
                 "Fa",
@@ -548,7 +548,7 @@
         "6107": {
             "name": "Survey of Modeling and Simulation",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -558,7 +558,7 @@
         "6109": {
             "name": "Algorithms Analysis and Design",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -568,7 +568,7 @@
         "6114": {
             "name": "Fundamentals of Machine Learning",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 10,
             "seasons": [
                 "Fa"
@@ -579,14 +579,14 @@
             "prereq": [
                 "CPSC 6114"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "6119": {
             "name": "Object-Oriented Development",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 5,
             "seasons": [
                 "Sp"
@@ -597,7 +597,7 @@
             "prereq": [
                 "CPSC 6114"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -606,14 +606,14 @@
         "6125": {
             "name": "Operating Systems Design and Implementation",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "6126": {
             "name": "Introduction to Cybersecurity",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 18,
             "seasons": [
                 "Fa",
@@ -623,7 +623,7 @@
         "6127": {
             "name": "Contemporary Issues in Database Management Systems",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -634,7 +634,7 @@
             "prereq": [
                 "CPSC 6126"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -643,7 +643,7 @@
         "6129": {
             "name": "Computer Language Design and Interpretation",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Fa"
@@ -654,7 +654,7 @@
             "prereq": [
                 "CPSC 6126"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Fa"
@@ -665,14 +665,14 @@
             "prereq": [
                 "CPSC 6119"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "6147": {
             "name": "Data Visualization and Presentation",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -681,14 +681,14 @@
         "6155": {
             "name": "Advanced Computer Architecture",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "6157": {
             "name": "Network and Cloud Management",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Fa"
@@ -699,7 +699,7 @@
             "prereq": [
                 "CPSC 6126"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -708,7 +708,7 @@
             "prereq": [
                 "CPSC 6126"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -717,7 +717,7 @@
         "6175": {
             "name": "Web Engineering and Technologies",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -726,21 +726,21 @@
         "6177": {
             "name": "Software Design and Development",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "6178": {
             "name": "Software Testing and Quality Assurance",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "6179": {
             "name": "Software Project Planning and Management",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Fa"
@@ -749,14 +749,14 @@
         "6180": {
             "name": "Software Estimation and Measurement",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "6185": {
             "name": "Intelligent Systems",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -767,14 +767,14 @@
             "prereq": [
                 "CPSC 6106"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "6555": {
             "name": "Selected Topics in Computer Science",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Fa"
@@ -783,7 +783,7 @@
         "6698": {
             "name": "Graduate Internship in Computer Science",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Fa"
@@ -792,7 +792,7 @@
         "6899": {
             "name": "Independent Study",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -802,7 +802,7 @@
         "6985": {
             "name": "Research and Thesis",
             "prereq": [],
-            "credits": "4",
+            "credits": 4,
             "value": 4,
             "seasons": [
                 "Fa"
@@ -811,7 +811,7 @@
         "6986": {
             "name": "Thesis Defense",
             "prereq": [],
-            "credits": "0",
+            "credits": 0,
             "value": 4,
             "seasons": [
                 "Fa"
@@ -822,7 +822,7 @@
         "1000": {
             "name": "History Convocation",
             "prereq": [],
-            "credits": "0",
+            "credits": 0,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -832,7 +832,7 @@
         "1111": {
             "name": "World History to 1500",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 39,
             "seasons": [
                 "Fa",
@@ -842,7 +842,7 @@
         "1112": {
             "name": "World History since 1500",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 39,
             "seasons": [
                 "Fa",
@@ -852,7 +852,7 @@
         "2111": {
             "name": "U. S. History to 1865",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -862,7 +862,7 @@
         "2112": {
             "name": "U. S. History since 1865",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -875,7 +875,7 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -885,7 +885,7 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Fa"
@@ -897,14 +897,14 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "3125": {
             "name": "Historical Methods",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 13,
             "seasons": [
                 "Fa",
@@ -917,7 +917,7 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -927,7 +927,7 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -937,7 +937,7 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -949,7 +949,7 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -959,14 +959,14 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "3139": {
             "name": "Introduction to African American History",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -978,7 +978,7 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Fa"
@@ -990,7 +990,7 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -1000,7 +1000,7 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -1010,14 +1010,14 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "3158": {
             "name": "Military History of Early Modern Europe",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -1027,7 +1027,7 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -1037,7 +1037,7 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -1047,7 +1047,7 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -1060,7 +1060,7 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -1070,7 +1070,7 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -1080,7 +1080,7 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -1089,7 +1089,7 @@
         "4698": {
             "name": "Internship",
             "prereq": [],
-            "credits": "6",
+            "credits": 6,
             "value": 0,
             "seasons": []
         },
@@ -1098,7 +1098,7 @@
             "prereq": [
                 "HIST 3125"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -1110,7 +1110,7 @@
             "prereq": [
                 "HIST 3125"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -1119,7 +1119,7 @@
             "prereq": [
                 "HIST 6101"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Fa"
@@ -1128,7 +1128,7 @@
         "5112": {
             "name": "American Slavery and Emancipation, 1619-1877",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -1137,7 +1137,7 @@
             "prereq": [
                 "HIST 3125"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -1148,21 +1148,21 @@
             "prereq": [
                 "HIST 3125"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "5118": {
             "name": "The Age of Revolutions",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "5135": {
             "name": "Race and Ethnicity in Latin Am",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Fa"
@@ -1171,56 +1171,56 @@
         "5136": {
             "name": "Slavery in Latin America",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "5165": {
             "name": "Jacksonian America, 1820 to 1850",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "5176": {
             "name": "US in the Twentieth Century",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "5195": {
             "name": "Historiography",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "5525": {
             "name": "Topics Med/Early Mod Europe",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "5535": {
             "name": "Selected Topics in Latin American History",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "5546": {
             "name": "Selected Topics in African History",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "5555": {
             "name": "Selected Topics in World History",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -1232,14 +1232,14 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "5559": {
             "name": "Selected Topics in United States History",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -1248,21 +1248,21 @@
         "5566": {
             "name": "Selected Topics in Race and U.S. History",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "5575": {
             "name": "Selected Topics in European History",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "5576": {
             "name": "History Topics",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Fa"
@@ -1271,14 +1271,14 @@
         "5577": {
             "name": "Selected Topics in Film and History",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "5707": {
             "name": "Commodities and Consumption in World History",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -1287,28 +1287,28 @@
             "prereq": [
                 "HIST 3125"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "5715": {
             "name": "The Crusades",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "5716": {
             "name": "The Caliphate: The Islamic State, Medieval to Modern",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "6015": {
             "name": "Graduate History Convocation",
             "prereq": [],
-            "credits": "0",
+            "credits": 0,
             "value": 0,
             "seasons": []
         },
@@ -1317,63 +1317,63 @@
             "prereq": [
                 "HIST 6999"
             ],
-            "credits": "0",
+            "credits": 0,
             "value": 0,
             "seasons": []
         },
         "6555": {
             "name": "Selected Topics in United States History",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "6556": {
             "name": "Selected Topics in European History",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "6557": {
             "name": "Selected Topics in Latin American History",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "6558": {
             "name": "Selected Topics in African History",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "6559": {
             "name": "Selected Topics in World History",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "6745": {
             "name": "Graduate Colloquium",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "6999": {
             "name": "Thesis Research and Writing",
             "prereq": [],
-            "credits": "6",
+            "credits": 6,
             "value": 1,
             "seasons": []
         },
         "7899": {
             "name": "Independent Study",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         }
@@ -1382,7 +1382,7 @@
         "1205": {
             "name": "Sustainability and the Environment",
             "prereq": [],
-            "credits": "4",
+            "credits": 4,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -1394,7 +1394,7 @@
         "1101": {
             "name": "English Composition I",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 54,
             "seasons": [
                 "Fa",
@@ -1406,7 +1406,7 @@
             "prereq": [
                 "ENGL 1101"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 31,
             "seasons": [
                 "Fa",
@@ -1418,7 +1418,7 @@
             "prereq": [
                 "ENGL 1102"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -1430,7 +1430,7 @@
             "prereq": [
                 "ENGL 1102"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -1442,7 +1442,7 @@
             "prereq": [
                 "ENGL 1102"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -1454,7 +1454,7 @@
         "1110": {
             "name": "Public Speaking",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -1466,7 +1466,7 @@
         "1705": {
             "name": "Introduction to Servant Leadership",
             "prereq": [],
-            "credits": "2",
+            "credits": 2,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -1478,7 +1478,7 @@
         "1145": {
             "name": "Comparative Arts",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -1488,7 +1488,7 @@
         "1155": {
             "name": "The Western Intellectual Tradition",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -1498,14 +1498,14 @@
         "2125": {
             "name": "Historical Perspectives on the Philosophy of Science and Mathematics",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "1779": {
             "name": "Scholarship Across the Disciplines",
             "prereq": [],
-            "credits": "2",
+            "credits": 2,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -1517,7 +1517,7 @@
         "2010": {
             "name": "Introduction to Philosophy",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -1529,7 +1529,7 @@
         "2125": {
             "name": "Introduction to the History of Art I- Prehistoric through Gothic",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Fa"
@@ -1538,7 +1538,7 @@
         "2126": {
             "name": "Introduction to the History of Art II- Renaissance through Modern",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -1547,7 +1547,7 @@
         "1100": {
             "name": "Art Appreciation",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         }
@@ -1556,7 +1556,7 @@
         "1100": {
             "name": "Theatre Appreciation",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -1568,7 +1568,7 @@
         "1100": {
             "name": "Music Appreciation",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -1580,7 +1580,7 @@
         "1215": {
             "name": "Principles of Biology",
             "prereq": [],
-            "credits": "4",
+            "credits": 4,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -1590,7 +1590,7 @@
         "1125": {
             "name": "Contemporary Issues in Biology Non-Lab",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         }
@@ -1599,7 +1599,7 @@
         "1101": {
             "name": "American Government",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -1611,7 +1611,7 @@
         "1106": {
             "name": "Lifetime Wellness",
             "prereq": [],
-            "credits": "2",
+            "credits": 2,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -1623,7 +1623,7 @@
         "1205": {
             "name": "Concepts of Fitness",
             "prereq": [],
-            "credits": "2",
+            "credits": 2,
             "value": 0,
             "seasons": []
         }
@@ -1634,7 +1634,7 @@
             "prereq": [
                 "MATH 2125"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 12,
             "seasons": [
                 "Fa",
@@ -1646,7 +1646,7 @@
             "prereq": [
                 "MATH 1113"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 103,
             "seasons": [
                 "Fa",
@@ -1658,7 +1658,7 @@
             "prereq": [
                 "MATH 1111"
             ],
-            "credits": "4",
+            "credits": 4,
             "value": 159,
             "seasons": [
                 "Fa",
@@ -1670,7 +1670,7 @@
             "prereq": [
                 ""
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 162,
             "seasons": [
                 "Fa",
@@ -1682,7 +1682,7 @@
             "prereq": [
                 "MATH 1113"
             ],
-            "credits": "4",
+            "credits": 4,
             "value": 39,
             "seasons": [
                 "Fa",
@@ -1694,7 +1694,7 @@
         "1401": {
             "name": "Elementary Statistics",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 49,
             "seasons": [
                 "Fa",
@@ -1706,7 +1706,7 @@
             "prereq": [
                 "STAT 1401"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -1719,7 +1719,7 @@
                 "STAT 1401",
                 "BUSA 3115"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 43,
             "seasons": [
                 "Fa",
@@ -1731,7 +1731,7 @@
             "prereq": [
                 "STAT 3127"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -1740,7 +1740,7 @@
             "prereq": [
                 "STAT 3127"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -1749,7 +1749,7 @@
             "prereq": [
                 "STAT 3127"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -1758,7 +1758,7 @@
             "prereq": [
                 "STAT 3127"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -1767,7 +1767,7 @@
             "prereq": [
                 "STAT 3127"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -1776,7 +1776,7 @@
             "prereq": [
                 "STAT 3127"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         }
@@ -1787,7 +1787,7 @@
             "prereq": [
                 "CPSC 1301"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 70,
             "seasons": [
                 "Fa",
@@ -1799,7 +1799,7 @@
             "prereq": [
                 "CYBR 2159"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 42,
             "seasons": [
                 "Fa",
@@ -1811,7 +1811,7 @@
             "prereq": [
                 "CYBR 2160"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -1822,7 +1822,7 @@
             "prereq": [
                 "CPSC 2108"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Fa"
@@ -1833,7 +1833,7 @@
             "prereq": [
                 "CPSC 1301"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -1842,7 +1842,7 @@
             "prereq": [
                 "CYBR 2160"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -1853,7 +1853,7 @@
             "prereq": [
                 "CYBR 3135"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Fa"
@@ -1865,7 +1865,7 @@
                 "MISM 3115",
                 "MISM 3109"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -1876,7 +1876,7 @@
             "prereq": [
                 "CYBR 2159"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 9,
             "seasons": [
                 "Sp"
@@ -1888,7 +1888,7 @@
                 "CYBR 2159",
                 "CYBR 2160"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Fa"
@@ -1897,7 +1897,7 @@
         "4125": {
             "name": "Global Perspectives on Cybersecurity",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -1906,7 +1906,7 @@
             "prereq": [
                 "CYBR 2160"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -1917,7 +1917,7 @@
             "prereq": [
                 "CYBR 2160"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Fa"
@@ -1928,7 +1928,7 @@
             "prereq": [
                 "CYBR 2160"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -1939,7 +1939,7 @@
             "prereq": [
                 "CYBR 2160"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Fa"
@@ -1948,7 +1948,7 @@
         "4145": {
             "name": "Security for Web Applications & Social Networking",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -1959,7 +1959,7 @@
             "prereq": [
                 "CYBR 2160"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Fa"
@@ -1970,7 +1970,7 @@
             "prereq": [
                 "CPSC 2108"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -1981,7 +1981,7 @@
             "prereq": [
                 "CPSC 4127"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -1990,7 +1990,7 @@
         "4416": {
             "name": "Cybersecurity Practicum",
             "prereq": [],
-            "credits": "1",
+            "credits": 1,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -2003,7 +2003,7 @@
             "prereq": [
                 "CPSC 1301"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 24,
             "seasons": [
                 "Fa",
@@ -2020,7 +2020,7 @@
                 "BUSA 2115",
                 "ECON 2105"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 19,
             "seasons": [
                 "Fa",
@@ -2033,7 +2033,7 @@
                 "BUSA 3115",
                 "MISM 3109"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -2045,7 +2045,7 @@
                 "MISM 3109",
                 "MISM 3115"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -2055,7 +2055,7 @@
                 "MISM 3115",
                 "MISM 3109"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -2064,7 +2064,7 @@
             "prereq": [
                 "CPSC 1301"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 3,
             "seasons": [
                 "Fa",
@@ -2077,7 +2077,7 @@
                 "MISM 3115",
                 "MISM 3109"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -2089,7 +2089,7 @@
                 "MISM 3115",
                 "MISM 3109"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -2099,7 +2099,7 @@
                 "MISM 3109",
                 "MISM 3115"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -2108,7 +2108,7 @@
             "prereq": [
                 "MISM 3136"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -2118,7 +2118,7 @@
                 "MISM 3115",
                 "MISM 3109"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -2130,7 +2130,7 @@
             "prereq": [
                 "CPSC 1301K"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -2140,7 +2140,7 @@
         "4899": {
             "name": "Independent Study",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         }
@@ -2149,7 +2149,7 @@
         "1501": {
             "name": "Introduction to Data Science",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -2161,7 +2161,7 @@
             "prereq": [
                 "STAT 3127"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -2170,7 +2170,7 @@
             "prereq": [
                 "DSCI 3111"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -2181,7 +2181,7 @@
             "prereq": [
                 "DSCI 3112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Sp"
@@ -2192,7 +2192,7 @@
             "prereq": [
                 "DSCI 3112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -2201,7 +2201,7 @@
             "prereq": [
                 "DSCI 3112"
             ],
-            "credits": "6",
+            "credits": 6,
             "value": 0,
             "seasons": []
         }
@@ -2212,7 +2212,7 @@
             "prereq": [
                 "STAT 3127"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 30,
             "seasons": [
                 "Fa"
@@ -2223,7 +2223,7 @@
             "prereq": [
                 "DSCI 3111"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 20,
             "seasons": []
         },
@@ -2232,7 +2232,7 @@
             "prereq": [
                 "DSCI 3112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -2241,7 +2241,7 @@
             "prereq": [
                 "DSCI 3112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 4,
             "seasons": [
                 "Fa"
@@ -2253,7 +2253,7 @@
                 "DSCI 3112",
                 "DSCI 4127"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 1,
             "seasons": []
         },
@@ -2262,7 +2262,7 @@
             "prereq": [
                 "DSCI 4111"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -2272,7 +2272,7 @@
                 "MATH 2115",
                 "MATH 3175"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -2282,7 +2282,7 @@
                 "STAT 3127",
                 "CPSC 1301"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": []
         },
@@ -2291,7 +2291,7 @@
             "prereq": [
                 "DSCI 3112"
             ],
-            "credits": "6",
+            "credits": 6,
             "value": 4,
             "seasons": [
                 "Fa"
@@ -2302,7 +2302,7 @@
         "4001": {
             "name": "Foundations of FinTech",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -2312,7 +2312,7 @@
         "4002": {
             "name": "FinTech Technologies",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -2322,7 +2322,7 @@
         "4003": {
             "name": "Commercial Banking and Fintech",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -2332,14 +2332,14 @@
         "4004": {
             "name": "COBOL Programming",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "4005": {
             "name": "Introduction to Financial Data Analytics",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -2349,7 +2349,7 @@
         "4100": {
             "name": "Introduction to Information Security for FinTech",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -2359,7 +2359,7 @@
         "4698": {
             "name": "Fintech Internship",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         }
@@ -2368,7 +2368,7 @@
         "1506": {
             "name": "Perspectives 1-hour",
             "prereq": [],
-            "credits": "1",
+            "credits": 1,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -2378,7 +2378,7 @@
         "1507": {
             "name": "Perspectives 2-hour",
             "prereq": [],
-            "credits": "2",
+            "credits": 2,
             "value": 2,
             "seasons": [
                 "Fa",
@@ -2393,7 +2393,7 @@
                 "MATH 1113",
                 "PHYS 1311"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 7,
             "seasons": []
         },
@@ -2403,14 +2403,14 @@
                 "PHYS 1111",
                 "PHYS 1311"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "1125": {
             "name": "Physics of Color and Sound",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -2419,14 +2419,14 @@
             "prereq": [
                 "MATH 1501"
             ],
-            "credits": "4",
+            "credits": 4,
             "value": 0,
             "seasons": []
         },
         "1212": {
             "name": "Principles of Physics II and Lab",
             "prereq": [],
-            "credits": "4",
+            "credits": 4,
             "value": 0,
             "seasons": []
         },
@@ -2436,7 +2436,7 @@
                 "MATH 1113",
                 "PHYS 1111"
             ],
-            "credits": "1",
+            "credits": 1,
             "value": 4,
             "seasons": []
         },
@@ -2446,14 +2446,14 @@
                 "PHYS 1111",
                 "PHYS 1311"
             ],
-            "credits": "1",
+            "credits": 1,
             "value": 0,
             "seasons": []
         },
         "1325": {
             "name": "Physics of Color and Sound Lab",
             "prereq": [],
-            "credits": "1",
+            "credits": 1,
             "value": 0,
             "seasons": []
         },
@@ -2463,7 +2463,7 @@
                 "MATH 1131",
                 "PHYS 2311"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 22,
             "seasons": []
         },
@@ -2473,7 +2473,7 @@
                 "PHYS 2211",
                 "PHYS 2311"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 3,
             "seasons": []
         },
@@ -2483,7 +2483,7 @@
                 "MATH 1131",
                 "PHYS 2211"
             ],
-            "credits": "1",
+            "credits": 1,
             "value": 13,
             "seasons": []
         },
@@ -2493,7 +2493,7 @@
                 "PHYS 2211",
                 "PHYS 2311"
             ],
-            "credits": "1",
+            "credits": 1,
             "value": 3,
             "seasons": []
         },
@@ -2503,7 +2503,7 @@
                 "PHYS 2212",
                 "PHYS 2312"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
@@ -2513,7 +2513,7 @@
                 "PHYS 2212",
                 "PHYS 2312"
             ],
-            "credits": "4",
+            "credits": 4,
             "value": 0,
             "seasons": []
         },
@@ -2523,35 +2523,35 @@
                 "PHYS 2212",
                 "PHYS 2312"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "4899": {
             "name": "Undergraduate Research in Physics",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "5555": {
             "name": "Selected Introductory Topics in Teaching Physics",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "7110": {
             "name": "Conceptual Physics I",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         },
         "7120": {
             "name": "Conceptual Physics II",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
             "seasons": []
         }

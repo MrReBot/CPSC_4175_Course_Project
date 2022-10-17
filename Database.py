@@ -35,7 +35,7 @@ class Course:
         template = {
             "name":self.name,
             "prereq":self.prereq,
-            "credits":self.credits,
+            "credits":int(self.credits),
             "value": self.get_value(),
             "seasons":self.get_seasons()
             }
