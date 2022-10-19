@@ -2,6 +2,7 @@ import Database
 import os
 import datetime
 import random
+import Parser
 
 class Student:
     remaining_courses = []
@@ -113,17 +114,17 @@ class Student:
         #for course in course_list: # Begin Inital adding to course_schedule
         return True, schedule
 
-    def generate_schedule(self, filename, template):
+    def generate_schedule(self, data, template):
         """Takes a file and a template and returns a schedule and classlist"""
-        self.remaining_courses = []
+        if type(data) == str: # If we are getting a filename parse it
+            self.remaining_courses = Parser.parse_file(data)
+            if self.remaining_courses == None:
+                return {},[]
+        else:
+            self.remaining_courses = data
         self.completed_courses = []
         output_schedule = {}
         classlist = []
-        if os.path.exists(filename):
-            with open(filename,"r") as f:
-                for line in f.read().splitlines():
-                    if not line.startswith("#"):
-                        self.remaining_courses.append(line.strip())
         #self.remaining_courses = list(dict.fromkeys(self.remaining_courses)) # Dedupe the list
         self.generate_completed()
         credits = list(template.values())
@@ -158,5 +159,6 @@ def main():
     }
     st = Student(db)
     schedule, classlist = st.generate_schedule("Test Files/CompGamesProgramming.txt", schedule_template)
+    print(schedule)
 if __name__ == "__main__":
     main()
