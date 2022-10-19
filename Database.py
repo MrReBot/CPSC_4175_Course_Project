@@ -9,7 +9,6 @@ class Course:
     id = ""
     credits = -1
     value = -1
-    concurrent = []
     seasons = [] # Seasons that class is avaliabe in can be Fa, Sp, or Su
     valid_seasons = {"Fall":"Fa","Spring":"Sp","Summer":"Su"}
     db = {}
@@ -20,17 +19,13 @@ class Course:
         if db != None:
             self.db = db
 
+    def reset_value(self):
+        self.value = -1
+    
     def add_season(self, season):
         if season in ["Fa", "Sp", "Su"] and season not in self.get_seasons():
             self.seasons.append(season)
-
-    def add_concurrent(self, course):
-        if self.db.course_exist(course) and course not in self.concurrent:
-            self.concurrent.append(course)
-
-    def get_concurrent(self):
-        """Return a list of all classes that may be taken concurrently"""
-        return self.concurrent
+            self.reset_value()
 
     def get_seasons(self):
         return self.seasons
@@ -40,28 +35,29 @@ class Course:
         template = {
             "name":self.name,
             "prereq":self.prereq,
-            "credits":self.credits,
+            "credits":int(self.credits),
             "value": self.get_value(),
-            "seasons":self.get_seasons(),
-            "concurrent": self.concurrent
+            "seasons":self.get_seasons()
             }
         return template
 
     def format(self):
+        """Fancy formatted version of course e.g 'CPSC 1301 - Computer Science I'"""
         return f"{self.section} {self.id} - {self.name}"
 
-    def __str__(self): # String version of object
-        return f"{self.section} {self.id}" # e.g
+    def __str__(self):
+        """Printed version of a course e.g 'CPSC 1301'"""
+        return f"{self.section} {self.id}"
 
-    def __lt__(self, other): # Makes the object sortable
+    def __lt__(self, other):
+        """This allows a list of course objects to be sorted and represents the less than operator"""
         return self.get_value() < other.get_value()
 
     def get_prereq(self):
         """Get the list of Prerequisites"""
         return self.prereq
 
-
-    def check_eligible(self, course_list, semester, season):
+    def check_eligible(self, course_list, semester=[], season=None):
         """Check if a given course_list makes you eligible"""
         temp_course = course_list.copy()
         if season != None and self.seasons != []: # If a season was provided check if the course is in season
@@ -72,11 +68,10 @@ class Course:
         for i in range(len(temp_course)): # Convert course objects into their course name
             if type(temp_course[i]) == Course:
                 temp_course[i] = str(temp_course[i])
-        for course in self.get_concurrent():
-            if self.db.get_course(course) in semester:
-                #print(f"Taking {self} concurrently with {course}")
-                return True
         for prereq in self.get_prereq():
+            if str(self) in self.db.get_course(prereq).get_prereq():
+                 #print(f"Taking {self} concurrently with {prereq}")
+                 return True
             if self.db.course_exist(prereq):
                 if prereq not in temp_course:
                     return False
@@ -92,9 +87,11 @@ class Course:
             if last_course == None:
                 last_course = [self]
             if self.seasons != []:
-                i += (3 - len(self.seasons)) * 10
+                i += (3 - len(self.seasons)) * 2
             #print(str(self), last_course)
             for c in self.db.all_courses(sort=False):
+                if type(c) == list: # This skips over any tags that may be in the database
+                    continue
                 if str(self) in c.get_prereq() and str(c) not in last_course:
                     i+= 1
                     last_course.append(str(c))
@@ -137,7 +134,13 @@ class Database:
                             self.credit_hours = int(self.data[section][course].credits)
         else:
             self.data = {}
-
+        
+    def reset_values(self):
+        """Clear all stored values so they can be recalculated. Mainly used when the value system is modified"""
+        for course in self.all_courses():
+            course.reset_value()
+        
+        
     def all_tags(self):
         """Get every tag"""
         return self.tags
@@ -173,7 +176,7 @@ class Database:
         else:
             with open(self.filename,"w") as f:
                 f.write(data)
-        del self.data["TAGS"]
+        self.data.pop("TAGS",None)
         
     # This is just for testing def remove this later
     def reset(self):
@@ -239,7 +242,7 @@ class Database:
             #print(f"ERROR: {course} doesn't exist")
             return False
         except ValueError:
-            print(f"ERROR: '{course}' isn't a valid course name")
+            #print(f"ERROR: '{course}' isn't a valid course name")
             return False
 
     def section_exist(self, section):
@@ -271,7 +274,7 @@ class Database:
             if self.course_exist(query):
                 found.append(self.get_course(query))
             if query.lower() in course.name.lower():
-                if int(course.credits) >= min_credits:
+                if course.credits >= min_credits:
                     found.append(course.format())
         if sort:
             found.sort()
@@ -279,25 +282,6 @@ class Database:
 
 def main():
     db = Database("database.txt")
-    #db.save()
-    #db.save()
-    for course in db.all_courses(sort=True, reverse=True):
-        print(course, course.get_value())
-    while False:
-        query = input("What do you want to search for? (or enter quit to quit): ")
-        if query == "quit":
-            break
-        results = db.search(query, sort=True)
-
-        print(f"Found {len(results)} result(s)")
-        print("\n".join([str(i) for i in results]),"\n")
-    #print(db.check_eligible("CPSC 1302", [])) # I Can't take CPSC 1302
-    #print(db.check_eligible("CPSC 1302", ["CPSC 1301"])) # I Can
-    #db.add_course("CPSC 1301","Computer Science 1", credits=4)
-    #db.add_course("CPSC 1302","Computer Science 2", ["CPSC 1301"], credits=3)
-    #db.add_course("CPSC 1303","Computer Science 3", ["CPSC 1302"], credits=3)
-    #print(type(db.get_course("CPSC 1301")))
-    #db.save()
 
 if __name__ == "__main__":
     main()

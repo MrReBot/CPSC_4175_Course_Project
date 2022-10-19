@@ -3,58 +3,53 @@
         "1105": {
             "name": "Introduction to Computing Principles and Technology",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "1301": {
             "name": "Computer Science I",
             "prereq": [],
-            "credits": "4",
-            "value": 75,
+            "credits": 4,
+            "value": 295,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "1302": {
             "name": "Computer Science II",
             "prereq": [
                 "CPSC 1301"
             ],
-            "credits": "3",
-            "value": 35,
+            "credits": 3,
+            "value": 151,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "1555": {
             "name": "Selected Topics in Computer Science",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "2105": {
             "name": "Computer Organization",
             "prereq": [
                 "CPSC 1301"
             ],
-            "credits": "3",
-            "value": 3,
+            "credits": 3,
+            "value": 15,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "2108": {
             "name": "Data Structures",
@@ -62,105 +57,96 @@
                 "CPSC 1302",
                 "MATH 2125"
             ],
-            "credits": "3",
-            "value": 19,
+            "credits": 3,
+            "value": 87,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "2115": {
             "name": "Information Technology Fundamentals",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "2125": {
             "name": "Internet Programming",
             "prereq": [
                 "CPSC 1301"
             ],
-            "credits": "3",
-            "value": 3,
+            "credits": 3,
+            "value": 19,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "2555": {
             "name": "Selected Topics in Computer Science",
             "prereq": [
                 "CPSC 1302"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "3105": {
             "name": "Digital Multimedia Development",
             "prereq": [
                 "CPSC 2125"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "3111": {
             "name": "COBOL Programming",
             "prereq": [
                 "CPSC 1302"
             ],
-            "credits": "3",
-            "value": 1,
+            "credits": 3,
+            "value": 9,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "3116": {
             "name": "z/OS and JCL",
             "prereq": [
                 "CPSC 1302"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "3118": {
             "name": "Graphical User Interface Development",
             "prereq": [
                 "CPSC 1302"
             ],
-            "credits": "3",
-            "value": 4,
+            "credits": 3,
+            "value": 24,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "3121": {
             "name": "Assembly Language Programming I",
             "prereq": [
                 "CPSC 2105"
             ],
-            "credits": "3",
-            "value": 1,
+            "credits": 3,
+            "value": 9,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "3125": {
             "name": "Operating Systems",
@@ -168,109 +154,100 @@
                 "CPSC 2105",
                 "CPSC 2108"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "3131": {
             "name": "Database Systems I",
             "prereq": [
                 "CPSC 1302"
             ],
-            "credits": "3",
-            "value": 3,
+            "credits": 3,
+            "value": 13,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "3137": {
             "name": "Natural Language Processing and Text Mining",
             "prereq": [
                 "CPSC 1301"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "3156": {
             "name": "Transaction Processing",
             "prereq": [
                 "CPSC 3111"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "3165": {
             "name": "Professionalism in Computing",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "3175": {
             "name": "Object-Oriented Design",
             "prereq": [
                 "CPSC 2108"
             ],
-            "credits": "3",
-            "value": 8,
+            "credits": 3,
+            "value": 38,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "3415": {
             "name": "Information Technology",
             "prereq": [],
-            "credits": "1",
-            "value": 0,
+            "credits": 1,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "3555": {
             "name": "Selected Topics in Computer Science",
             "prereq": [
                 "CPSC 2108"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "4000": {
             "name": "Baccalaureate Survey",
             "prereq": [
                 "LAST-YEAR"
             ],
-            "credits": "0",
-            "value": 0,
+            "credits": 0,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "4111": {
             "name": "Game Programming I",
@@ -278,24 +255,23 @@
                 "CPSC 3118",
                 "CPSC 3175"
             ],
-            "credits": "3",
-            "value": 3,
+            "credits": 3,
+            "value": 19,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "4112": {
             "name": "Game Programming II",
             "prereq": [
-                "CPSC 4111"
+                "CPSC 4111",
+                "CPSC 4113"
             ],
-            "credits": "3",
-            "value": 1,
+            "credits": 3,
+            "value": 9,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": ["CPSC 4113"]
+            ]
         },
         "4113": {
             "name": "Game Jam",
@@ -303,12 +279,11 @@
                 "CPSC 4111",
                 "CPSC 4112"
             ],
-            "credits": "1",
-            "value": 0,
+            "credits": 1,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": ["CPSC 4112"]
+            ]
         },
         "4115": {
             "name": "Algorithms",
@@ -316,34 +291,31 @@
                 "CPSC 2108",
                 "MATH 5125"
             ],
-            "credits": "3",
-            "value": 1,
+            "credits": 3,
+            "value": 9,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "4121": {
             "name": "Robotics Programming I",
             "prereq": [
                 "CPSC 1302"
             ],
-            "credits": "3",
-            "value": 1,
+            "credits": 3,
+            "value": 5,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "4122": {
             "name": "Robotics Programming II",
             "prereq": [
                 "CPSC 4121"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "4125": {
             "name": "Server-Side Web Development",
@@ -351,24 +323,22 @@
                 "CPSC 2125",
                 "CPSC 3131"
             ],
-            "credits": "3",
-            "value": 1,
+            "credits": 3,
+            "value": 9,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "4126": {
             "name": "Web Development Projects",
             "prereq": [
                 "CPSC 4125"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "4127": {
             "name": "Computer and Network Security",
@@ -376,583 +346,528 @@
                 "CYBR 2160",
                 "CYBR 2159"
             ],
-            "credits": "3",
-            "value": 1,
+            "credits": 3,
+            "value": 9,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "4130": {
             "name": "Mobile Computing",
             "prereq": [
                 "CPSC 3175"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "4135": {
             "name": "Programming Languages",
             "prereq": [
                 "CPSC 3175"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "4138": {
             "name": "Advanced Database Systems",
             "prereq": [
                 "CPSC 3131"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "4145": {
             "name": "Computer Graphics",
             "prereq": [
                 "CPSC 2108"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "4148": {
             "name": "Theory of Computation",
             "prereq": [
                 "CPSC 4115"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "4155": {
             "name": "Computer Architecture",
             "prereq": [
                 "CPSC 3121"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "4157": {
             "name": "Computer Networks",
             "prereq": [
                 "CPSC 2108"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "4175": {
             "name": "Software Engineering",
             "prereq": [
                 "CPSC 3175"
             ],
-            "credits": "3",
-            "value": 1,
+            "credits": 3,
+            "value": 9,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "4176": {
             "name": "Senior Software Engineering Project",
             "prereq": [
                 "CPSC 4175"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "4185": {
             "name": "Artificial Intelligence and Machine Learning",
             "prereq": [
                 "CPSC 2108"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "4205": {
             "name": "IT Senior Capstone",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "4505": {
             "name": "Undergraduate Research",
             "prereq": [
                 "CPSC 2108"
             ],
-            "credits": "6",
-            "value": 0,
+            "credits": 6,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "4555": {
             "name": "Selected Topics in Computer Science",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "4698": {
             "name": "Internship",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "4899": {
             "name": "Independent Study",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "6000": {
             "name": "Graduate Exit Examination",
             "prereq": [],
-            "credits": "0",
-            "value": 0,
+            "credits": 0,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "6103": {
             "name": "Computer Science Principles for Teachers",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "6105": {
             "name": "Fundamental Principles of Computer Science",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "6106": {
             "name": "Fundamentals of Computer Programming and Data Structures",
             "prereq": [],
-            "credits": "3",
-            "value": 1,
+            "credits": 3,
+            "value": 3,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "6107": {
             "name": "Survey of Modeling and Simulation",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "6109": {
             "name": "Algorithms Analysis and Design",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "6114": {
             "name": "Fundamentals of Machine Learning",
             "prereq": [],
-            "credits": "3",
-            "value": 2,
+            "credits": 3,
+            "value": 10,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "6118": {
             "name": "Human-Computer Interface Development",
             "prereq": [
                 "CPSC 6114"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "6119": {
             "name": "Object-Oriented Development",
             "prereq": [],
-            "credits": "3",
-            "value": 1,
+            "credits": 3,
+            "value": 5,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "6124": {
             "name": "Advanced Machine Learning",
             "prereq": [
                 "CPSC 6114"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "6125": {
             "name": "Operating Systems Design and Implementation",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "6126": {
             "name": "Introduction to Cybersecurity",
             "prereq": [],
-            "credits": "3",
-            "value": 4,
+            "credits": 3,
+            "value": 18,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "6127": {
             "name": "Contemporary Issues in Database Management Systems",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "6128": {
             "name": "Network Security",
             "prereq": [
                 "CPSC 6126"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "6129": {
             "name": "Computer Language Design and Interpretation",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "6136": {
             "name": "Human Aspects of Cybersecurity",
             "prereq": [
                 "CPSC 6126"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "6138": {
             "name": "Mobile Systems and Applications",
             "prereq": [
                 "CPSC 6119"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "6147": {
             "name": "Data Visualization and Presentation",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "6155": {
             "name": "Advanced Computer Architecture",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "6157": {
             "name": "Network and Cloud Management",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "6159": {
             "name": "Digital Forensics",
             "prereq": [
                 "CPSC 6126"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "6167": {
             "name": "Cybersecurity Risk Management",
             "prereq": [
                 "CPSC 6126"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "6175": {
             "name": "Web Engineering and Technologies",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "6177": {
             "name": "Software Design and Development",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "6178": {
             "name": "Software Testing and Quality Assurance",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "6179": {
             "name": "Software Project Planning and Management",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "6180": {
             "name": "Software Estimation and Measurement",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "6185": {
             "name": "Intelligent Systems",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "6190": {
             "name": "Applied Cryptography",
             "prereq": [
                 "CPSC 6106"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "6555": {
             "name": "Selected Topics in Computer Science",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "6698": {
             "name": "Graduate Internship in Computer Science",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "6899": {
             "name": "Independent Study",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "6985": {
             "name": "Research and Thesis",
             "prereq": [],
-            "credits": "4",
-            "value": 0,
+            "credits": 4,
+            "value": 4,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "6986": {
             "name": "Thesis Defense",
             "prereq": [],
-            "credits": "0",
-            "value": 0,
+            "credits": 0,
+            "value": 4,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         }
     },
     "HIST": {
         "1000": {
             "name": "History Convocation",
             "prereq": [],
-            "credits": "0",
-            "value": 0,
+            "credits": 0,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "1111": {
             "name": "World History to 1500",
             "prereq": [],
-            "credits": "3",
-            "value": 19,
+            "credits": 3,
+            "value": 39,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "1112": {
             "name": "World History since 1500",
             "prereq": [],
-            "credits": "3",
-            "value": 19,
+            "credits": 3,
+            "value": 39,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "2111": {
             "name": "U. S. History to 1865",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "2112": {
             "name": "U. S. History since 1865",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "3101": {
             "name": "Introduction to Native American History",
@@ -960,10 +875,9 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "3105": {
             "name": "History of Georgia",
@@ -971,12 +885,11 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "3120": {
             "name": "Introduction to Public History",
@@ -984,21 +897,19 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "3125": {
             "name": "Historical Methods",
             "prereq": [],
-            "credits": "3",
-            "value": 5,
+            "credits": 3,
+            "value": 13,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "3126": {
             "name": "History in Film",
@@ -1006,10 +917,9 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "3130": {
             "name": "Introduction to Modern Ireland",
@@ -1017,10 +927,9 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "3135": {
             "name": "Introduction to Latin American History",
@@ -1028,12 +937,11 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "3137": {
             "name": "Latin America and the United States",
@@ -1041,10 +949,9 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "3138": {
             "name": "Introduction to Asian History",
@@ -1052,20 +959,18 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "3139": {
             "name": "Introduction to African American History",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "3146": {
             "name": "Introduction to US Military History",
@@ -1073,12 +978,11 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "3149": {
             "name": "Women and Gender in American History",
@@ -1086,10 +990,9 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "3156": {
             "name": "Early Modern Europe, 1500-1789",
@@ -1097,10 +1000,9 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "3157": {
             "name": "Modern Europe, 1789-Present",
@@ -1108,18 +1010,16 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "3158": {
             "name": "Military History of Early Modern Europe",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "3165": {
             "name": "The Making of the Islamic World, ca. 600-1100",
@@ -1127,10 +1027,9 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "3176": {
             "name": "Fall of Rome",
@@ -1138,10 +1037,9 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "3555": {
             "name": "History Topics",
@@ -1149,13 +1047,12 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "3556": {
             "name": "Topics in World History",
@@ -1163,10 +1060,9 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "3557": {
             "name": "Topics in European History",
@@ -1174,10 +1070,9 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "3559": {
             "name": "Topics in United States History",
@@ -1185,169 +1080,151 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "4698": {
             "name": "Internship",
             "prereq": [],
-            "credits": "6",
+            "credits": 6,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "4795": {
             "name": "Senior Research Seminar",
             "prereq": [
                 "HIST 3125"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "4899": {
             "name": "Independent Study",
             "prereq": [
                 "HIST 3125"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "5111": {
             "name": "New South",
             "prereq": [
                 "HIST 6101"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "5112": {
             "name": "American Slavery and Emancipation, 1619-1877",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "5115": {
             "name": "The Civil War",
             "prereq": [
                 "HIST 3125"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "5116": {
             "name": "World War II",
             "prereq": [
                 "HIST 3125"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "5118": {
             "name": "The Age of Revolutions",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "5135": {
             "name": "Race and Ethnicity in Latin Am",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "5136": {
             "name": "Slavery in Latin America",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "5165": {
             "name": "Jacksonian America, 1820 to 1850",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "5176": {
             "name": "US in the Twentieth Century",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "5195": {
             "name": "Historiography",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "5525": {
             "name": "Topics Med/Early Mod Europe",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "5535": {
             "name": "Selected Topics in Latin American History",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "5546": {
             "name": "Selected Topics in African History",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "5555": {
             "name": "Selected Topics in World History",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "5557": {
             "name": "Selected Topics in British History",
@@ -1355,435 +1232,400 @@
                 "HIST 1111",
                 "HIST 1112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "5559": {
             "name": "Selected Topics in United States History",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "5566": {
             "name": "Selected Topics in Race and U.S. History",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "5575": {
             "name": "Selected Topics in European History",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "5576": {
             "name": "History Topics",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "5577": {
             "name": "Selected Topics in Film and History",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "5707": {
             "name": "Commodities and Consumption in World History",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "5708": {
             "name": "The United States in the 1960s",
             "prereq": [
                 "HIST 3125"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "5715": {
             "name": "The Crusades",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "5716": {
             "name": "The Caliphate: The Islamic State, Medieval to Modern",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "6015": {
             "name": "Graduate History Convocation",
             "prereq": [],
-            "credits": "0",
+            "credits": 0,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "6025": {
             "name": "Thesis Defense",
             "prereq": [
                 "HIST 6999"
             ],
-            "credits": "0",
+            "credits": 0,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "6555": {
             "name": "Selected Topics in United States History",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "6556": {
             "name": "Selected Topics in European History",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "6557": {
             "name": "Selected Topics in Latin American History",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "6558": {
             "name": "Selected Topics in African History",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "6559": {
             "name": "Selected Topics in World History",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "6745": {
             "name": "Graduate Colloquium",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "6999": {
             "name": "Thesis Research and Writing",
             "prereq": [],
-            "credits": "6",
+            "credits": 6,
             "value": 1,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "7899": {
             "name": "Independent Study",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         }
     },
     "ENVS": {
         "1205": {
             "name": "Sustainability and the Environment",
             "prereq": [],
-            "credits": "4",
-            "value": 0,
+            "credits": 4,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         }
     },
     "ENGL": {
         "1101": {
             "name": "English Composition I",
             "prereq": [],
-            "credits": "3",
-            "value": 20,
+            "credits": 3,
+            "value": 54,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "1102": {
             "name": "English Composition II",
             "prereq": [
                 "ENGL 1101"
             ],
-            "credits": "3",
-            "value": 11,
+            "credits": 3,
+            "value": 31,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "2111": {
             "name": "World Literature I",
             "prereq": [
                 "ENGL 1102"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "2112": {
             "name": "World Literature II",
             "prereq": [
                 "ENGL 1102"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "5195": {
             "name": "Technical and Scientific Writing",
             "prereq": [
                 "ENGL 1102"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         }
     },
     "COMM": {
         "1110": {
             "name": "Public Speaking",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         }
     },
     "LEAD": {
         "1705": {
             "name": "Introduction to Servant Leadership",
             "prereq": [],
-            "credits": "2",
-            "value": 0,
+            "credits": 2,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         }
     },
     "ITDS": {
         "1145": {
             "name": "Comparative Arts",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "1155": {
             "name": "The Western Intellectual Tradition",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "2125": {
             "name": "Historical Perspectives on the Philosophy of Science and Mathematics",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "1779": {
             "name": "Scholarship Across the Disciplines",
             "prereq": [],
-            "credits": "2",
-            "value": 0,
+            "credits": 2,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         }
     },
     "PHIL": {
         "2010": {
             "name": "Introduction to Philosophy",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         }
     },
     "ARTH": {
         "2125": {
             "name": "Introduction to the History of Art I- Prehistoric through Gothic",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "2126": {
             "name": "Introduction to the History of Art II- Renaissance through Modern",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
+        },
+        "1100": {
+            "name": "Art Appreciation",
+            "prereq": [],
+            "credits": 3,
+            "value": 0,
+            "seasons": []
         }
     },
     "THEA": {
         "1100": {
             "name": "Theatre Appreciation",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         }
     },
     "MUSC": {
         "1100": {
             "name": "Music Appreciation",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         }
     },
     "BIOL": {
         "1215": {
             "name": "Principles of Biology",
             "prereq": [],
-            "credits": "4",
-            "value": 0,
+            "credits": 4,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "1125": {
             "name": "Contemporary Issues in Biology Non-Lab",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         }
     },
     "POLS": {
         "1101": {
             "name": "American Government",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         }
     },
     "KINS": {
         "1106": {
             "name": "Lifetime Wellness",
             "prereq": [],
-            "credits": "2",
-            "value": 0,
+            "credits": 2,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         }
     },
     "PHED": {
         "1205": {
             "name": "Concepts of Fitness",
             "prereq": [],
-            "credits": "2",
+            "credits": 2,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         }
     },
     "MATH": {
@@ -1792,91 +1634,84 @@
             "prereq": [
                 "MATH 2125"
             ],
-            "credits": "3",
-            "value": 2,
+            "credits": 3,
+            "value": 12,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "2125": {
             "name": "Introduction to Discrete Mathematics",
             "prereq": [
                 "MATH 1113"
             ],
-            "credits": "3",
-            "value": 23,
+            "credits": 3,
+            "value": 103,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "1113": {
             "name": "Pre-Calculus",
             "prereq": [
                 "MATH 1111"
             ],
-            "credits": "4",
-            "value": 25,
+            "credits": 4,
+            "value": 159,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "1111": {
             "name": "College Algebra",
             "prereq": [
                 ""
             ],
-            "credits": "3",
-            "value": 26,
+            "credits": 3,
+            "value": 162,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "1131": {
             "name": "Calculus with Analytic Geometry I",
             "prereq": [
                 "MATH 1113"
             ],
-            "credits": "4",
-            "value": 0,
+            "credits": 4,
+            "value": 39,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         }
     },
     "STAT": {
         "1401": {
             "name": "Elementary Statistics",
             "prereq": [],
-            "credits": "3",
-            "value": 23,
+            "credits": 3,
+            "value": 49,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "0996": {
             "name": "Support for Elementary Statistics",
             "prereq": [
                 "STAT 1401"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "3127": {
             "name": "Statistical Computing",
@@ -1884,73 +1719,66 @@
                 "STAT 1401",
                 "BUSA 3115"
             ],
-            "credits": "3",
-            "value": 21,
+            "credits": 3,
+            "value": 43,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "5117": {
             "name": "Applied Multivariate Analysis",
             "prereq": [
                 "STAT 3127"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "5118": {
             "name": "Applied Nonparametric Methods",
             "prereq": [
                 "STAT 3127"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "5119": {
             "name": "Applied Categorical Data Analysis",
             "prereq": [
                 "STAT 3127"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "5176": {
             "name": "Statistical Design and Analysis of Experiments",
             "prereq": [
                 "STAT 3127"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "5177": {
             "name": "Applied Regression Analysis",
             "prereq": [
                 "STAT 3127"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "5555": {
             "name": "Selected Topics in Statistics",
             "prereq": [
                 "STAT 3127"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         }
     },
     "CYBR": {
@@ -1959,84 +1787,77 @@
             "prereq": [
                 "CPSC 1301"
             ],
-            "credits": "3",
-            "value": 14,
+            "credits": 3,
+            "value": 70,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "2160": {
             "name": "Intro to Information Security",
             "prereq": [
                 "CYBR 2159"
             ],
-            "credits": "3",
-            "value": 8,
+            "credits": 3,
+            "value": 42,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "3106": {
             "name": "Cybersecurity Risk Management",
             "prereq": [
                 "CYBR 2160"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "3108": {
             "name": "Defensive Programming",
             "prereq": [
                 "CPSC 2108"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "3115": {
             "name": "Programming for Data Science",
             "prereq": [
                 "CPSC 1301"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "3119": {
             "name": "Fundamentals of Digital Forensics",
             "prereq": [
                 "CYBR 2160"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "3126": {
             "name": "Client / Server Security",
             "prereq": [
                 "CYBR 3135"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "3128": {
             "name": "Cybersecurity Management",
@@ -2044,24 +1865,22 @@
                 "MISM 3115",
                 "MISM 3109"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "3135": {
             "name": "Infrastructure Security",
             "prereq": [
                 "CYBR 2159"
             ],
-            "credits": "3",
-            "value": 1,
+            "credits": 3,
+            "value": 9,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "3136": {
             "name": "Wireless, IoT and Mobile Security",
@@ -2069,124 +1888,113 @@
                 "CYBR 2159",
                 "CYBR 2160"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "4125": {
             "name": "Global Perspectives on Cybersecurity",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "4128": {
             "name": "Penetration Testing and Countermeasures",
             "prereq": [
                 "CYBR 2160"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "4137": {
             "name": "Security Policies & Implementation Security",
             "prereq": [
                 "CYBR 2160"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "4138": {
             "name": "Security Auditing for Compliance",
             "prereq": [
                 "CYBR 2160"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "4139": {
             "name": "Security Issues in Legal Context",
             "prereq": [
                 "CYBR 2160"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "4145": {
             "name": "Security for Web Applications & Social Networking",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "4146": {
             "name": "Network, Virtualization & Cloud Communication Infrastructure",
             "prereq": [
                 "CYBR 2160"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "4160": {
             "name": "Applied Cryptography",
             "prereq": [
                 "CPSC 2108"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "4166": {
             "name": "Intrusion Detection and Prevention",
             "prereq": [
                 "CPSC 4127"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "4416": {
             "name": "Cybersecurity Practicum",
             "prereq": [],
-            "credits": "1",
-            "value": 0,
+            "credits": 1,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         }
     },
     "MISM": {
@@ -2195,13 +2003,12 @@
             "prereq": [
                 "CPSC 1301"
             ],
-            "credits": "3",
-            "value": 8,
+            "credits": 3,
+            "value": 24,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "3115": {
             "name": "Principles of Information Systems Management",
@@ -2213,13 +2020,12 @@
                 "BUSA 2115",
                 "ECON 2105"
             ],
-            "credits": "3",
-            "value": 7,
+            "credits": 3,
+            "value": 19,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "3116": {
             "name": "Business Analytics II",
@@ -2227,12 +2033,11 @@
                 "BUSA 3115",
                 "MISM 3109"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "3118": {
             "name": "Global e-Business",
@@ -2240,10 +2045,9 @@
                 "MISM 3109",
                 "MISM 3115"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "3126": {
             "name": "Business Process Management Design",
@@ -2251,23 +2055,21 @@
                 "MISM 3115",
                 "MISM 3109"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "3136": {
             "name": "Database Design",
             "prereq": [
                 "CPSC 1301"
             ],
-            "credits": "3",
-            "value": 1,
+            "credits": 3,
+            "value": 3,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "3145": {
             "name": "Business Data Networks and Security",
@@ -2275,12 +2077,11 @@
                 "MISM 3115",
                 "MISM 3109"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "3146": {
             "name": "Data Visualization",
@@ -2288,10 +2089,9 @@
                 "MISM 3115",
                 "MISM 3109"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "4126": {
             "name": "Business Process Management Development",
@@ -2299,20 +2099,18 @@
                 "MISM 3109",
                 "MISM 3115"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "4128": {
             "name": "Business Intelligence",
             "prereq": [
                 "MISM 3136"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "4165": {
             "name": "Project Management",
@@ -2320,101 +2118,92 @@
                 "MISM 3115",
                 "MISM 3109"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "4168": {
             "name": "Systems Analysis & Design",
             "prereq": [
                 "CPSC 1301K"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "4899": {
             "name": "Independent Study",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         }
     },
     "DATA": {
         "1501": {
             "name": "Introduction to Data Science",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "3111": {
             "name": "Data Mining I",
             "prereq": [
                 "STAT 3127"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "3112": {
             "name": "Data Mining II",
             "prereq": [
                 "DSCI 3111"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "3116": {
             "name": "Ethics and Data Analytics",
             "prereq": [
                 "DSCI 3112"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "3215": {
             "name": "Data Analytics Project",
             "prereq": [
                 "DSCI 3112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "4698": {
             "name": "Data Analytics Internship",
             "prereq": [
                 "DSCI 3112"
             ],
-            "credits": "6",
+            "credits": 6,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         }
     },
     "DSCI": {
@@ -2423,44 +2212,40 @@
             "prereq": [
                 "STAT 3127"
             ],
-            "credits": "3",
-            "value": 10,
+            "credits": 3,
+            "value": 30,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "3112": {
             "name": "Data Mining II",
             "prereq": [
                 "DSCI 3111"
             ],
-            "credits": "3",
-            "value": 8,
-            "seasons": [],
-            "concurrent": []
+            "credits": 3,
+            "value": 20,
+            "seasons": []
         },
         "3116": {
             "name": "Ethics and Data Analytics",
             "prereq": [
                 "DSCI 3112"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "3215": {
             "name": "Data Analytics Project",
             "prereq": [
                 "DSCI 3112"
             ],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 4,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         },
         "4111": {
             "name": "Predictive Models and Analytics I",
@@ -2468,20 +2253,18 @@
                 "DSCI 3112",
                 "DSCI 4127"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 1,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "4112": {
             "name": "Predictive Models and Analytics II",
             "prereq": [
                 "DSCI 4111"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "4119": {
             "name": "Machine Learning",
@@ -2489,10 +2272,9 @@
                 "MATH 2115",
                 "MATH 3175"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "4127": {
             "name": "Advanced Statistical Programming",
@@ -2500,119 +2282,278 @@
                 "STAT 3127",
                 "CPSC 1301"
             ],
-            "credits": "3",
+            "credits": 3,
             "value": 2,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "4698": {
             "name": "Data Analytics Internship",
             "prereq": [
                 "DSCI 3112"
             ],
-            "credits": "6",
-            "value": 0,
+            "credits": 6,
+            "value": 4,
             "seasons": [
                 "Fa"
-            ],
-            "concurrent": []
+            ]
         }
     },
     "FTA": {
         "4001": {
             "name": "Foundations of FinTech",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "4002": {
             "name": "FinTech Technologies",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "4003": {
             "name": "Commercial Banking and Fintech",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "4004": {
             "name": "COBOL Programming",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         },
         "4005": {
             "name": "Introduction to Financial Data Analytics",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "4100": {
             "name": "Introduction to Information Security for FinTech",
             "prereq": [],
-            "credits": "3",
-            "value": 0,
+            "credits": 3,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "4698": {
             "name": "Fintech Internship",
             "prereq": [],
-            "credits": "3",
+            "credits": 3,
             "value": 0,
-            "seasons": [],
-            "concurrent": []
+            "seasons": []
         }
     },
     "PERS": {
         "1506": {
             "name": "Perspectives 1-hour",
             "prereq": [],
-            "credits": "1",
-            "value": 0,
+            "credits": 1,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
-            ],
-            "concurrent": []
+            ]
         },
         "1507": {
             "name": "Perspectives 2-hour",
             "prereq": [],
-            "credits": "2",
-            "value": 0,
+            "credits": 2,
+            "value": 2,
             "seasons": [
                 "Fa",
                 "Sp"
+            ]
+        }
+    },
+    "PHYS": {
+        "1111": {
+            "name": "Introductory Physics I",
+            "prereq": [
+                "MATH 1113",
+                "PHYS 1311"
             ],
-            "concurrent": []
+            "credits": 3,
+            "value": 7,
+            "seasons": []
+        },
+        "1112": {
+            "name": "Introductory Physics II",
+            "prereq": [
+                "PHYS 1111",
+                "PHYS 1311"
+            ],
+            "credits": 3,
+            "value": 0,
+            "seasons": []
+        },
+        "1125": {
+            "name": "Physics of Color and Sound",
+            "prereq": [],
+            "credits": 3,
+            "value": 0,
+            "seasons": []
+        },
+        "1211": {
+            "name": "Principles of Physics I",
+            "prereq": [
+                "MATH 1501"
+            ],
+            "credits": 4,
+            "value": 0,
+            "seasons": []
+        },
+        "1212": {
+            "name": "Principles of Physics II and Lab",
+            "prereq": [],
+            "credits": 4,
+            "value": 0,
+            "seasons": []
+        },
+        "1311": {
+            "name": "Introductory Physics I Lab",
+            "prereq": [
+                "MATH 1113",
+                "PHYS 1111"
+            ],
+            "credits": 1,
+            "value": 4,
+            "seasons": []
+        },
+        "1312": {
+            "name": "Introductory Physics II Lab",
+            "prereq": [
+                "PHYS 1111",
+                "PHYS 1311"
+            ],
+            "credits": 1,
+            "value": 0,
+            "seasons": []
+        },
+        "1325": {
+            "name": "Physics of Color and Sound Lab",
+            "prereq": [],
+            "credits": 1,
+            "value": 0,
+            "seasons": []
+        },
+        "2211": {
+            "name": "Principles of Physics I",
+            "prereq": [
+                "MATH 1131",
+                "PHYS 2311"
+            ],
+            "credits": 3,
+            "value": 22,
+            "seasons": []
+        },
+        "2212": {
+            "name": "Principles of Physics II",
+            "prereq": [
+                "PHYS 2211",
+                "PHYS 2311"
+            ],
+            "credits": 3,
+            "value": 3,
+            "seasons": []
+        },
+        "2311": {
+            "name": "Principles of Physics I Lab",
+            "prereq": [
+                "MATH 1131",
+                "PHYS 2211"
+            ],
+            "credits": 1,
+            "value": 13,
+            "seasons": []
+        },
+        "2312": {
+            "name": "Principles of Physics II Lab",
+            "prereq": [
+                "PHYS 2211",
+                "PHYS 2311"
+            ],
+            "credits": 1,
+            "value": 3,
+            "seasons": []
+        },
+        "3100": {
+            "name": "Waves and Optics",
+            "prereq": [
+                "PHYS 2212",
+                "PHYS 2312"
+            ],
+            "credits": 3,
+            "value": 0,
+            "seasons": []
+        },
+        "3200": {
+            "name": "Twentieth Century Physics",
+            "prereq": [
+                "PHYS 2212",
+                "PHYS 2312"
+            ],
+            "credits": 4,
+            "value": 0,
+            "seasons": []
+        },
+        "4100": {
+            "name": "Survey of Quantum Mechanics",
+            "prereq": [
+                "PHYS 2212",
+                "PHYS 2312"
+            ],
+            "credits": 3,
+            "value": 0,
+            "seasons": []
+        },
+        "4899": {
+            "name": "Undergraduate Research in Physics",
+            "prereq": [],
+            "credits": 3,
+            "value": 0,
+            "seasons": []
+        },
+        "5555": {
+            "name": "Selected Introductory Topics in Teaching Physics",
+            "prereq": [],
+            "credits": 3,
+            "value": 0,
+            "seasons": []
+        },
+        "7110": {
+            "name": "Conceptual Physics I",
+            "prereq": [],
+            "credits": 3,
+            "value": 0,
+            "seasons": []
+        },
+        "7120": {
+            "name": "Conceptual Physics II",
+            "prereq": [],
+            "credits": 3,
+            "value": 0,
+            "seasons": []
         }
     },
     "TAGS": {
@@ -2623,6 +2564,14 @@
             "THEA 1100",
             "ARTH 2125",
             "ARTH 2126"
+        ],
+        "WELL-NESS": [
+            "KINS 1106",
+            "PHED 1205"
+        ],
+        "HIST-ORYY": [
+            "HIST 2111",
+            "HIST 2112"
         ]
     }
 }
