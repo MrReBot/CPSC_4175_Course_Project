@@ -75,10 +75,10 @@ class Student:
         completed = []
         last_year_courses = []
         self.remaining_courses += self.get_tag_courses()
-        for course_name in self.remaining_courses:
+        for course_name in self.remaining_courses: # Loop through all the given courses and filter them
             if self.db.course_exist(course_name):
                 course = self.db.get_course(course_name)
-            elif self.db.tag_exist(course_name):
+            elif self.db.tag_exist(course_name): # If it is a tag ignore it
                 continue
             if course != None:
                 if "LAST-YEAR" in course.get_prereq():
@@ -89,7 +89,7 @@ class Student:
                 print(f"Skipping {course_name} Since it doesn't exist")
         not_completed.sort(reverse=True)
         count = 0 # How many times the while loop has ran
-        place = 0 # Which credit to use
+        place = 0 # Which season to use
         season = seasons[0]
         seasons.append(seasons.pop(0))
         while len(not_completed) > 0:
@@ -103,7 +103,7 @@ class Student:
             self.completed_courses += semester
             count += 1
             if count >= len(self.remaining_courses) * 10 and len(not_completed) > 0:
-                # If the loop runs for 10 times the length of the course list assume the loop and stuck and end it
+                # If the loop runs for 10 times the length of the course list assume the loop is stuck and end it
                 print("Infinite Loop?")
                 return False, []
             place += 1
@@ -115,7 +115,7 @@ class Student:
         return True, schedule
 
     def generate_schedule(self, data, template):
-        """Takes a file and a template and returns a schedule and classlist"""
+        """Generates a schedule from a list or filename"""
         if type(data) == str: # If we are getting a filename parse it
             self.remaining_courses = Parser.parse_file(data)
             if self.remaining_courses == None:

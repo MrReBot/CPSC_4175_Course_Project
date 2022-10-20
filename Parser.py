@@ -1,6 +1,7 @@
 import os
 
 def parse_file(filename):
+    """Get a files extension and attempt to parse it into a class list"""
     ext =  filename[filename.rfind(".")+1:] # Get the file extension
     if not os.path.exists(filename):
         print("ERROR: File Doesn't exist!")
@@ -13,6 +14,7 @@ def parse_file(filename):
         
             
 def parse_txt(filename):
+    """Parser for text files"""
     course_list = []
     with open(filename,"r") as f:
         for line in f.read().splitlines():
