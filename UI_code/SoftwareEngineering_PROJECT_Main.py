@@ -1,10 +1,12 @@
 from PyQt5 import QtWidgets as qtw
-from PyQt5.QtWidgets import QTableWidgetItem, QMessageBox
+from PyQt5.QtWidgets import QTableWidgetItem, QMessageBox, QFileDialog
 from PyQt5 import QtCore as qtc
 
-#This imports the UI Layout code from the Input and Output Python files
+#This imports the UI Layout code from the Input, Output, Elective and Settings Python GUI files
 from Project_Input_GUI import Ui_Input_window_frm
 from Project_Output_GUI import Ui_Output_window_frm
+from Project_Elective_GUI import Ui_Elective_popupWindow_frm
+from Project_Settings_GUI import Ui_Settings_window_frm
 
 import sys
 # Import Brandon's Student Class to be able to call his Python program
@@ -46,9 +48,21 @@ class InputWindow(qtw.QWidget):
         #--- text field input as a String called 'inputFilePath'
         self.ui.Continue_btn.clicked.connect(self.storeInputForm)
 
+        #    When the BROWSE button is clicked, the program will allow
+        #--- the user to browse for the filename and update the Input text_Edit field
+        self.ui.Browse_input_file_btn.clicked.connect(self.browseInputFile)
+
         #    Then the Clear button is clicked, the program will clear
         #--- the lineEdit field for the InputFilePath_lineEdit
         self.ui.Clear_btn.clicked.connect(self.clearInputForm)
+
+        #    When the Settings button is clicked, the program will open
+        #--- the 'Settings' Window
+        self.ui.Settings_btn.clicked.connect(self.showSettingsWindow)
+
+        #    When the Exit Scheduler button is clicked, the program will close
+        self.ui.Exit_application_btn.clicked.connect(self.closeApplication)
+
 
 
     #
@@ -92,6 +106,18 @@ class InputWindow(qtw.QWidget):
         self.ui.InputStudentID_lineEdit.clear()
         self.ui.InputFilePath_lineEdit.clear()
 
+    #  This defines the functionality for the 'Settings_btn'
+    def showSettingsWindow(self):
+        inputWindow.hide()
+        settingsWindow.show()
+
+    #  This defines the functionality for the 'Exit_scheduler_btn'
+    def closeApplication(self):
+        quit()
+
+    def browseInputFile(self):
+        browseInputFileName = QFileDialog.getOpenFileName(self, 'Choose file', 'C:')
+        self.ui.InputFilePath_lineEdit.setText(browseInputFileName[0])
 
 
 
@@ -118,6 +144,11 @@ class OutputWindow(qtw.QWidget):
         # When Return Button is clicked, the user will return to Main Menu Window
         self.ui.Return_btn.clicked.connect(self.returnToMainMenu)
 
+        #    When the BROWSE Output button is clicked, the program will allow
+        #--- the user to browse for the filename and update the Output text_Edit field
+        self.ui.Browse_output_filename_btn.clicked.connect(self.browseOutputFile)
+
+
 
     #
     #----------- Output UI Widget Methods/Functions Definitions ---------------
@@ -128,7 +159,8 @@ class OutputWindow(qtw.QWidget):
     #def generateSchedule(self, excel_file_path , excel_file_name):
         excelWorkbook = openpyxl.load_workbook(excelOutputFilePath)
         excelWorkSheet = excelWorkbook.active
-
+        # Also, the'Browse' for Output Button is now ENABLED
+        self.ui.Browse_output_filename_btn.setEnabled(True)
 
         # Sets Yearly Credit Totals for Spreadsheet in Output UI Table
         # --- Note: This is a workaround because python will not calculate
@@ -229,7 +261,6 @@ class OutputWindow(qtw.QWidget):
 
 
 
-
         # This portion of code sets the Rows and Columns, also removes NULL cells
         self.ui.SchedulerOutput_tbl.setRowCount(excelWorkSheet .max_row)
         self.ui.SchedulerOutput_tbl.setColumnCount(excelWorkSheet .max_column)
@@ -266,16 +297,72 @@ class OutputWindow(qtw.QWidget):
         #        self.ui.SchedulerOutput_tbl.setItem(tableRow[0], column_Table_Index, newTableItem)
 
 
-
     #  This handles the 'Return' button functionality
     def returnToMainMenu(self):
         outputWindow.hide()
         inputWindow.show()
 
+    #  This handles the 'Browse' output button functionality
+    def browseOutputFile(self):
+        browseOutputFileName = QFileDialog.getOpenFileName(self, 'Choose file', 'C:')
+        self.ui.OutputFilePath_lineEdit.setText(browseOutputFileName[0])
+        # Also, 'Check Prerequisite' Button and is now ENABLED
+        self.ui.CheckSchedule_btn.setEnabled(True)
+
+
+
+
+#----------------------------------------------------------------------------------
+#   This creates a CLASS that utlizes the Settings_GUI python file to contruct the UI
+class SettingsWindow(qtw.QWidget):
+
+    def __init__(self, *args, ** kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.ui = Ui_Settings_window_frm()
+        self.ui.setupUi(self)
+
+    #
+    #----------- SETTINGS UI Widget ACTION Definitions ---------------
+    #
+
+        # When the Exit Button is clicked, the program will exit the
+        # --- Settings Menu and return to Main Input Menu
+        self.ui.Exit_btn.clicked.connect(self.exitToMainMenu)
+
+    #
+    #----------- SETTINGS UI Widget Methods/Functions Definitions ---------------
+    #
+
+    #  This defines the functionality for the 'Exit_btn'
+    def exitToMainMenu(self):
+        settingsWindow.hide()
+        inputWindow.show()
+
+
+#----------------------------------------------------------------------------------
+#   This creates a CLASS that utlizes the Elective_GUI python file to contruct the UI
+class ElectiveWindow(qtw.QWidget):
+
+    def __init__(self, *args, ** kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.ui = Ui_Elective_popupWindow_frm()
+        self.ui.setupUi(self)
+
+    #
+    #----------- ELECTIVE UI Widget ACTION Definitions ---------------
+    #
+
+
+    #
+    #----------- SETTINGS UI Widget Methods/Functions Definitions ---------------
+    #
+
 
 
 # This is the MAIN Application
-# --- This creates the Input and Output GUI CLASS objects
+# --- This creates the INPUT, OUTPUT, ELECTIVE, and SETTINGS GUI CLASS objects
 # --- This allows the program to run correctly
 if __name__ == '__main__':
     app = qtw.QApplication([])
@@ -284,5 +371,9 @@ if __name__ == '__main__':
     #inputWindow.show()
     outputWindow = OutputWindow()
     #outputWindow.show()
+    settingsWindow = SettingsWindow()
+    #settingsWindow.show()
+    electiveWindow = ElectiveWindow()
+    #electiveWindow.show()
 
     app.exec_()

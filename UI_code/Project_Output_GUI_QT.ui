@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>Output_window_frm</class>
  <widget class="QWidget" name="Output_window_frm">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -80,10 +83,10 @@
   <widget class="QLabel" name="ViewScheduler_lbl">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>10</y>
-     <width>321</width>
-     <height>31</height>
+     <x>30</x>
+     <y>20</y>
+     <width>242</width>
+     <height>27</height>
     </rect>
    </property>
    <property name="palette">
@@ -126,7 +129,7 @@
    <property name="font">
     <font>
      <family>Arial</family>
-     <pointsize>20</pointsize>
+     <pointsize>18</pointsize>
      <weight>75</weight>
      <bold>true</bold>
     </font>
@@ -139,9 +142,9 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>440</y>
+     <y>430</y>
      <width>161</width>
-     <height>41</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
@@ -154,13 +157,16 @@
     <string>Return to Main Menu</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="Print_btn">
+  <widget class="QPushButton" name="Browse_output_filename_btn">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="geometry">
     <rect>
-     <x>530</x>
-     <y>440</y>
+     <x>500</x>
+     <y>410</y>
      <width>121</width>
-     <height>41</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="palette">
@@ -234,14 +240,17 @@
     </font>
    </property>
    <property name="text">
-    <string>Print Schedule</string>
+    <string>Browse</string>
    </property>
   </widget>
   <widget class="QPushButton" name="CheckSchedule_btn">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>350</y>
+     <x>400</x>
+     <y>450</y>
      <width>221</width>
      <height>31</height>
     </rect>
@@ -259,19 +268,19 @@
   <widget class="QTableWidget" name="SchedulerOutput_tbl">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>40</y>
-     <width>551</width>
-     <height>301</height>
+     <x>30</x>
+     <y>50</y>
+     <width>601</width>
+     <height>281</height>
     </rect>
    </property>
   </widget>
   <widget class="QPushButton" name="GenerateSchedule_btn">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>350</y>
-     <width>221</width>
+     <x>470</x>
+     <y>10</y>
+     <width>161</width>
      <height>31</height>
     </rect>
    </property>
@@ -283,6 +292,137 @@
    </property>
    <property name="text">
     <string>Generate Schedule</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Output_filename_lbl">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>350</y>
+     <width>120</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>120</red>
+         <green>120</green>
+         <blue>120</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>File Destination</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="OutputFilePath_lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>370</y>
+     <width>511</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+    </font>
+   </property>
+  </widget>
+  <widget class="QLabel" name="CheckForPreReiqErrors_lbl">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>340</y>
+     <width>291</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>120</red>
+         <green>120</green>
+         <blue>120</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Choose File to check for errors</string>
    </property>
   </widget>
  </widget>
