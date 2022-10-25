@@ -181,6 +181,21 @@ class Ui_Settings_window_frm(object):
         self.Summer_credits_lbl.setText(_translate("Settings_window_frm", "Summer Credits"))
         self.Exit_btn.setText(_translate("Settings_window_frm", "Exit"))
         self.Help_btn.setText(_translate("Settings_window_frm", "Help"))
+        
+    def get_values(self):
+        """Return the Settings as a dictionary"""
+        return {
+        "Set_Credits" : self.Set_credit_limits_checkBox.isChecked(),
+        "Manual Elective": self.Manual_selection_checkBox.isChecked(), 
+        "Credits" : {
+            "Fall" : int(self.lineEdit.text()),
+            "Spring": int(self.lineEdit_2.text()),
+            "Summer": int(self.lineEdit_3.text())
+            }
+        
+        }
+        
+        
 
 
 if __name__ == "__main__":

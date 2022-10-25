@@ -28,6 +28,8 @@ from openpyxl.formula.translate import Translator
 #   This allows a File Path check
 import os.path as fp
 
+# Global variable for storing settings
+settings = {"Set_Credits":False, "Manual Elective":False}
 
 #---------------------------------------------------------------------------------
 #   This creates a CLASS that utlizes the Input_GUI python file to contruct the UI
@@ -87,11 +89,14 @@ class InputWindow(qtw.QWidget):
             inputWindow.hide()
             ew=excelwriter.ExcelWriter()
             st =  Student.Student(db)
-            schedule_template = {
-            "Fall": 15,
-            "Spring": 15,
-            "Summer": 3
-            }
+            if settings["Set_Credits"]:
+                schedule_template = settings["Credits"]
+            else:
+                schedule_template = {
+                "Fall": 15,
+                "Spring": 15,
+                "Summer": 3
+                }
             schedule, classlist = st.generate_schedule(inputFilePath, schedule_template)
             excelOutputFilePath = f"Path to Graduation {inputStudentID}.xlsx"
             errorcheck = ew.savetofile(schedule,classlist,excelOutputFilePath,excelTemplateFilePath ) # Not sure about what the output filename should be
@@ -336,8 +341,10 @@ class SettingsWindow(qtw.QWidget):
 
     #  This defines the functionality for the 'Exit_btn'
     def exitToMainMenu(self):
+        global settings
         settingsWindow.hide()
         inputWindow.show()
+        settings = self.ui.get_values()
 
 
 #----------------------------------------------------------------------------------
