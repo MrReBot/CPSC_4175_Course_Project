@@ -342,10 +342,12 @@ class SettingsWindow(qtw.QWidget):
     #  This defines the functionality for the 'Exit_btn'
     def exitToMainMenu(self):
         global settings
-        settingsWindow.hide()
-        inputWindow.show()
-        settings = self.ui.get_values()
-
+        if self.ui.validate_values():
+            settings = self.ui.get_values()
+            settingsWindow.hide()
+            inputWindow.show()
+        else:
+            qtw.QMessageBox.warning(self, "Error", "Invalid Settings")
 
 #----------------------------------------------------------------------------------
 #   This creates a CLASS that utlizes the Elective_GUI python file to contruct the UI

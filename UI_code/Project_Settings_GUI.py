@@ -186,7 +186,7 @@ class Ui_Settings_window_frm(object):
         """Return the Settings as a dictionary"""
         return {
         "Set_Credits" : self.Set_credit_limits_checkBox.isChecked(),
-        "Manual Elective": self.Manual_selection_checkBox.isChecked(), 
+        "Manual Elective": self.Manual_selection_checkBox.isChecked(),
         "Credits" : {
             "Fall" : int(self.lineEdit.text()),
             "Spring": int(self.lineEdit_2.text()),
@@ -194,6 +194,14 @@ class Ui_Settings_window_frm(object):
             }
         
         }
+    
+    def validate_values(self):
+        """Check if the settings menu has valid values"""
+        credit_hours = [self.lineEdit.text(),self.lineEdit_2.text(),self.lineEdit_3.text()]
+        for hour in credit_hours:
+            if not hour.isnumeric():
+                return False
+        return True
         
         
 
