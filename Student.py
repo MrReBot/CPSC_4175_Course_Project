@@ -61,6 +61,7 @@ class Student:
                 if count > len(self.tags) * 100:
                     print(f"Error occured getting course for {tag}")
                     break
+                count += 1
             if course not in temp:
                 temp.append(course)
         return temp
@@ -117,7 +118,7 @@ class Student:
     def generate_schedule(self, data, template: dict):
         """Generates a schedule from a list or filename"""
         if type(data) == str: # If we are getting a filename parse it
-            self.remaining_courses = Parser.parse_file(data)
+            self.remaining_courses = Parser.parse_file(data, self.db)
             if self.remaining_courses == None:
                 return {},[]
         else:
