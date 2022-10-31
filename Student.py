@@ -12,20 +12,27 @@ class Student:
     def __init__(self, db):
         self.db = db
 
+    def get_prereq_tree(self, course:str):
+        course_list = []
+        for prereq in self.db.get_course(course).get_prereq(): # Loop through all the preqs in a course
+            if self.db.course_exist(prereq):
+                course_list.append(prereq)
+                if len(self.db.get_prereq(prereq)) != 0 and course not in self.db.get_prereq(prereq):
+                    course_list += self.get_prereq_tree(prereq)
+        return course_list
+
     def generate_completed(self):
-        self.completed_courses = self.db.all_courses()
+        self.completed_courses = []
         self.tags=[]
         for course in self.remaining_courses:
             if self.db.course_exist(course):
-                try:
-                    self.completed_courses.remove(self.db.get_course(course))
-                except ValueError:
-                    pass
+                self.completed_courses += self.get_prereq_tree(course)
             elif self.db.tag_exist(course):
                 self.tags.append(self.db.get_tag(course))
             else:
                 print(f"{course} doesn't exist")
-
+        self.completed_courses = list(dict.fromkeys(self.completed_courses))
+        
     def check_credits(self, courses)  -> int:
         """Check how many credits a given list, dir or course object has"""
         i = 0

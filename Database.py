@@ -232,6 +232,11 @@ class Database:
                 course = self.get_course(course)
                 course.prereq.append(req)
 
+    def get_prereq(self, course: str):
+        if self.course_exist(course):
+            return self.get_course(course).get_prereq()
+        return []
+
     def course_exist(self, course: str) -> bool:
         """Check if a course exists in the database"""
         try:
