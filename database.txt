@@ -1593,6 +1593,13 @@
             "credits": 3,
             "value": 0,
             "seasons": []
+        },
+        "1225": {
+            "name": "Contemporary Issues in Biology with Lab",
+            "prereq": [],
+            "credits": 4,
+            "value": 0,
+            "seasons": []
         }
     },
     "POLS": {
@@ -2552,6 +2559,76 @@
             "name": "Conceptual Physics II",
             "prereq": [],
             "credits": 3,
+            "value": 0,
+            "seasons": []
+        }
+    },
+    "CHEM": {
+        "1151": {
+            "name": "Survey of Chemistry I",
+            "prereq": [],
+            "credits": 4,
+            "value": 1,
+            "seasons": []
+        },
+        "1152": {
+            "name": "Survey of Chemistry II",
+            "prereq": [
+                "CHEM 1151"
+            ],
+            "credits": 4,
+            "value": 0,
+            "seasons": []
+        },
+        "1212": {
+            "name": "Principles of Chemistry II",
+            "prereq": [
+                "CHEM 1211"
+            ],
+            "credits": 4,
+            "value": 0,
+            "seasons": []
+        },
+        "1211": {
+            "name": "Principles of Chemistry I and Lab",
+            "prereq": [
+                "MATH 1113"
+            ],
+            "credits": 4,
+            "value": 1,
+            "seasons": []
+        }
+    },
+    "ATSC": {
+        "1112": {
+            "name": "Understanding the Weather",
+            "prereq": [],
+            "credits": 4,
+            "value": 0,
+            "seasons": []
+        }
+    },
+    "GEOL": {
+        "1121": {
+            "name": "Introductory Geosciences I & Lab",
+            "prereq": [],
+            "credits": 4,
+            "value": 1,
+            "seasons": []
+        },
+        "1122": {
+            "name": "Introductory Geo-sciences II: Historical Geology",
+            "prereq": [
+                "GEOL 1121"
+            ],
+            "credits": 4,
+            "value": 0,
+            "seasons": []
+        },
+        "2225": {
+            "name": "The Fossil Record",
+            "prereq": [],
+            "credits": 4,
             "value": 0,
             "seasons": []
         }

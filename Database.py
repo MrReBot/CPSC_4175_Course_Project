@@ -259,6 +259,13 @@ class Database:
         """Check if a section is a valid name"""
         return section.upper() in self.all_sections()
 
+    def validate_tags(self):
+        """Make sure all tagged courses exist"""
+        for tag in self.all_tags():
+            for course in self.get_tag(tag):
+                if not self.course_exist(course):
+                    print(f"{course} does not exist")
+            
     def get_course(self, course: str):
         """If a course exists return it's data"""
         if self.course_exist(course):
