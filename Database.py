@@ -140,6 +140,11 @@ class Database:
         for course in self.all_courses():
             course.reset_value()
         
+    def check_eligible(self, course, course_list: list, semester=[], season=None):
+        if self.course_exist(course):
+            return self.get_course(course).check_eligible(course_list, semester, season)
+        print(f"ERROR: {course} doesn't exist Assuming it is eligible")
+        return True
         
     def all_tags(self):
         """Get every tag"""
