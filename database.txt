@@ -2572,6 +2572,23 @@
         "HIST-ORYY": [
             "HIST 2111",
             "HIST 2112"
+        ],
+        "SCIE-LABB": [
+            "BIOL 1225",
+            "CHEM 1151",
+            "CHEM 1152",
+            "CHEM 1211",
+            "CHEM 1212",
+            "ATSC 1112",
+            "GEOL 1121",
+            "GEOL 1122",
+            "GEOL 2225",
+            "PHYS 1111",
+            "PHYS 1112",
+            "PHYS 1125",
+            "PHYS 2211",
+            "PHYS 2212",
+            "ENVS 1205"
         ]
     }
 }
