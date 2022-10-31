@@ -63,7 +63,8 @@ class Student:
         count = 0
         for tag in self.tags:
             course = random.choice(tag)
-            while course in temp:
+            # Check if the course has not already been added and if it is eligible to take
+            while course in temp or not self.db.check_eligible(course, self.completed_courses):
                 course = random.choice(tag)
                 if count > len(self.tags) * 100:
                     print(f"Error occured getting course for {tag}")
