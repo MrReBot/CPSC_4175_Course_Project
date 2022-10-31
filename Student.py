@@ -26,7 +26,7 @@ class Student:
             else:
                 print(f"{course} doesn't exist")
 
-    def check_credits(self, courses):
+    def check_credits(self, courses)  -> int:
         """Check how many credits a given list, dir or course object has"""
         i = 0
         if type(courses) == list:
@@ -39,7 +39,7 @@ class Student:
             i = int(courses.credits)
         return i
 
-    def generate_semester(self, course_list, completed, season, credits=15):
+    def generate_semester(self, course_list: list, completed: list, season:str, credits=15):
         not_completed = course_list.copy() # Make a copy of the course list
         semester = []
         for course in course_list:
@@ -50,7 +50,7 @@ class Student:
             not_completed.remove(course)
         return semester, not_completed
 
-    def get_tag_courses(self):
+    def get_tag_courses(self)  -> list:
         """Auto Select courses to satisfy tag"""
         temp = []
         count = 0
@@ -65,7 +65,7 @@ class Student:
                 temp.append(course)
         return temp
 
-    def generate_course_list(self, seasons, credits=[-1]):
+    def generate_course_list(self, seasons:list, credits=[-1]):
         """Generate a course schedule using the given ammount of credit hours. You can also do -1 credits for no limit"""
         for i in range(len(credits)):
             if credits[i] == -1: credits[i] = 1000
@@ -114,7 +114,7 @@ class Student:
         #for course in course_list: # Begin Inital adding to course_schedule
         return True, schedule
 
-    def generate_schedule(self, data, template):
+    def generate_schedule(self, data, template: dict):
         """Generates a schedule from a list or filename"""
         if type(data) == str: # If we are getting a filename parse it
             self.remaining_courses = Parser.parse_file(data)

@@ -22,7 +22,7 @@ class Course:
     def reset_value(self):
         self.value = -1
     
-    def add_season(self, season):
+    def add_season(self, season: str):
         if season in ["Fa", "Sp", "Su"] and season not in self.get_seasons():
             self.seasons.append(season)
             self.reset_value()
@@ -57,7 +57,7 @@ class Course:
         """Get the list of Prerequisites"""
         return self.prereq
 
-    def check_eligible(self, course_list, semester=[], season=None):
+    def check_eligible(self, course_list: list, semester=[], season=None):
         """Check if a given course_list makes you eligible"""
         temp_course = course_list.copy()
         if season != None and self.seasons != []: # If a season was provided check if the course is in season
@@ -80,11 +80,11 @@ class Course:
                 return True
         return True
 
-    def get_value(self, last_course=None, req_list=[]):
+    def get_value(self, last_course=[], req_list=[]):
         """Get a single courses's value in relation to the other courses"""
         i = 0
         if self.value == -1:
-            if last_course == None:
+            if last_course == []:
                 last_course = [self]
             if self.seasons != []:
                 i += (3 - len(self.seasons)) * 2
@@ -145,24 +145,24 @@ class Database:
         """Get every tag"""
         return self.tags
 
-    def tag_exist(self, tag):
+    def tag_exist(self, tag: str) -> bool:
         """Check if a given tag exists"""
         return tag in self.all_tags().keys()
 
-    def get_tag(self, tag):
+    def get_tag(self, tag: str):
         """If a tag exists return it"""
         if self.tag_exist(tag):
             return self.tags[tag]
 
 
-    def add_tag(self, tag, classes=None):
+    def add_tag(self, tag: str, classes=None) -> None:
         """Add a new tag or update an already existing tag"""
         if not self.tag_exist(tag):
             self.tags[tag] = []
         if classes != None:
             self.tags[tag] = classes
 
-    def save(self):
+    def save(self) -> None:
         """Save Any Changes to disk"""
         self.data["TAGS"] = self.tags
         try:
@@ -182,11 +182,11 @@ class Database:
     def reset(self):
         self.data = {}
 
-    def all_sections(self):
+    def all_sections(self) -> list:
         """Get a list of every available course section"""
         return list(self.data.keys())
 
-    def all_courses(self, sort=False, reverse=False):
+    def all_courses(self, sort=False, reverse=False) -> list:
         """Return a list of all courses. Optionally sorted by course value"""
         temp = []
         for section in self.all_sections():
@@ -195,12 +195,12 @@ class Database:
             temp.sort(reverse=reverse)
         return temp
 
-    def add_section(self, section):
+    def add_section(self, section: str) -> None:
         """If a section does not exist add it"""
         if section not in self.all_sections():
             self.data[section] = {}
 
-    def add_course(self, course, name=None, prereq=[], credits=0):
+    def add_course(self, course: str, name=None, prereq=[], credits=0) -> None:
         """Add a course to the course list"""
         section, id = course.split(" ")
         template = {}
@@ -221,7 +221,7 @@ class Database:
         for course in self.all_courses():
             course.value = -1
 
-    def add_prereq(self, course, prereq):
+    def add_prereq(self, course: str, prereq: list) -> None:
         """" Add a list of prerequisites to a course"""
         for req in prereq:
             if req == course: # Don't add a course to itself
@@ -232,7 +232,7 @@ class Database:
                 course = self.get_course(course)
                 course.prereq.append(req)
 
-    def course_exist(self, course):
+    def course_exist(self, course: str) -> bool:
         """Check if a course exists in the database"""
         try:
             section, c_number = course.split(" ")
@@ -245,24 +245,24 @@ class Database:
             #print(f"ERROR: '{course}' isn't a valid course name")
             return False
 
-    def section_exist(self, section):
+    def section_exist(self, section: str) -> bool:
         """Check if a section is a valid name"""
         return section.upper() in self.all_sections()
 
-    def get_course(self, course):
+    def get_course(self, course: str):
         """If a course exists return it's data"""
         if self.course_exist(course):
             section, c_number = course.split(" ")
             return self.data[section][c_number]
 
-    def get_section(self, section):
+    def get_section(self, section: str) -> dict:
         """Get a specific section from the database e.g 'CPSC' for all the computer science classes"""
         if section in self.data.keys():
             return self.data[section]
         else:
             return {}
 
-    def search(self, query, min_credits=0 ,max_size=20, sort=False):
+    def search(self, query: str, min_credits=0 ,max_size=20, sort=False) -> list:
         """Search for a course or section in the database"""
         found = []
         if query in [""," "]: # If the query is "" or " "
