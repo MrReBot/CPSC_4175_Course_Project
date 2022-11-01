@@ -1,5 +1,6 @@
 # This File is from Sample Input1
-ENVS 1205
+SCIE-LABB
+SCIE-LABB
 STAT 1401
 CPSC 1302
 CPSC 2105

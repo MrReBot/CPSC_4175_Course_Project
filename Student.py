@@ -15,7 +15,7 @@ class Student:
     def get_prereq_tree(self, course:str):
         course_list = []
         for prereq in self.db.get_course(course).get_prereq(): # Loop through all the preqs in a course
-            if self.db.course_exist(prereq):
+            if self.db.course_exist(prereq) and prereq not in self.remaining_courses:
                 course_list.append(prereq)
                 if len(self.db.get_prereq(prereq)) != 0 and course not in self.db.get_prereq(prereq):
                     course_list += self.get_prereq_tree(prereq)
@@ -126,7 +126,7 @@ class Student:
     def generate_schedule(self, data, template: dict):
         """Generates a schedule from a list or filename"""
         if type(data) == str: # If we are getting a filename parse it
-            self.remaining_courses = Parser.parse_file(data, self.db)
+            self.remaining_courses = Parser.parse_file(data)
             if self.remaining_courses == None:
                 return {},[]
         else:

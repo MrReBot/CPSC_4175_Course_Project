@@ -1,6 +1,8 @@
 import os
+from PyPDF2 import PdfFileReader, PdfFileWriter
+import re
 
-def parse_file(filename:str, db) -> list:
+def parse_file(filename:str) -> list:
     """Get a files extension and attempt to parse it into a class list"""
     ext =  filename[filename.rfind(".")+1:] # Get the file extension
     if not os.path.exists(filename):
@@ -8,6 +10,8 @@ def parse_file(filename:str, db) -> list:
         return
     if ext == "txt":
         return parse_txt(filename)
+    elif ext == "pdf":
+        return parse_pdf(filename)
     else:
         print(f"'{ext}' isn't a supported file extension")
         
@@ -21,3 +25,31 @@ def parse_txt(filename: str) -> list:
             if not line.startswith("#"):
                 course_list.append(line.strip())
         return course_list
+
+def parse_pdf(filename: str) -> list:
+    """Parser for DegreeWorks PDF Files"""
+    pdf = PdfFileReader(filename)
+    course_list = []
+    prune_list = ["GEOL 1121", "GEOL 2225", "ENVS 1205", "ASTR 1105", "CHEM 1211","CHEM 1212", "ATSC 1112", "CPSC 5115"]
+    for page_num in range(pdf.numPages):
+        pageObj = pdf.getPage(page_num)
+        txt = pageObj.extract_text().splitlines()
+        for line in txt:
+            if "SCIENCE COURSES WITH LAB Still Needed" in line:
+                count = int(re.findall("[0-9]+", line)[0]) #Get the number of labs that are required
+                for i in range(count):
+                     course_list.append("SCIE-LABB")
+            #elif "Senior Software Engineering Project" in line:
+            #    course_list.append("CPSC 4176")
+            elif "Class in" in line:
+                course = re.findall("[a-zA-Z]+ [0-9]{4}",line)
+                try:
+                    course_list.append(course[0])
+                except IndexError:
+                    pass
+            #elif "Credits in" in line: # Need this for elective processing
+                #print(line)
+    for course in prune_list:
+        if course in course_list:
+            course_list.remove(course)
+    return course_list
