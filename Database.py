@@ -116,6 +116,7 @@ class Course:
 class Database:
     data = {}
     tags = {}
+    electives = {}
     #default_course = {"req":[],"name":""} # Default template for all courses
     pretty_print = True
     credit_hours = -1
@@ -128,9 +129,12 @@ class Database:
         if os.path.exists(self.filename) and os.path.getsize(self.filename) != 0: #If it exists and is not empty
             with open(self.filename,"r") as f:
                 temp_data = json.loads(f.read())
-                if "TAGS" in temp_data.keys():
+                if "TAGS" in temp_data.keys(): # Get the tags from file and remove them from data
                     self.tags = temp_data["TAGS"]
                     del temp_data["TAGS"]
+                if "ELECT" in temp_data.keys(): # Get the electives from file and remove them from data
+                    self.electives = temp_data["ELECT"]
+                    del temp_data["ELECT"]
                 for section in temp_data:
                     for course in temp_data[section]:
                         self.add_section(section)
@@ -172,6 +176,10 @@ class Database:
             self.tags[tag] = []
         if classes != None:
             self.tags[tag] = classes
+
+    def get_elective(self, name):
+        if name in self.electives.keys():
+            return self.electives[name]
 
     def save(self) -> None:
         """Save Any Changes to disk"""
