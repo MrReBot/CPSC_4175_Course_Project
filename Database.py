@@ -279,7 +279,16 @@ class Database:
             for course in self.get_tag(tag):
                 if not self.course_exist(course):
                     print(f"{course} does not exist")
-            
+
+    def get_courses(self, section: str, min_level=1):
+        """Get a list of courses based off section and level"""
+        course_list = []
+        for course in self.get_section(section):
+            course = self.get_course(f"{section} {course}")
+            if course.get_level() >= min_level:
+                course_list.append(course)
+        return course_list
+
     def get_course(self, course: str):
         """If a course exists return it's data"""
         if self.course_exist(course):

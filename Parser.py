@@ -1,23 +1,24 @@
 import os
 from PyPDF2 import PdfFileReader, PdfFileWriter
 import re
+import  Database
 
-def parse_file(filename:str) -> list:
+def parse_file(filename:str, db) -> list:
     """Get a files extension and attempt to parse it into a class list"""
     ext =  filename[filename.rfind(".")+1:] # Get the file extension
     if not os.path.exists(filename):
         print("ERROR: File Doesn't exist!")
         return
     if ext == "txt":
-        return parse_txt(filename)
+        return parse_txt(filename, db)
     elif ext == "pdf":
-        return parse_pdf(filename)
+        return parse_pdf(filename, db)
     else:
         print(f"'{ext}' isn't a supported file extension")
-        
-        
-            
-def parse_txt(filename: str) -> list:
+
+
+
+def parse_txt(filename: str, db) -> list:
     """Parser for text files"""
     course_list = []
     with open(filename,"r") as f:
@@ -26,7 +27,7 @@ def parse_txt(filename: str) -> list:
                 course_list.append(line.strip())
         return course_list
 
-def parse_pdf(filename: str) -> list:
+def parse_pdf(filename: str, db) -> list:
     """Parser for DegreeWorks PDF Files"""
     pdf = PdfFileReader(filename)
     course_list = []
@@ -34,7 +35,7 @@ def parse_pdf(filename: str) -> list:
     for page_num in range(pdf.numPages):
         pageObj = pdf.getPage(page_num)
         txt = pageObj.extract_text().splitlines()
-        for line in txt:
+        for line_num, line in enumerate(txt):
             if "SCIENCE COURSES WITH LAB Still Needed" in line:
                 count = int(re.findall("[0-9]+", line)[0]) #Get the number of labs that are required
                 for i in range(count):
@@ -47,9 +48,15 @@ def parse_pdf(filename: str) -> list:
                     course_list.append(course[0])
                 except IndexError:
                     pass
-            #elif "Credits in" in line: # Need this for elective processing
-                #print(line)
+            elif "Electives" in line: # Need this for elective processing
+                elective = db.get_elective(line.split(" Electives ")[0])
+                credits = txt[line_num+1].strip().split(" ")[0]
+                course_list.append(f"ELEC,{elective},{credits}")
     for course in prune_list:
         if course in course_list:
             course_list.remove(course)
     return course_list
+
+if __name__ == "__main__":
+    db = Database.Database("database.txt")
+    print(parse_pdf("Test Files/Input1.pdf",db))
