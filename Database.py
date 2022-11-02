@@ -21,15 +21,22 @@ class Course:
 
     def reset_value(self):
         self.value = -1
-    
+
+    def get_level(self):
+        """Get the course level"""
+        return int(self.id[0])
+
+
     def add_season(self, season: str):
+        """Add a Season to the course"""
         if season in ["Fa", "Sp", "Su"] and season not in self.get_seasons():
             self.seasons.append(season)
             self.reset_value()
 
     def get_seasons(self):
+        """Get all of a courses seasons"""
         return self.seasons
-        
+
     def toJSON(self):
         """Create a dictionary representation of the course. Mainly for exporting to disk"""
         template = {
@@ -134,7 +141,6 @@ class Database:
                             self.credit_hours = int(self.data[section][course].credits)
         else:
             self.data = {}
-        
     def reset_values(self):
         """Clear all stored values so they can be recalculated. Mainly used when the value system is modified"""
         for course in self.all_courses():
