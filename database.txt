@@ -1666,7 +1666,7 @@
                 "MATH 1111"
             ],
             "credits": 4,
-            "value": 161,
+            "value": 169,
             "seasons": [
                 "Fa",
                 "Sp"
@@ -1678,7 +1678,7 @@
                 ""
             ],
             "credits": 3,
-            "value": 164,
+            "value": 172,
             "seasons": [
                 "Fa",
                 "Sp"
@@ -1690,11 +1690,82 @@
                 "MATH 1113"
             ],
             "credits": 4,
-            "value": 39,
+            "value": 47,
             "seasons": [
                 "Fa",
                 "Sp"
             ]
+        },
+        "1125": {
+            "name": "Applied Calculus",
+            "prereq": [
+            ],
+            "credits": 3,
+            "value": 1,
+            "seasons": []
+        },
+        "3106": {
+            "name": "Mathematical Theory of Interest",
+            "prereq": [
+                
+            ],
+            "credits": 3,
+            "value": 0,
+            "seasons": []
+        },
+        "3107": {
+            "name": "Differential Equations",
+            "prereq": [
+                "MATH 1132"
+              
+            ],
+            "credits": 3,
+            "value": 0,
+            "seasons": []
+        },
+        "3108": {
+            "name": "Introduction to Actuarial Science",
+            "prereq": [
+                "MATH 3175"
+            ],
+            "credits": 3,
+            "value": 0,
+            "seasons": []
+        },
+        "3154": {
+            "name": "Introduction to Mathematical Proofs I",
+            "prereq": [
+            ],
+            "credits": 3,
+            "value": 1,
+            "seasons": []
+        },
+        "3155": {
+            "name": "Introduction to Mathematical Proofs II",
+            "prereq": [
+                "MATH 3154"
+            ],
+            "credits": 3,
+            "value": 0,
+            "seasons": []
+        },
+        "3175": {
+            "name": "Introduction to Probability",
+            "prereq": [
+                "MATH 1132"
+            ],
+            "credits": 3,
+            "value": 2,
+            "seasons": []
+        },
+        "1132": {
+            "name": "Calculus with Analytic Geometry II",
+            "prereq": [
+                "MATH 1501"
+            ],
+            "credits": 4,
+            "value": 4,
+            "seasons": []
         }
     },
     "STAT": {
@@ -2467,7 +2538,6 @@
         "2211": {
             "name": "Principles of Physics I",
             "prereq": [
-                "MATH 1131",
                 "PHYS 2311"
             ],
             "credits": 3,
@@ -2669,7 +2739,7 @@
         ]
     },
     "ELECT": {
-    "Computer Science": "CPSC/CYBR",
-    "Mathematics" : "MATH"
+        "Computer Science": "CPSC/CYBR",
+        "Mathematics": "MATH"
     }
 }

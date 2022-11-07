@@ -186,6 +186,7 @@ class Database:
     def save(self) -> None:
         """Save Any Changes to disk"""
         self.data["TAGS"] = self.tags
+        self.data["ELECT"] = self.electives
         try:
             if self.pretty_print:
                 data = json.dumps(self.data, indent=4, default=lambda x: x.toJSON())
@@ -198,6 +199,7 @@ class Database:
             with open(self.filename,"w") as f:
                 f.write(data)
         self.data.pop("TAGS",None)
+        self.data.pop("ELECT",None)
         
     # This is just for testing def remove this later
     def reset(self):
@@ -211,7 +213,9 @@ class Database:
         """Return a list of all courses. Optionally sorted by course value"""
         temp = []
         for section in self.all_sections():
-            temp += list(self.data[section].values())
+            for course in self.data[section].values():
+                if type(course) == Course:
+                    temp += [course]
         if sort:
             temp.sort(reverse=reverse)
         return temp
@@ -282,13 +286,16 @@ class Database:
                 if not self.course_exist(course):
                     print(f"{course} does not exist")
 
-    def get_courses(self, section: str, min_level=1):
+    def get_courses(self, section: str, min_level=1, credit_limit=-1, sort=False, reverse=False):
         """Get a list of courses based off section and level"""
         course_list = []
         for course in self.get_section(section):
             course = self.get_course(f"{section} {course}")
-            if course.get_level() >= min_level:
-                course_list.append(course)
+            if course.get_level()<=5 and course.get_level() >= min_level:
+                if credit_limit > 0 and course.credits <= credit_limit:
+                    course_list.append(course)
+        if sort:
+            course_list.sort(reverse=reverse)
         return course_list
 
     def get_course(self, course: str):
@@ -296,6 +303,8 @@ class Database:
         if self.course_exist(course):
             section, c_number = course.split(" ")
             return self.data[section][c_number]
+        else:
+            print(f"ERROR: {course} doesn't exist")
 
     def get_section(self, section: str) -> dict:
         """Get a specific section from the database e.g 'CPSC' for all the computer science classes"""
