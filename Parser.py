@@ -51,7 +51,7 @@ def parse_pdf(filename: str, db) -> list:
             elif "Electives" in line: # Need this for elective processing
                 elective = db.get_elective(line.split(" Electives ")[0])
                 credits = txt[line_num+1].strip().split(" ")[0]
-                course_list.append(f"ELEC,{elective},{credits}")
+                course_list.append(f"ELECT,{elective},{credits}")
     for course in prune_list:
         if course in course_list:
             course_list.remove(course)

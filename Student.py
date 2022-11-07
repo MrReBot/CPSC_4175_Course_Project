@@ -29,8 +29,8 @@ class Student:
         self.electives = {}
         temp = self.remaining_courses
         for i,course in enumerate(self.remaining_courses):
-            if course.startswith("ELEC,"):
-                elective = course.replace("ELEC,","").split(",")
+            if course.startswith("ELECT,"):
+                elective = course.replace("ELECT,","").split(",")
                 self.electives[elective[0]] = int(elective[1])
                 self.remaining_courses[i] = ""
             elif self.db.course_exist(course):
