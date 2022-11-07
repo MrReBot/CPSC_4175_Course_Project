@@ -492,9 +492,10 @@
             "name": "Internship",
             "prereq": [],
             "credits": 3,
-            "value": 4,
+            "value": 2,
             "seasons": [
-                "Fa"
+                "Fa",
+                "Sp"
             ]
         },
         "4899": {
@@ -803,18 +804,20 @@
             "name": "Research and Thesis",
             "prereq": [],
             "credits": 4,
-            "value": 4,
+            "value": 2,
             "seasons": [
-                "Fa"
+                "Fa",
+                "Sp"
             ]
         },
         "6986": {
             "name": "Thesis Defense",
             "prereq": [],
             "credits": 0,
-            "value": 4,
+            "value": 2,
             "seasons": [
-                "Fa"
+                "Fa",
+                "Sp"
             ]
         }
     },
@@ -1111,8 +1114,10 @@
                 "HIST 3125"
             ],
             "credits": 3,
-            "value": 0,
-            "seasons": []
+            "value": 4,
+            "seasons": [
+                "Sp"
+            ]
         },
         "5111": {
             "name": "New South",
@@ -1374,8 +1379,10 @@
             "name": "Independent Study",
             "prereq": [],
             "credits": 3,
-            "value": 0,
-            "seasons": []
+            "value": 4,
+            "seasons": [
+                "Sp"
+            ]
         }
     },
     "ENVS": {
@@ -1548,8 +1555,11 @@
             "name": "Art Appreciation",
             "prereq": [],
             "credits": 3,
-            "value": 0,
-            "seasons": []
+            "value": 2,
+            "seasons": [
+                "Fa",
+                "Sp"
+            ]
         }
     },
     "THEA": {
@@ -1598,8 +1608,10 @@
             "name": "Contemporary Issues in Biology with Lab",
             "prereq": [],
             "credits": 4,
-            "value": 0,
-            "seasons": []
+            "value": 4,
+            "seasons": [
+                "Sp"
+            ]
         }
     },
     "POLS": {
@@ -1631,8 +1643,10 @@
             "name": "Concepts of Fitness",
             "prereq": [],
             "credits": 2,
-            "value": 0,
-            "seasons": []
+            "value": 4,
+            "seasons": [
+                "Sp"
+            ]
         }
     },
     "MATH": {
@@ -1698,30 +1712,30 @@
         },
         "1125": {
             "name": "Applied Calculus",
-            "prereq": [
-            ],
+            "prereq": [],
             "credits": 3,
             "value": 1,
             "seasons": []
         },
         "3106": {
             "name": "Mathematical Theory of Interest",
-            "prereq": [
-                
-            ],
+            "prereq": [],
             "credits": 3,
-            "value": 0,
-            "seasons": []
+            "value": 4,
+            "seasons": [
+                "Fa"
+            ]
         },
         "3107": {
             "name": "Differential Equations",
             "prereq": [
                 "MATH 1132"
-              
             ],
             "credits": 3,
-            "value": 0,
-            "seasons": []
+            "value": 4,
+            "seasons": [
+                "Sp"
+            ]
         },
         "3108": {
             "name": "Introduction to Actuarial Science",
@@ -1734,11 +1748,12 @@
         },
         "3154": {
             "name": "Introduction to Mathematical Proofs I",
-            "prereq": [
-            ],
+            "prereq": [],
             "credits": 3,
-            "value": 1,
-            "seasons": []
+            "value": 9,
+            "seasons": [
+                "Fa"
+            ]
         },
         "3155": {
             "name": "Introduction to Mathematical Proofs II",
@@ -1746,8 +1761,10 @@
                 "MATH 3154"
             ],
             "credits": 3,
-            "value": 0,
-            "seasons": []
+            "value": 4,
+            "seasons": [
+                "Sp"
+            ]
         },
         "3175": {
             "name": "Introduction to Probability",
@@ -1755,8 +1772,10 @@
                 "MATH 1132"
             ],
             "credits": 3,
-            "value": 2,
-            "seasons": []
+            "value": 6,
+            "seasons": [
+                "Sp"
+            ]
         },
         "1132": {
             "name": "Calculus with Analytic Geometry II",
@@ -1764,8 +1783,11 @@
                 "MATH 1501"
             ],
             "credits": 4,
-            "value": 4,
-            "seasons": []
+            "value": 14,
+            "seasons": [
+                "Fa",
+                "Sp"
+            ]
         }
     },
     "STAT": {
@@ -2472,8 +2494,10 @@
                 "PHYS 1311"
             ],
             "credits": 3,
-            "value": 7,
-            "seasons": []
+            "value": 29,
+            "seasons": [
+                "Fa"
+            ]
         },
         "1112": {
             "name": "Introductory Physics II",
@@ -2482,8 +2506,11 @@
                 "PHYS 1311"
             ],
             "credits": 3,
-            "value": 0,
-            "seasons": []
+            "value": 2,
+            "seasons": [
+                "Fa",
+                "Sp"
+            ]
         },
         "1125": {
             "name": "Physics of Color and Sound",
@@ -2515,8 +2542,10 @@
                 "PHYS 1111"
             ],
             "credits": 1,
-            "value": 4,
-            "seasons": []
+            "value": 18,
+            "seasons": [
+                "Fa"
+            ]
         },
         "1312": {
             "name": "Introductory Physics II Lab",
@@ -2525,8 +2554,11 @@
                 "PHYS 1311"
             ],
             "credits": 1,
-            "value": 0,
-            "seasons": []
+            "value": 2,
+            "seasons": [
+                "Fa",
+                "Sp"
+            ]
         },
         "1325": {
             "name": "Physics of Color and Sound Lab",
@@ -2541,8 +2573,11 @@
                 "PHYS 2311"
             ],
             "credits": 3,
-            "value": 22,
-            "seasons": []
+            "value": 86,
+            "seasons": [
+                "Fa",
+                "Sp"
+            ]
         },
         "2212": {
             "name": "Principles of Physics II",
@@ -2551,8 +2586,11 @@
                 "PHYS 2311"
             ],
             "credits": 3,
-            "value": 3,
-            "seasons": []
+            "value": 13,
+            "seasons": [
+                "Fa",
+                "Sp"
+            ]
         },
         "2311": {
             "name": "Principles of Physics I Lab",
@@ -2561,8 +2599,10 @@
                 "PHYS 2211"
             ],
             "credits": 1,
-            "value": 13,
-            "seasons": []
+            "value": 53,
+            "seasons": [
+                "Sp"
+            ]
         },
         "2312": {
             "name": "Principles of Physics II Lab",
@@ -2571,8 +2611,10 @@
                 "PHYS 2311"
             ],
             "credits": 1,
-            "value": 3,
-            "seasons": []
+            "value": 15,
+            "seasons": [
+                "Fa"
+            ]
         },
         "3100": {
             "name": "Waves and Optics",
@@ -2591,8 +2633,10 @@
                 "PHYS 2312"
             ],
             "credits": 4,
-            "value": 0,
-            "seasons": []
+            "value": 4,
+            "seasons": [
+                "Fa"
+            ]
         },
         "4100": {
             "name": "Survey of Quantum Mechanics",
@@ -2601,15 +2645,19 @@
                 "PHYS 2312"
             ],
             "credits": 3,
-            "value": 0,
-            "seasons": []
+            "value": 4,
+            "seasons": [
+                "Sp"
+            ]
         },
         "4899": {
             "name": "Undergraduate Research in Physics",
             "prereq": [],
             "credits": 3,
-            "value": 0,
-            "seasons": []
+            "value": 4,
+            "seasons": [
+                "Sp"
+            ]
         },
         "5555": {
             "name": "Selected Introductory Topics in Teaching Physics",
@@ -2638,8 +2686,11 @@
             "name": "Survey of Chemistry I",
             "prereq": [],
             "credits": 4,
-            "value": 1,
-            "seasons": []
+            "value": 5,
+            "seasons": [
+                "Fa",
+                "Sp"
+            ]
         },
         "1152": {
             "name": "Survey of Chemistry II",
@@ -2647,8 +2698,11 @@
                 "CHEM 1151"
             ],
             "credits": 4,
-            "value": 0,
-            "seasons": []
+            "value": 2,
+            "seasons": [
+                "Fa",
+                "Sp"
+            ]
         },
         "1212": {
             "name": "Principles of Chemistry II",
@@ -2656,8 +2710,11 @@
                 "CHEM 1211"
             ],
             "credits": 4,
-            "value": 0,
-            "seasons": []
+            "value": 2,
+            "seasons": [
+                "Fa",
+                "Sp"
+            ]
         },
         "1211": {
             "name": "Principles of Chemistry I and Lab",
@@ -2665,8 +2722,11 @@
                 "MATH 1113"
             ],
             "credits": 4,
-            "value": 1,
-            "seasons": []
+            "value": 5,
+            "seasons": [
+                "Fa",
+                "Sp"
+            ]
         }
     },
     "ATSC": {
@@ -2674,8 +2734,11 @@
             "name": "Understanding the Weather",
             "prereq": [],
             "credits": 4,
-            "value": 0,
-            "seasons": []
+            "value": 2,
+            "seasons": [
+                "Fa",
+                "Sp"
+            ]
         }
     },
     "GEOL": {
@@ -2683,8 +2746,11 @@
             "name": "Introductory Geosciences I & Lab",
             "prereq": [],
             "credits": 4,
-            "value": 1,
-            "seasons": []
+            "value": 7,
+            "seasons": [
+                "Fa",
+                "Sp"
+            ]
         },
         "1122": {
             "name": "Introductory Geo-sciences II: Historical Geology",
@@ -2692,15 +2758,19 @@
                 "GEOL 1121"
             ],
             "credits": 4,
-            "value": 0,
-            "seasons": []
+            "value": 4,
+            "seasons": [
+                "Sp"
+            ]
         },
         "2225": {
             "name": "The Fossil Record",
             "prereq": [],
             "credits": 4,
-            "value": 0,
-            "seasons": []
+            "value": 4,
+            "seasons": [
+                "Fa"
+            ]
         }
     },
     "TAGS": {
