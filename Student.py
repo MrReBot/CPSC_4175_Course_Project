@@ -24,8 +24,14 @@ class Student:
     def generate_completed(self):
         self.completed_courses = []
         self.tags=[]
-        for course in self.remaining_courses:
-            if self.db.course_exist(course):
+        self.electives = {}
+        temp = self.remaining_courses
+        for i,course in enumerate(self.remaining_courses):
+            if course.startswith("ELEC,"):
+                elective = course.replace("ELEC,","").split(",")
+                self.electives[elective[0]] = int(elective[1])
+                self.remaining_courses[i] = ""
+            elif self.db.course_exist(course):
                 self.completed_courses += self.get_prereq_tree(course)
             elif self.db.tag_exist(course):
                 self.tags.append(self.db.get_tag(course))
@@ -50,7 +56,7 @@ class Student:
         not_completed = course_list.copy() # Make a copy of the course list
         semester = []
         for course in course_list:
-            if course.check_eligible(self.completed_courses+completed, semester, season):
+            if course.check_eligible(self.completed_courses+completed, season):
                 if self.check_credits(semester+[course]) <= credits: # If current course does not put us over the credit limit
                     semester.append(course)
         for course in semester:

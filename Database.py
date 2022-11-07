@@ -64,7 +64,7 @@ class Course:
         """Get the list of Prerequisites"""
         return self.prereq
 
-    def check_eligible(self, course_list: list, semester=[], season=None):
+    def check_eligible(self, course_list: list, season=None):
         """Check if a given course_list makes you eligible"""
         temp_course = course_list.copy()
         if season != None and self.seasons != []: # If a season was provided check if the course is in season
@@ -76,6 +76,8 @@ class Course:
             if type(temp_course[i]) == Course:
                 temp_course[i] = str(temp_course[i])
         for prereq in self.get_prereq():
+            if prereq == "LAST-YEAR":
+                continue
             if str(self) in self.db.get_course(prereq).get_prereq():
                  #print(f"Taking {self} concurrently with {prereq}")
                  return True
@@ -150,9 +152,9 @@ class Database:
         for course in self.all_courses():
             course.reset_value()
         
-    def check_eligible(self, course, course_list: list, semester=[], season=None):
+    def check_eligible(self, course, course_list: list, season=None):
         if self.course_exist(course):
-            return self.get_course(course).check_eligible(course_list, semester, season)
+            return self.get_course(course).check_eligible(course_list, season)
         print(f"ERROR: {course} doesn't exist Assuming it is eligible")
         return True
         
