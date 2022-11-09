@@ -2,10 +2,11 @@ from PyQt5 import QtWidgets as qtw
 from PyQt5.QtWidgets import QTableWidgetItem, QMessageBox, QFileDialog
 from PyQt5 import QtCore as qtc
 
-#This imports the UI Layout code from the Input, Output, Elective and Settings Python GUI files
+#This imports the UI Layout code from the Input, Output, Elective, AutoElective and Settings Python GUI files
 from Project_Input_GUI import Ui_Input_window_frm
 from Project_Output_GUI import Ui_Output_window_frm
 from Project_Elective_GUI import Ui_Elective_popupWindow_frm
+from Project_AutoElective_GUI import Ui_AutoElective_popupWindow_frm
 from Project_Settings_GUI import Ui_Settings_window_frm
 
 import sys
@@ -365,9 +366,29 @@ class ElectiveWindow(qtw.QWidget):
 
 
     #
-    #----------- SETTINGS UI Widget Methods/Functions Definitions ---------------
+    #----------- ELECTIVE UI Widget Methods/Functions Definitions ---------------
     #
 
+
+
+#----------------------------------------------------------------------------------
+#   This creates a CLASS that utlizes the AutoElective_GUI python file to contruct the UI
+class AutoElectiveWindow(qtw.QWidget):
+
+    def __init__(self, *args, ** kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.ui = Ui_AutoElective_popupWindow_frm()
+        self.ui.setupUi(self)
+
+    #
+    #----------- AUTOELECTIVE UI Widget ACTION Definitions ---------------
+    #
+
+
+    #
+    #----------- AUTOELECTIVE UI Widget Methods/Functions Definitions ---------------
+    #
 
 
 # This is the MAIN Application
@@ -384,5 +405,6 @@ if __name__ == '__main__':
     #settingsWindow.show()
     electiveWindow = ElectiveWindow()
     #electiveWindow.show()
-
+    autoElectiveWindow = AutoElectiveWindow()
+    #autoElectiveWindow.show()
     app.exec_()
