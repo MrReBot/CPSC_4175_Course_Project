@@ -343,8 +343,8 @@ class SettingsWindow(qtw.QWidget):
     #  This defines the functionality for the 'Exit_btn'
     def exitToMainMenu(self):
         global settings
-        if self.ui.validate_values():
-            settings = self.ui.get_values()
+        settings = self.ui.get_values()
+        if self.ui.validate_values() or not settings["Set_Credits"]:
             settingsWindow.hide()
             inputWindow.show()
         else:
