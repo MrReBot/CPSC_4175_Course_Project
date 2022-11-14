@@ -8,26 +8,24 @@ from Project_Output_GUI import Ui_Output_window_frm
 from Project_Elective_GUI import Ui_Elective_popupWindow_frm
 from Project_AutoElective_GUI import Ui_AutoElective_popupWindow_frm
 from Project_Settings_GUI import Ui_Settings_window_frm
-
 import sys
-# Import Brandon's Student Class to be able to call his Python program
-sys.path.insert(1, '..') # Makes it so we can access Database.py
-import Database
-db = Database.Database("../database.txt")
-import Student
-
-# Import Eriq's Finalized EXCEL document so it can be displayed in UI
-#sys.path.insert(1, '..') # Makes it so we can access Eriq's Excel File
-excelOutputFilePath = "" # Path to the output file
-excelTemplateFilePath = "../Sandbox/Path To Graduation Template.xlsx" # Template file to base outputs on
-sys.path.insert(1, '../Sandbox') # Makes it so we can access Database.py
-import excelwriter
 #   This allows this program to access Excel files
 import pandas as pd
 import openpyxl
 from openpyxl.formula.translate import Translator
 #   This allows a File Path check
 import os.path as fp
+
+sys.path.insert(1, '..') # Makes it so we can access Database.py
+import Database
+db = Database.Database("../database.txt")
+import Student # Import Brandon's Student Class to be able to call his Python program
+import excelwriter
+
+# Import Eriq's Finalized EXCEL document so it can be displayed in UI
+#sys.path.insert(1, '..') # Makes it so we can access Eriq's Excel File
+excelOutputFilePath = "" # Path to the output file
+excelTemplateFilePath = "../Sandbox/Path To Graduation Template.xlsx" # Template file to base outputs on
 
 # Global variable for storing settings
 settings = {"Set_Credits":False, "Manual Elective":False}
