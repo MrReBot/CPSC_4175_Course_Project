@@ -1,0 +1,4 @@
+PyPDF2
+PyQt5
+pandas
+openpyxl
