@@ -350,14 +350,47 @@ class SettingsWindow(qtw.QWidget):
     #  This defines the functionality for the 'Exit_btn'
     def exitToMainMenu(self):
         global settings
-        settings = self.ui.get_values()
-        if self.ui.validate_values() or not settings["Set_Credits"]:
+        settings = self.get_values()
+        if self.validate_values() or not settings["Set_Credits"]:
             settingsWindow.hide()
             inputWindow.show()
         else:
             settings["Manual Elective"]:False
-        settingsWindow.hide()
-        inputWindow.show()
+            qtw.QMessageBox.warning(self, "Error", "Invalid Settings Entered")
+        #settingsWindow.hide()
+        #inputWindow.show()
+
+
+    def get_values(self):
+        """Return the Settings as a dictionary"""
+        try:
+            return {
+            "Set_Credits" : settingsWindow.ui.Set_credit_limits_checkBox.isChecked(),
+            "Manual Elective": settingsWindow.ui.Manual_selection_checkBox.isChecked(),
+            "Credits" : {
+                "Fall" : int(settingsWindow.ui.lineEdit.text()),
+                "Spring": int(settingsWindow.ui.lineEdit_2.text()),
+                "Summer": int(settingsWindow.ui.lineEdit_3.text())
+            }
+            }
+        except ValueError:
+            return {
+                "Set_Credits" : settingsWindow.ui.Set_credit_limits_checkBox.isChecked(),
+                "Manual Elective": settingsWindow.ui.Manual_selection_checkBox.isChecked(),
+                "Credits" : {
+                    "Fall" : 0,
+                    "Spring": 0,
+                    "Summer": 0
+                }
+                }
+    
+    def validate_values(self):
+        """Check if the settings menu has valid values"""
+        credit_hours = [settingsWindow.ui.lineEdit.text(),settingsWindow.ui.lineEdit_2.text(),settingsWindow.ui.lineEdit_3.text()]
+        for hour in credit_hours:
+            if not hour.isnumeric():
+                return False
+        return True
 
 
 
