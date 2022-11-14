@@ -2807,9 +2807,5 @@
             "PHYS 2212",
             "ENVS 1205"
         ]
-    },
-    "ELECT": {
-        "Computer Science": "CPSC/CYBR",
-        "Mathematics": "MATH"
     }
 }

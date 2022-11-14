@@ -7,10 +7,8 @@ import Parser
 class Student:
     remaining_courses = []
     completed_courses = []
-    completed_electives = []
     db = None
     tags = []
-    electives = {}
     def __init__(self, db):
         self.db = db
 
@@ -26,14 +24,9 @@ class Student:
     def generate_completed(self):
         self.completed_courses = []
         self.tags=[]
-        self.electives = {}
         temp = self.remaining_courses
         for i,course in enumerate(self.remaining_courses):
-            if course.startswith("ELECT,"):
-                elective = course.replace("ELECT,","").split(",")
-                self.electives[elective[0]] = int(elective[1])
-                self.remaining_courses[i] = ""
-            elif self.db.course_exist(course):
+            if self.db.course_exist(course):
                 self.completed_courses += self.get_prereq_tree(course)
             elif self.db.tag_exist(course):
                 self.tags.append(self.db.get_tag(course))
@@ -63,28 +56,7 @@ class Student:
                     semester.append(course)
         for course in semester:
             not_completed.remove(course)
-        if self.check_credits(semester) < credits:
-            self.fill_electives(semester, season, credits)
         return semester, not_completed
-
-    def fill_electives(self, semester, season, credit_limit):
-        """Attempt to fill semester with electives"""
-        for course in self.get_elective(credit_limit, season, sort=True, reverse=True):
-            if self.check_credits(semester+[course]) <= credit_limit:
-                if str(course) not in self.completed_courses:
-                    self.update_elective(course)
-                    semester.append(course)
-                    self.completed_electives.append(course)
-                    #print(f"Adding {course} as elective")
-
-    def update_elective(self, course):
-        """Decrease elective credit requirement using course"""
-        sections = []
-        for elective in self.electives:
-            for section in elective.split("/"):
-                if course.section == section:
-                    self.electives[elective] -= course.credits
-                    return
 
     def get_tag_courses(self)  -> list:
         """Auto Select courses to satisfy tag"""
@@ -102,19 +74,6 @@ class Student:
             if course not in temp:
                 temp.append(course)
         return temp
-
-    def get_elective(self, credit_limit: int, season: str, sort=False, reverse=False):
-        """Get a course that satisfies an elective"""
-        course_list = []
-        for elective in self.electives:
-            credit_limit = self.electives[elective]
-            for section in elective.split("/"):
-                for course in self.db.get_courses(section, 3, credit_limit, sort=True):
-                    if course.check_eligible(self.completed_courses, season) and str(course) not in self.remaining_courses + self.completed_courses:
-                        course_list.append(course)
-        if sort:
-            course_list.sort(reverse=reverse)
-        return course_list
         
 
 

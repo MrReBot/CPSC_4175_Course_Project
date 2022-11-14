@@ -48,10 +48,25 @@ def parse_pdf(filename: str, db) -> list:
                     course_list.append(course[0])
                 except IndexError:
                     pass
-            elif "Electives" in line: # Need this for elective processing
-                elective = db.get_elective(line.split(" Electives ")[0])
-                credits = txt[line_num+1].strip().split(" ")[0]
-                course_list.append(f"ELECT,{elective},{credits}")
+            #elif "Electives" in line: # Need this for elective processing
+            #    elective = db.get_elective(line.split(" Electives ")[0])
+            #    credits = txt[line_num+1].strip().split(" ")[0]
+            #    course_list.append(f"ELECT,{elective},{credits}")
+            elif "Credits in" in line:
+                continue
+                line = line.strip() #Remove any trailing or leading whitespace
+                elective = []
+                credits = line.split(" ")[0]
+                if credits.isnumeric():
+                    count = credits // 3 # Calculate how many classes this is
+                else:
+                    continue
+                for course in re.findall("[a-zA-Z]{4} [0-9]@", line):
+                    course = course.split(" ")[0] #Remove the 3@
+                    elective.append(course)
+                for i in range(count):
+                    course_list.append("/".join(elective)+"-ELECT")
+            
     for course in prune_list:
         if course in course_list:
             course_list.remove(course)

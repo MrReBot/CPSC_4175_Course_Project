@@ -118,7 +118,6 @@ class Course:
 class Database:
     data = {}
     tags = {}
-    electives = {}
     #default_course = {"req":[],"name":""} # Default template for all courses
     pretty_print = True
     credit_hours = -1
@@ -134,9 +133,6 @@ class Database:
                 if "TAGS" in temp_data.keys(): # Get the tags from file and remove them from data
                     self.tags = temp_data["TAGS"]
                     del temp_data["TAGS"]
-                if "ELECT" in temp_data.keys(): # Get the electives from file and remove them from data
-                    self.electives = temp_data["ELECT"]
-                    del temp_data["ELECT"]
                 for section in temp_data:
                     for course in temp_data[section]:
                         self.add_section(section)
@@ -164,11 +160,22 @@ class Database:
 
     def tag_exist(self, tag: str) -> bool:
         """Check if a given tag exists"""
+        if tag.endswith("-ELECT"):
+            return True
         return tag in self.all_tags().keys()
 
     def get_tag(self, tag: str):
         """If a tag exists return it"""
-        if self.tag_exist(tag):
+        if tag.endswith("ELECT"):
+            temp = []
+            sections = tag.replace("-ELECT","").split("/")
+            for section in sections:
+                for course in self.get_courses(section, 3):
+                    if course.credits >= 3:
+                        temp+= [course]
+            temp.sort(reverse=True)
+            return temp
+        elif self.tag_exist(tag):
             return self.tags[tag]
 
 
@@ -179,14 +186,9 @@ class Database:
         if classes != None:
             self.tags[tag] = classes
 
-    def get_elective(self, name):
-        if name in self.electives.keys():
-            return self.electives[name]
-
     def save(self) -> None:
         """Save Any Changes to disk"""
         self.data["TAGS"] = self.tags
-        self.data["ELECT"] = self.electives
         try:
             if self.pretty_print:
                 data = json.dumps(self.data, indent=4, default=lambda x: x.toJSON())
@@ -265,6 +267,7 @@ class Database:
     def course_exist(self, course: str) -> bool:
         """Check if a course exists in the database"""
         try:
+            if type(course) == Course: return True
             section, c_number = course.split(" ")
             self.data[section][c_number] # This will throw a key error if the course doesn't exist
             return True
@@ -286,7 +289,7 @@ class Database:
                 if not self.course_exist(course):
                     print(f"{course} does not exist")
 
-    def get_courses(self, section: str, min_level=1, credit_limit=-1, sort=False, reverse=False):
+    def get_courses(self, section: str, min_level=1, credit_limit=99, sort=False, reverse=False):
         """Get a list of courses based off section and level"""
         course_list = []
         for course in self.get_section(section):
@@ -301,6 +304,7 @@ class Database:
     def get_course(self, course: str):
         """If a course exists return it's data"""
         if self.course_exist(course):
+            if type(course) == Course: return course
             section, c_number = course.split(" ")
             return self.data[section][c_number]
         else:
