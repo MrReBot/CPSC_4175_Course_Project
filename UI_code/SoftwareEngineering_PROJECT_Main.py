@@ -350,25 +350,10 @@ class SettingsWindow(qtw.QWidget):
     #  This defines the functionality for the 'Exit_btn'
     def exitToMainMenu(self):
         global settings
-<<<<<<< HEAD
-
-        # COMMENTING OUT -  Until 'validate_values' function is defined
-        #if self.ui.validate_values():  <<<<----------------
-        #    settings = self.ui.get_values()
-        #    settingsWindow.hide()
-        #    inputWindow.show()
-        #else:
-        #    qtw.QMessageBox.warning(self, "Error", "Invalid Settings")
-
-        # Checks the Manual Selection Setting in Settings
-        if self.ui.Manual_selection_checkBox.isChecked():
-            settings["Manual Elective"]:True
-=======
         settings = self.ui.get_values()
         if self.ui.validate_values() or not settings["Set_Credits"]:
             settingsWindow.hide()
             inputWindow.show()
->>>>>>> 21607c1912a6ebf7227014cd903b358b3f6c8016
         else:
             settings["Manual Elective"]:False
         settingsWindow.hide()

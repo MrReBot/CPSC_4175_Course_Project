@@ -182,42 +182,6 @@ class Ui_Settings_window_frm(object):
         self.Summer_credits_lbl.setText(_translate("Settings_window_frm", "Summer Credits"))
         self.Exit_btn.setText(_translate("Settings_window_frm", "Exit"))
         self.Help_btn.setText(_translate("Settings_window_frm", "Help"))
-<<<<<<< HEAD
-=======
-        
-    def get_values(self):
-        """Return the Settings as a dictionary"""
-        try:
-            return {
-            "Set_Credits" : self.Set_credit_limits_checkBox.isChecked(),
-            "Manual Elective": self.Manual_selection_checkBox.isChecked(),
-            "Credits" : {
-                "Fall" : int(self.lineEdit.text()),
-                "Spring": int(self.lineEdit_2.text()),
-                "Summer": int(self.lineEdit_3.text())
-            }
-            }
-        except ValueError:
-            return {
-                "Set_Credits" : self.Set_credit_limits_checkBox.isChecked(),
-                "Manual Elective": self.Manual_selection_checkBox.isChecked(),
-                "Credits" : {
-                    "Fall" : 0,
-                    "Spring": 0,
-                    "Summer": 0
-                }
-                }
-    
-    def validate_values(self):
-        """Check if the settings menu has valid values"""
-        credit_hours = [self.lineEdit.text(),self.lineEdit_2.text(),self.lineEdit_3.text()]
-        for hour in credit_hours:
-            if not hour.isnumeric():
-                return False
-        return True
-        
-        
->>>>>>> 21607c1912a6ebf7227014cd903b358b3f6c8016
 
 
 if __name__ == "__main__":
