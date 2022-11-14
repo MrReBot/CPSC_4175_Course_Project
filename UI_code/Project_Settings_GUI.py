@@ -36,6 +36,7 @@ class Ui_Settings_window_frm(object):
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Window, brush)
         Settings_window_frm.setPalette(palette)
         self.Manual_selection_checkBox = QtWidgets.QCheckBox(Settings_window_frm)
+        self.Manual_selection_checkBox.setEnabled(True)
         self.Manual_selection_checkBox.setGeometry(QtCore.QRect(20, 20, 217, 22))
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
@@ -54,7 +55,7 @@ class Ui_Settings_window_frm(object):
         font.setBold(True)
         font.setWeight(75)
         self.Manual_selection_checkBox.setFont(font)
-        self.Manual_selection_checkBox.setChecked(True)
+        self.Manual_selection_checkBox.setChecked(False)
         self.Manual_selection_checkBox.setObjectName("Manual_selection_checkBox")
         self.Set_credit_limits_checkBox = QtWidgets.QCheckBox(Settings_window_frm)
         self.Set_credit_limits_checkBox.setGeometry(QtCore.QRect(20, 60, 151, 22))
@@ -75,7 +76,7 @@ class Ui_Settings_window_frm(object):
         font.setBold(True)
         font.setWeight(75)
         self.Set_credit_limits_checkBox.setFont(font)
-        self.Set_credit_limits_checkBox.setChecked(True)
+        self.Set_credit_limits_checkBox.setChecked(False)
         self.Set_credit_limits_checkBox.setObjectName("Set_credit_limits_checkBox")
         self.Fall_credits_lbl = QtWidgets.QLabel(Settings_window_frm)
         self.Fall_credits_lbl.setGeometry(QtCore.QRect(20, 100, 88, 18))
@@ -181,29 +182,6 @@ class Ui_Settings_window_frm(object):
         self.Summer_credits_lbl.setText(_translate("Settings_window_frm", "Summer Credits"))
         self.Exit_btn.setText(_translate("Settings_window_frm", "Exit"))
         self.Help_btn.setText(_translate("Settings_window_frm", "Help"))
-        
-    def get_values(self):
-        """Return the Settings as a dictionary"""
-        return {
-        "Set_Credits" : self.Set_credit_limits_checkBox.isChecked(),
-        "Manual Elective": self.Manual_selection_checkBox.isChecked(),
-        "Credits" : {
-            "Fall" : int(self.lineEdit.text()),
-            "Spring": int(self.lineEdit_2.text()),
-            "Summer": int(self.lineEdit_3.text())
-            }
-        
-        }
-    
-    def validate_values(self):
-        """Check if the settings menu has valid values"""
-        credit_hours = [self.lineEdit.text(),self.lineEdit_2.text(),self.lineEdit_3.text()]
-        for hour in credit_hours:
-            if not hour.isnumeric():
-                return False
-        return True
-        
-        
 
 
 if __name__ == "__main__":

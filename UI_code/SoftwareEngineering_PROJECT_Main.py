@@ -86,7 +86,13 @@ class InputWindow(qtw.QWidget):
         # Checks if File Path exists and runs program if TRUE
         filePath_exists = fp.exists(inputFilePath)
         if filePath_exists:
-            outputWindow.show()
+            # If Manual Selection is TRUE or FALSE, this will display the correct window
+            if settings["Manual Elective"]:
+                electiveWindow.show()
+            else:
+                autoElectiveWindow.show()
+            #outputWindow.show()
+
             inputWindow.hide()
             ew=excelwriter.ExcelWriter()
             st =  Student.Student(db)
@@ -328,6 +334,7 @@ class SettingsWindow(qtw.QWidget):
         self.ui = Ui_Settings_window_frm()
         self.ui.setupUi(self)
 
+
     #
     #----------- SETTINGS UI Widget ACTION Definitions ---------------
     #
@@ -343,12 +350,24 @@ class SettingsWindow(qtw.QWidget):
     #  This defines the functionality for the 'Exit_btn'
     def exitToMainMenu(self):
         global settings
-        if self.ui.validate_values():
-            settings = self.ui.get_values()
-            settingsWindow.hide()
-            inputWindow.show()
+
+        # COMMENTING OUT -  Until 'validate_values' function is defined
+        #if self.ui.validate_values():  <<<<----------------
+        #    settings = self.ui.get_values()
+        #    settingsWindow.hide()
+        #    inputWindow.show()
+        #else:
+        #    qtw.QMessageBox.warning(self, "Error", "Invalid Settings")
+
+        # Checks the Manual Selection Setting in Settings
+        if self.ui.Manual_selection_checkBox.isChecked():
+            settings["Manual Elective"]:True
         else:
-            qtw.QMessageBox.warning(self, "Error", "Invalid Settings")
+            settings["Manual Elective"]:False
+        settingsWindow.hide()
+        inputWindow.show()
+
+
 
 #----------------------------------------------------------------------------------
 #   This creates a CLASS that utlizes the Elective_GUI python file to contruct the UI
@@ -385,10 +404,33 @@ class AutoElectiveWindow(qtw.QWidget):
     #----------- AUTOELECTIVE UI Widget ACTION Definitions ---------------
     #
 
+    # When 'Show Electives' Button is clicked, user will see A.I. generated Elective choices
+        self.ui.AutoElectives_Show_btn.clicked.connect(self.displayElectiveChosenByAI)
+    # When 'Continue' Button is clicked, user will see the Output Window with updated Electives
+        self.ui.AutoElectives_Continue_btn.clicked.connect(self.showOutputWindowFromAutoElectives)
 
     #
     #----------- AUTOELECTIVE UI Widget Methods/Functions Definitions ---------------
     #
+
+    # Defines the use of A.I. module to fill AUTO ELECTIVE combobox with courses choosen by A.I.
+    def displayElectiveChosenByAI(self):
+
+        electiveTestList = [{"Elective":"Elective1"}, {"Elective":"Elective2"}, {"Elective":"Elective3"}]
+        row = 0
+        self.ui.AutoElective_tbl.clear()
+        self.ui.AutoElective_tbl.setRowCount(len(electiveTestList))
+        for elective in electiveTestList:
+            self.ui.AutoElective_tbl.setItem(row, 0, qtw.QTableWidgetItem(elective["Elective"]))
+            row = row + 1
+        # Enables 'Continue' Button  and disables 'Show Electives' Button
+        self.ui.AutoElectives_Continue_btn.setEnabled(True)
+        self.ui.AutoElectives_Show_btn.setEnabled(False)
+
+    # Defines use of Continue button functionality
+    def showOutputWindowFromAutoElectives(self):
+        outputWindow.show()
+        autoElectiveWindow.hide()
 
 
 # This is the MAIN Application

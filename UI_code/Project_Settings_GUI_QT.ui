@@ -78,6 +78,9 @@
    <string>Settings</string>
   </property>
   <widget class="QCheckBox" name="Manual_selection_checkBox">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -135,7 +138,7 @@
     <string>Manually Select Electives</string>
    </property>
    <property name="checked">
-    <bool>true</bool>
+    <bool>false</bool>
    </property>
   </widget>
   <widget class="QCheckBox" name="Set_credit_limits_checkBox">
@@ -196,7 +199,7 @@
     <string>Set Credit Limits</string>
    </property>
    <property name="checked">
-    <bool>true</bool>
+    <bool>false</bool>
    </property>
   </widget>
   <widget class="QLabel" name="Fall_credits_lbl">

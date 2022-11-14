@@ -80,9 +80,9 @@
   <widget class="QLabel" name="autoElectiveWelcome_lbl">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>60</x>
      <y>10</y>
-     <width>636</width>
+     <width>561</width>
      <height>27</height>
     </rect>
    </property>
@@ -159,27 +159,20 @@
     </font>
    </property>
    <property name="text">
-    <string>Our Automated A.I. has choosen the following Electives</string>
+    <string>Our Automated A.I. will chose Student Electives</string>
    </property>
    <property name="textFormat">
     <enum>Qt::AutoText</enum>
    </property>
   </widget>
-  <widget class="QComboBox" name="AutoElective_cbx">
-   <property name="geometry">
-    <rect>
-     <x>70</x>
-     <y>80</y>
-     <width>511</width>
-     <height>301</height>
-    </rect>
+  <widget class="QPushButton" name="AutoElectives_Continue_btn">
+   <property name="enabled">
+    <bool>false</bool>
    </property>
-  </widget>
-  <widget class="QPushButton" name="AutoElective_Continue_btn">
    <property name="geometry">
     <rect>
-     <x>250</x>
-     <y>420</y>
+     <x>480</x>
+     <y>430</y>
      <width>141</width>
      <height>41</height>
     </rect>
@@ -199,10 +192,10 @@
   <widget class="QLabel" name="autoElectiveWelcome2_lbl">
    <property name="geometry">
     <rect>
-     <x>70</x>
+     <x>120</x>
      <y>40</y>
-     <width>527</width>
-     <height>22</height>
+     <width>416</width>
+     <height>17</height>
     </rect>
    </property>
    <property name="palette">
@@ -272,7 +265,7 @@
    <property name="font">
     <font>
      <family>Arial</family>
-     <pointsize>14</pointsize>
+     <pointsize>11</pointsize>
      <weight>75</weight>
      <bold>true</bold>
     </font>
@@ -282,6 +275,71 @@
    </property>
    <property name="textFormat">
     <enum>Qt::AutoText</enum>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="AutoElective_tbl">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>70</y>
+     <width>581</width>
+     <height>341</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="rowCount">
+    <number>12</number>
+   </property>
+   <property name="columnCount">
+    <number>1</number>
+   </property>
+   <attribute name="horizontalHeaderVisible">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="horizontalHeaderCascadingSectionResizes">
+    <bool>true</bool>
+   </attribute>
+   <attribute name="verticalHeaderVisible">
+    <bool>false</bool>
+   </attribute>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <row/>
+   <column/>
+  </widget>
+  <widget class="QPushButton" name="AutoElectives_Show_btn">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>430</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Show Electives</string>
    </property>
   </widget>
  </widget>
