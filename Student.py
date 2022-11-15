@@ -157,6 +157,41 @@ class Student:
                 classlist += [course.format(), course.credits, ""]
         return output_schedule, classlist
 
+    def check_schedule(self, filename):
+        schedule = Parser.excelParser(self, filename)[0]
+        remaining = Parser.excelParser(self, filename)[1]
+        validation = True
+        
+        for seasons in schedule:
+            if 'Fall' in seasons:
+                season = "Fa"
+            elif 'Spring' in seasons:
+                season = "Sp"
+            elif 'Summer' in seasons:
+                season = "Su"
+            for course in schedule[seasons]:
+                
+                if not (isinstance(course,int)):
+                    coursen = self.db.get_course(course)
+                    if season not in coursen.valid_seasons.values():
+                        validation = False
+                    prereqs = coursen.get_prereq()
+                    print(course)
+                    if(prereqs):
+                        for prereq in prereqs:
+                            if prereq in remaining and course not in self.db.get_course(prereq).get_prereq():
+                                print( course + "This course is missing -")
+                                print( prereq + "THIS PREREQ MISSING")   
+                                print(remaining)
+                                remaining.append(prereq + " must be taken before " + course)
+                                validation = False
+                    if course in remaining:
+                        remaining.remove(course)
+                    #print(check)
+        print(validation)
+        print(remaining)
+        print(self.remaining_courses)
+        return validation, remaining  
 
 def main():
     db = Database.Database("database.txt")
