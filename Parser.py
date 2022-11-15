@@ -1,6 +1,7 @@
 import os
 from PyPDF2 import PdfFileReader, PdfFileWriter
 import re
+import openpyxl as xl
 import  Database
 
 def parse_file(filename:str, db) -> list:
@@ -71,6 +72,66 @@ def parse_pdf(filename: str, db) -> list:
         if course in course_list:
             course_list.remove(course)
     return course_list
+
+def excelParser(self, excelFileName):
+    #If file does not exists then print an error and return else parse the file into useable data
+    if(os.path.exists(excelFileName)==False):
+        print("ERROR: File Doesn't exist!")
+        return
+    #else load the file and run it through the dictionary creator
+    else:
+        wb = xl.load_workbook(excelFileName)
+        ws =wb.active           
+        classdict = dictCreator(self, ws)[0]
+        classlist = dictCreator(self, ws)[1]
+        #retutn the created dictionary
+        return classdict, classlist
+        
+def dictCreator(self, ws):
+     #variables required in order to create a sorted dictionary from an excel sheet
+     excelindex = 0
+     classdict = {}
+     courselist =[]
+     FallSemesterName = ""
+     SpringSemesterName = ""
+     SummerSemesterName = ""
+     #The while loop runs and sorts the data based on the semester name and the class information
+     while excelindex <36:
+         if(ws['A'+str(excelindex+3)].value !=None):
+             #If the data does not contain the word fall or total, add it to the list under the existing fall semester key
+             if('Fall' not in ws['A'+str(excelindex+3)].value and 'Total' not in ws['A'+str(excelindex+3)].value ):
+                 classdict[FallSemesterName].append(ws['A'+str(excelindex+3)].value)
+                 classdict[FallSemesterName].append(ws['B'+str(excelindex+3)].value)
+                 courselist.append(ws['A'+str(excelindex+3)].value)
+             #else if the data is a semester name, change the fallsemestername to that semester, and add the key to the dictionary
+             elif ('Fall' in ws['A'+str(excelindex+3)].value and "__" not in ws['A'+str(excelindex+3)].value):
+                 classdict[ws['A'+str(excelindex+3)].value] = list()
+                 FallSemesterName = ws['A'+str(excelindex+3)].value
+         
+         if(ws['C'+str(excelindex+3)].value !=None):
+             #If the data does not contain the word spring or total, add it to the list under the existing spring semester key
+             if('Spring' not in ws['C'+str(excelindex+3)].value and 'Total' not in ws['C'+str(excelindex+3)].value ):
+                 classdict[SpringSemesterName].append(ws['C'+str(excelindex+3)].value)
+                 classdict[SpringSemesterName].append(ws['D'+str(excelindex+3)].value)
+                 courselist.append(ws['C'+str(excelindex+3)].value)
+             #else if the data is a semester name, change the springsemestername to that semester, and add the key to the dictionary
+             elif ('Spring' in ws['C'+str(excelindex+3)].value and "__" not in ws['C'+str(excelindex+3)].value):
+                 classdict[ws['C'+str(excelindex+3)].value] = list()
+                 SpringSemesterName = ws['C'+str(excelindex+3)].value
+                 
+         if(ws['E'+str(excelindex+3)].value !=None):
+             #If the data does not contain the word summer or total, add it to the list under the existing summer semester key
+             if('Summer' not in ws['E'+str(excelindex+3)].value and 'Total' not in ws['E'+str(excelindex+3)].value ):
+                 classdict[SummerSemesterName].append(ws['E'+str(excelindex+3)].value)
+                 classdict[SummerSemesterName].append(ws['F'+str(excelindex+3)].value)
+                 courselist.append(ws['E'+str(excelindex+3)].value)
+                 #else if the data is a semester name, change the summersemestername to that semester, and add the key to the dictionary
+             elif ('Summer' in ws['E'+str(excelindex+3)].value and "__" not in ws['E'+str(excelindex+3)].value):
+                 classdict[ws['E'+str(excelindex+3)].value] = list()
+                 SummerSemesterName = ws['E'+str(excelindex+3)].value
+                 
+         excelindex+=1
+     return classdict, courselist
 
 if __name__ == "__main__":
     db = Database.Database("database.txt")
