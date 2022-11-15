@@ -157,6 +157,10 @@ class OutputWindow(qtw.QWidget):
         #    When the BROWSE Output button is clicked, the program will allow
         #--- the user to browse for the filename and update the Output text_Edit field
         self.ui.Browse_output_filename_btn.clicked.connect(self.browseOutputFile)
+       
+        #When check for prerequisites is clicked run the check schedule function
+        self.ui.CheckSchedule_btn.clicked.connect(self.checkSchedule)
+
 
 
 
@@ -312,6 +316,24 @@ class OutputWindow(qtw.QWidget):
         outputWindow.hide()
         inputWindow.show()
 
+    def checkSchedule(self):
+        # Checks if File Path exists and runs program if TRUE
+        outputFilePath = self.ui.OutputFilePath_lineEdit.text()
+        filePath_exists = fp.exists(outputFilePath)
+        st =  Student.Student(db)
+        if filePath_exists:
+            check = st.check_schedule(outputFilePath)[0]
+            remaining = st.check_schedule(outputFilePath)[1]
+            #if there is no error say there are no errors. else print the errors that were found
+            if check == True:
+                qtw.QMessageBox.warning(self, "No prerequisite errors", "No errors were in the excel sheet")
+            else:
+                cl ="Classes had prerequisite errors:"
+                for classes in remaining:
+                    cl = cl+ "\n" + classes 
+                qtw.QMessageBox.warning(self, "Prerequisite errors found", cl)
+                
+                
     #  This handles the 'Browse' output button functionality
     def browseOutputFile(self):
         browseOutputFileName = QFileDialog.getOpenFileName(self, 'Choose file', 'C:')
