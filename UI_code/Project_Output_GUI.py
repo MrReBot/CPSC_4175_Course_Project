@@ -57,7 +57,7 @@ class Ui_Output_window_frm(object):
         self.ViewScheduler_lbl.setFont(font)
         self.ViewScheduler_lbl.setObjectName("ViewScheduler_lbl")
         self.Return_btn = QtWidgets.QPushButton(Output_window_frm)
-        self.Return_btn.setGeometry(QtCore.QRect(10, 430, 161, 31))
+        self.Return_btn.setGeometry(QtCore.QRect(10, 430, 91, 51))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(12)
@@ -157,6 +157,14 @@ class Ui_Output_window_frm(object):
         font.setWeight(75)
         self.CheckForPreReiqErrors_lbl.setFont(font)
         self.CheckForPreReiqErrors_lbl.setObjectName("CheckForPreReiqErrors_lbl")
+        self.OpenExcelFile_btn = QtWidgets.QPushButton(Output_window_frm)
+        self.OpenExcelFile_btn.setEnabled(False)
+        self.OpenExcelFile_btn.setGeometry(QtCore.QRect(200, 450, 191, 31))
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        font.setPointSize(12)
+        self.OpenExcelFile_btn.setFont(font)
+        self.OpenExcelFile_btn.setObjectName("OpenExcelFile_btn")
 
         self.retranslateUi(Output_window_frm)
         QtCore.QMetaObject.connectSlotsByName(Output_window_frm)
@@ -165,12 +173,14 @@ class Ui_Output_window_frm(object):
         _translate = QtCore.QCoreApplication.translate
         Output_window_frm.setWindowTitle(_translate("Output_window_frm", "Class Scheduler Application"))
         self.ViewScheduler_lbl.setText(_translate("Output_window_frm", "Schedule for Student"))
-        self.Return_btn.setText(_translate("Output_window_frm", "Return to Main Menu"))
+        self.Return_btn.setText(_translate("Output_window_frm", "Return to \n"
+"Main Menu"))
         self.Browse_output_filename_btn.setText(_translate("Output_window_frm", "Browse"))
         self.CheckSchedule_btn.setText(_translate("Output_window_frm", "Check for Prerequiste Errors"))
         self.GenerateSchedule_btn.setText(_translate("Output_window_frm", "Generate Schedule"))
         self.Output_filename_lbl.setText(_translate("Output_window_frm", "File Destination"))
         self.CheckForPreReiqErrors_lbl.setText(_translate("Output_window_frm", "Choose File to check for errors"))
+        self.OpenExcelFile_btn.setText(_translate("Output_window_frm", "Open Schedule in Excel"))
 
 
 if __name__ == "__main__":

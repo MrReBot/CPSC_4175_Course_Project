@@ -143,8 +143,8 @@
     <rect>
      <x>10</x>
      <y>430</y>
-     <width>161</width>
-     <height>31</height>
+     <width>91</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="font">
@@ -154,7 +154,8 @@
     </font>
    </property>
    <property name="text">
-    <string>Return to Main Menu</string>
+    <string>Return to 
+Main Menu</string>
    </property>
   </widget>
   <widget class="QPushButton" name="Browse_output_filename_btn">
@@ -423,6 +424,28 @@
    </property>
    <property name="text">
     <string>Choose File to check for errors</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="OpenExcelFile_btn">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>450</y>
+     <width>191</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Open Schedule in Excel</string>
    </property>
   </widget>
  </widget>

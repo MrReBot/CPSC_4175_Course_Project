@@ -279,7 +279,7 @@
   <widget class="QPushButton" name="Continue_btn">
    <property name="geometry">
     <rect>
-     <x>420</x>
+     <x>480</x>
      <y>440</y>
      <width>171</width>
      <height>41</height>
@@ -298,7 +298,7 @@
   <widget class="QLabel" name="InputStudentID_lbl">
    <property name="geometry">
     <rect>
-     <x>210</x>
+     <x>20</x>
      <y>240</y>
      <width>236</width>
      <height>24</height>
@@ -356,7 +356,7 @@
   <widget class="QLineEdit" name="InputStudentID_lineEdit">
    <property name="geometry">
     <rect>
-     <x>210</x>
+     <x>20</x>
      <y>270</y>
      <width>241</width>
      <height>41</height>
@@ -390,7 +390,7 @@
   <widget class="QPushButton" name="Exit_application_btn">
    <property name="geometry">
     <rect>
-     <x>60</x>
+     <x>10</x>
      <y>440</y>
      <width>171</width>
      <height>41</height>
@@ -423,6 +423,90 @@
    </property>
    <property name="text">
     <string>Browse</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="ChooseDegree_cbx">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>270</y>
+     <width>271</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <item>
+    <property name="text">
+     <string>Computer Science - Games Programming</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Computer Science - Cyber Security</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="ChooseDegree_lbl">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>240</y>
+     <width>161</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>120</red>
+         <green>120</green>
+         <blue>120</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>16</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Choose Degree:</string>
    </property>
   </widget>
  </widget>

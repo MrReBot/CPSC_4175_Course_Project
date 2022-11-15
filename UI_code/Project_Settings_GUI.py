@@ -180,7 +180,7 @@ class Ui_Settings_window_frm(object):
         self.Fall_credits_lbl.setText(_translate("Settings_window_frm", "Fall Credits"))
         self.Spring_credits_lbl.setText(_translate("Settings_window_frm", "Spring Credits"))
         self.Summer_credits_lbl.setText(_translate("Settings_window_frm", "Summer Credits"))
-        self.Exit_btn.setText(_translate("Settings_window_frm", "Exit"))
+        self.Exit_btn.setText(_translate("Settings_window_frm", "Done"))
         self.Help_btn.setText(_translate("Settings_window_frm", "Help"))
 
 

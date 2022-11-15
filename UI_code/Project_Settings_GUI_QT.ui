@@ -436,7 +436,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Exit</string>
+    <string>Done</string>
    </property>
   </widget>
   <widget class="QPushButton" name="Help_btn">

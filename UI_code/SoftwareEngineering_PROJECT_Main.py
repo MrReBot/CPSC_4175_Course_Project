@@ -27,8 +27,9 @@ import excelwriter
 excelOutputFilePath = "" # Path to the output file
 excelTemplateFilePath = "../Sandbox/Path To Graduation Template.xlsx" # Template file to base outputs on
 
-# Global variable for storing settings
+# Global variable for storing settings and Manually Chosen Lectives
 settings = {"Set_Credits":False, "Manual Elective":False}
+finalElectiveList = []
 
 #---------------------------------------------------------------------------------
 #   This creates a CLASS that utlizes the Input_GUI python file to contruct the UI
@@ -367,7 +368,7 @@ class SettingsWindow(qtw.QWidget):
                     "Summer": 0
                 }
                 }
-    
+
     def validate_values(self):
         """Check if the settings menu has valid values"""
         credit_hours = [self.ui.lineEdit.text(),self.ui.lineEdit_2.text(),self.ui.lineEdit_3.text()]
@@ -401,15 +402,48 @@ class ElectiveWindow(qtw.QWidget):
         self.ui = Ui_Elective_popupWindow_frm()
         self.ui.setupUi(self)
 
+
+        #Adds List of Available Electives at CSU
+        defaultElectiveList = ["Elective1", "Elective2", "Elective3", "Elective4"]
+        self.ui.ChooseElective_cbx.addItems(defaultElectiveList)
+
+
     #
     #----------- ELECTIVE UI Widget ACTION Definitions ---------------
     #
 
+        # When the 'Add Elective' button is clicked, the selected elective
+        # --- will be added to the 2nd Combobox
+        # --- Once the 2nd Combobox, has 3 electives the button is disabled
+        self.ui.AddElective_btn.clicked.connect(self.addElective)
+
+        # When the 'Continue' Button is clicked, the Elective window will be hidden
+        # --- and the Output Window will be displayed
+        self.ui.Continue_btn.clicked.connect(self.continueToOutput)
 
     #
     #----------- ELECTIVE UI Widget Methods/Functions Definitions ---------------
     #
 
+    # This defines the functionality of the 'Add Elective' Button
+    # --- This stops after 3 electives are added and 'returns' the final Elective list
+    def addElective(self):
+        if  self.ui.ShowChosenElectives_listbox.count() < 4:
+            selectedItem = self.ui.ChooseElective_cbx.currentText()
+            self.ui.ShowChosenElectives_listbox.addItem(selectedItem)
+            removedItemIndex = self.ui.ChooseElective_cbx.currentIndex()
+            self.ui.ChooseElective_cbx.removeItem(removedItemIndex)
+            finalElectiveList.append(selectedItem)
+            if self.ui.ShowChosenElectives_listbox.count() == 3:
+                self.ui.AddElective_btn.setEnabled(False)
+                self.ui.Continue_btn.setEnabled(True)
+                # This shows what the Added Electives are <<<---------------
+                print(finalElectiveList)
+
+    # This defines the functionality of the 'Continue' button
+    def continueToOutput(self):
+        electiveWindow.hide()
+        outputWindow.show()
 
 
 #----------------------------------------------------------------------------------
