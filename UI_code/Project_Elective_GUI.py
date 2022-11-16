@@ -36,7 +36,7 @@ class Ui_Elective_popupWindow_frm(object):
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Window, brush)
         Elective_popupWindow_frm.setPalette(palette)
         self.Elective_greeting_lbl = QtWidgets.QLabel(Elective_popupWindow_frm)
-        self.Elective_greeting_lbl.setGeometry(QtCore.QRect(30, 150, 265, 33))
+        self.Elective_greeting_lbl.setGeometry(QtCore.QRect(20, 100, 265, 33))
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -86,6 +86,7 @@ class Ui_Elective_popupWindow_frm(object):
         self.ChooseElective_cbx.setMinimumContentsLength(0)
         self.ChooseElective_cbx.setObjectName("ChooseElective_cbx")
         self.AddElective_btn = QtWidgets.QPushButton(Elective_popupWindow_frm)
+        self.AddElective_btn.setEnabled(False)
         self.AddElective_btn.setGeometry(QtCore.QRect(250, 230, 131, 41))
         font = QtGui.QFont()
         font.setFamily("Arial")
@@ -99,6 +100,13 @@ class Ui_Elective_popupWindow_frm(object):
         font.setPointSize(12)
         self.ShowChosenElectives_listbox.setFont(font)
         self.ShowChosenElectives_listbox.setObjectName("ShowChosenElectives_listbox")
+        self.StartSelection_btn = QtWidgets.QPushButton(Elective_popupWindow_frm)
+        self.StartSelection_btn.setGeometry(QtCore.QRect(70, 150, 131, 41))
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        font.setPointSize(12)
+        self.StartSelection_btn.setFont(font)
+        self.StartSelection_btn.setObjectName("StartSelection_btn")
 
         self.retranslateUi(Elective_popupWindow_frm)
         self.ChooseElective_cbx.setCurrentIndex(-1)
@@ -110,6 +118,7 @@ class Ui_Elective_popupWindow_frm(object):
         self.Elective_greeting_lbl.setText(_translate("Elective_popupWindow_frm", "Choose 3 Electives"))
         self.Continue_btn.setText(_translate("Elective_popupWindow_frm", "Continue"))
         self.AddElective_btn.setText(_translate("Elective_popupWindow_frm", "Add Elective >"))
+        self.StartSelection_btn.setText(_translate("Elective_popupWindow_frm", "Start Selection"))
 
 
 if __name__ == "__main__":

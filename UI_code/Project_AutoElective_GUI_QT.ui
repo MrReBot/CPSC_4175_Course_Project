@@ -277,52 +277,6 @@
     <enum>Qt::AutoText</enum>
    </property>
   </widget>
-  <widget class="QTableWidget" name="AutoElective_tbl">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>70</y>
-     <width>581</width>
-     <height>341</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Arial</family>
-     <pointsize>14</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="rowCount">
-    <number>12</number>
-   </property>
-   <property name="columnCount">
-    <number>1</number>
-   </property>
-   <attribute name="horizontalHeaderVisible">
-    <bool>false</bool>
-   </attribute>
-   <attribute name="horizontalHeaderCascadingSectionResizes">
-    <bool>true</bool>
-   </attribute>
-   <attribute name="verticalHeaderVisible">
-    <bool>false</bool>
-   </attribute>
-   <row/>
-   <row/>
-   <row/>
-   <row/>
-   <row/>
-   <row/>
-   <row/>
-   <row/>
-   <row/>
-   <row/>
-   <row/>
-   <row/>
-   <column/>
-  </widget>
   <widget class="QPushButton" name="AutoElectives_Show_btn">
    <property name="geometry">
     <rect>
@@ -340,6 +294,24 @@
    </property>
    <property name="text">
     <string>Show Electives</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="AutoElective_listBox">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>70</y>
+     <width>581</width>
+     <height>341</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>18</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
   </widget>
  </widget>

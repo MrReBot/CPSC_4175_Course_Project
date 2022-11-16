@@ -80,8 +80,8 @@
   <widget class="QLabel" name="Elective_greeting_lbl">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>150</y>
+     <x>20</x>
+     <y>100</y>
      <width>265</width>
      <height>33</height>
     </rect>
@@ -222,6 +222,9 @@
    </property>
   </widget>
   <widget class="QPushButton" name="AddElective_btn">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>250</x>
@@ -254,6 +257,25 @@
      <family>Arial</family>
      <pointsize>12</pointsize>
     </font>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="StartSelection_btn">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>150</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Start Selection</string>
    </property>
   </widget>
  </widget>

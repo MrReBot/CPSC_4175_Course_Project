@@ -27,9 +27,11 @@ import excelwriter
 excelOutputFilePath = "" # Path to the output file
 excelTemplateFilePath = "../Sandbox/Path To Graduation Template.xlsx" # Template file to base outputs on
 
-# Global variable for storing settings and Manually Chosen Lectives
+# Global variable for storing Settings, Manually Chosen ELectives/Hours, and Chosen Degree Track
 settings = {"Set_Credits":False, "Manual Elective":False}
 finalElectiveList = []
+degreeTackGames = False
+degreeTrackCyberSecurity = False
 
 #---------------------------------------------------------------------------------
 #   This creates a CLASS that utlizes the Input_GUI python file to contruct the UI
@@ -81,6 +83,15 @@ class InputWindow(qtw.QWidget):
         # Stores Input for Student ID and Excel Output File Path
         inputStudentID = self.ui.InputStudentID_lineEdit.text()
         inputFilePath = self.ui.InputFilePath_lineEdit.text()
+
+        # Checks to see what Degree Track was Chosen
+        if self.ui.ChooseDegree_cbx.currentIndex() == 0:
+            degreeTackGames = True
+            degreeTrackCyberSecurity = False
+        elif self.ui.ChooseDegree_cbx.currentIndex() == 1:
+            degreeTrackCyberSecurity = True
+            degreeTackGames = False
+
 
         # Checks if File Path exists and runs program if TRUE
         filePath_exists = fp.exists(inputFilePath)
@@ -427,21 +438,20 @@ class ElectiveWindow(qtw.QWidget):
         self.ui.setupUi(self)
 
 
-        #Adds List of Available Electives at CSU
-        defaultElectiveList = ["Elective1", "Elective2", "Elective3", "Elective4"]
-        self.ui.ChooseElective_cbx.addItems(defaultElectiveList)
-
 
     #
     #----------- ELECTIVE UI Widget ACTION Definitions ---------------
     #
+        #     When 'Start Selection' Button is clicked, the Electives will be made
+        # --- avialble to the user to choose from
+        self.ui.StartSelection_btn.clicked.connect(self.startSelection)
 
-        # When the 'Add Elective' button is clicked, the selected elective
+        #     When the 'Add Elective' button is clicked, the selected elective
         # --- will be added to the 2nd Combobox
         # --- Once the 2nd Combobox, has 3 electives the button is disabled
         self.ui.AddElective_btn.clicked.connect(self.addElective)
 
-        # When the 'Continue' Button is clicked, the Elective window will be hidden
+        #     When the 'Continue' Button is clicked, the Elective window will be hidden
         # --- and the Output Window will be displayed
         self.ui.Continue_btn.clicked.connect(self.continueToOutput)
 
@@ -468,6 +478,37 @@ class ElectiveWindow(qtw.QWidget):
     def continueToOutput(self):
         electiveWindow.hide()
         outputWindow.show()
+
+    # This defines the functionality of the 'Start Selection' Button
+    def startSelection(self):
+        #Adds List of Available Electives at CSU
+        defaultGamesElectivesFile = open("../AI_Module\DefaultElectives_Database_GamesTrack.txt", "r")
+        gamesElectiveData = defaultGamesElectivesFile.read()
+        defaultGamesElectiveList = gamesElectiveData.split("\n")
+        defaultGamesElectivesFile.close()
+
+        print(defaultGamesElectiveList)
+        print("Games" + str(degreeTackGames))
+
+        defaultCyberElectivesFile = open("../AI_Module\DefaultElectives_Database_CyberSecurityTrack.txt", "r")
+        cyberElectiveData = defaultCyberElectivesFile.read()
+        defaultCyberElectiveList = cyberElectiveData.split("\n")
+        defaultCyberElectivesFile.close()
+
+        print(defaultCyberElectiveList)
+        print("Cyber" + str(degreeTrackCyberSecurity))
+
+        if degreeTackGames:
+            self.ui.ChooseElective_cbx.clear()
+            self.ui.ChooseElective_cbx.addItems(defaultGamesElectiveList)
+            print(defaultGamesElectiveList)
+        elif degreeTrackCyberSecurity:
+            self.ui.ChooseElective_cbx.clear()
+            self.ui.ChooseElective_cbx.addItems(defaultCyberElectiveList)
+
+        self.ui.StartSelection_btn.setEnabled(False)
+        self.ui.AddElective_btn.setEnabled(True)
+
 
 
 #----------------------------------------------------------------------------------
@@ -496,13 +537,9 @@ class AutoElectiveWindow(qtw.QWidget):
     # Defines the use of A.I. module to fill AUTO ELECTIVE combobox with courses choosen by A.I.
     def displayElectiveChosenByAI(self):
 
-        electiveTestList = [{"Elective":"Elective1"}, {"Elective":"Elective2"}, {"Elective":"Elective3"}]
-        row = 0
-        self.ui.AutoElective_tbl.clear()
-        self.ui.AutoElective_tbl.setRowCount(len(electiveTestList))
-        for elective in electiveTestList:
-            self.ui.AutoElective_tbl.setItem(row, 0, qtw.QTableWidgetItem(elective["Elective"]))
-            row = row + 1
+        autoElectiveTestList = ["Elective1", "Elective2", "Elective3"]
+        self.ui.AutoElective_listBox.clear()
+        self.ui.AutoElective_listBox.addItems(autoElectiveTestList)
         # Enables 'Continue' Button  and disables 'Show Electives' Button
         self.ui.AutoElectives_Continue_btn.setEnabled(True)
         self.ui.AutoElectives_Show_btn.setEnabled(False)
