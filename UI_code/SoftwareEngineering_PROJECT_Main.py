@@ -158,7 +158,7 @@ class OutputWindow(qtw.QWidget):
         #    When the BROWSE Output button is clicked, the program will allow
         #--- the user to browse for the filename and update the Output text_Edit field
         self.ui.Browse_output_filename_btn.clicked.connect(self.browseOutputFile)
-       
+
         #When check for prerequisites is clicked run the check schedule function
         self.ui.CheckSchedule_btn.clicked.connect(self.checkSchedule)
 
@@ -176,6 +176,8 @@ class OutputWindow(qtw.QWidget):
         excelWorkSheet = excelWorkbook.active
         # Also, the'Browse' for Output Button is now ENABLED
         self.ui.Browse_output_filename_btn.setEnabled(True)
+        # This re-enables the 'Open In Excel' Button
+        self.ui.OpenExcelFile_btn.setEnabled(True)
 
         # Sets Yearly Credit Totals for Spreadsheet in Output UI Table
         # --- Note: This is a workaround because python will not calculate
@@ -331,10 +333,10 @@ class OutputWindow(qtw.QWidget):
             else:
                 cl ="Classes had prerequisite errors:"
                 for classes in remaining:
-                    cl = cl+ "\n" + classes 
+                    cl = cl+ "\n" + classes
                 qtw.QMessageBox.warning(self, "Prerequisite errors found", cl)
-                
-                
+
+
     #  This handles the 'Browse' output button functionality
     def browseOutputFile(self):
         browseOutputFileName = QFileDialog.getOpenFileName(self, 'Choose file', 'C:')
