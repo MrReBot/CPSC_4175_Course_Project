@@ -28,10 +28,8 @@ excelOutputFilePath = "" # Path to the output file
 excelTemplateFilePath = "../Sandbox/Path To Graduation Template.xlsx" # Template file to base outputs on
 
 # Global variable for storing Settings, Manually Chosen ELectives/Hours, and Chosen Degree Track
-settings = {"Set_Credits":False, "Manual Elective":False}
+settings = {"Set_Credits":False, "Manual Elective":False, "Major":""}
 finalElectiveList = []
-degreeTackGames = False
-degreeTrackCyberSecurity = False
 
 #---------------------------------------------------------------------------------
 #   This creates a CLASS that utlizes the Input_GUI python file to contruct the UI
@@ -85,12 +83,8 @@ class InputWindow(qtw.QWidget):
         inputFilePath = self.ui.InputFilePath_lineEdit.text()
 
         # Checks to see what Degree Track was Chosen
-        if self.ui.ChooseDegree_cbx.currentIndex() == 0:
-            degreeTackGames = True
-            degreeTrackCyberSecurity = False
-        elif self.ui.ChooseDegree_cbx.currentIndex() == 1:
-            degreeTrackCyberSecurity = True
-            degreeTackGames = False
+        settings["Major"] = self.ui.ChooseDegree_cbx.currentText()
+        
 
 
         # Checks if File Path exists and runs program if TRUE
@@ -488,7 +482,7 @@ class ElectiveWindow(qtw.QWidget):
         defaultGamesElectivesFile.close()
 
         print(defaultGamesElectiveList)
-        print("Games" + str(degreeTackGames))
+        #print("Games" + str(degreeTackGames))
 
         defaultCyberElectivesFile = open("../AI_Module\DefaultElectives_Database_CyberSecurityTrack.txt", "r")
         cyberElectiveData = defaultCyberElectivesFile.read()
@@ -496,7 +490,7 @@ class ElectiveWindow(qtw.QWidget):
         defaultCyberElectivesFile.close()
 
         print(defaultCyberElectiveList)
-        print("Cyber" + str(degreeTrackCyberSecurity))
+        #print("Cyber" + str(degreeTrackCyberSecurity))
 
         if degreeTackGames:
             self.ui.ChooseElective_cbx.clear()
