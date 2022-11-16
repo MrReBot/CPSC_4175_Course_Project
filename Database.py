@@ -172,7 +172,7 @@ class Database:
             for section in sections:
                 for course in self.get_courses(section, 3):
                     if course.credits >= 3:
-                        temp+= [course]
+                        temp+= [str(course)]
             temp.sort(reverse=True)
             return temp
         elif self.tag_exist(tag):
