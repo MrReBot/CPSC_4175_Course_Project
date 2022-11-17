@@ -32,7 +32,7 @@ def parse_pdf(filename: str, db) -> list:
     """Parser for DegreeWorks PDF Files"""
     pdf = PdfFileReader(filename)
     course_list = []
-    prune_list = ["GEOL 1121", "GEOL 2225", "ENVS 1205", "ASTR 1105", "CHEM 1211","CHEM 1212", "ATSC 1112", "CPSC 5115"]
+    prune_list = ["CPSC 5115"] + db.get_tag("SCIE-LABB")
     for page_num in range(pdf.numPages):
         pageObj = pdf.getPage(page_num)
         txt = pageObj.extract_text().splitlines()

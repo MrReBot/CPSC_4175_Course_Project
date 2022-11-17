@@ -24,7 +24,6 @@ class Student:
     def generate_completed(self):
         self.completed_courses = []
         self.tags=[]
-        temp = self.remaining_courses
         for i,course in enumerate(self.remaining_courses):
             if self.db.course_exist(course):
                 self.completed_courses += self.get_prereq_tree(course)
@@ -181,7 +180,7 @@ class Student:
                         for prereq in prereqs:
                             if prereq in remaining and course not in self.db.get_course(prereq).get_prereq():
                                 print( course + "This course is missing -")
-                                print( prereq + "THIS PREREQ MISSING")   
+                                print( prereq + "THIS PREREQ MISSING")
                                 print(remaining)
                                 remaining.append(prereq + " must be taken before " + course)
                                 validation = False
@@ -191,7 +190,7 @@ class Student:
         print(validation)
         print(remaining)
         print(self.remaining_courses)
-        return validation, remaining  
+        return validation, remaining
 
 def main():
     db = Database.Database("database.txt")
