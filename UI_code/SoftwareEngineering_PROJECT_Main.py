@@ -75,7 +75,7 @@ class InputWindow(qtw.QWidget):
     #---This defines the functionality of the 'Continue_btn'
     def storeInputForm(self):
 
-        global excelOutputFilePath
+        global inputStudentID, inputFilePath
         # Making these global so this function can modify them
 
         # Stores Input for Student ID and Excel Output File Path
@@ -84,8 +84,7 @@ class InputWindow(qtw.QWidget):
 
         # Checks to see what Degree Track was Chosen
         settings["Major"] = self.ui.ChooseDegree_cbx.currentText()
-        
-
+    
 
         # Checks if File Path exists and runs program if TRUE
         filePath_exists = fp.exists(inputFilePath)
@@ -98,21 +97,6 @@ class InputWindow(qtw.QWidget):
             #outputWindow.show()
 
             inputWindow.hide()
-            ew=excelwriter.ExcelWriter()
-            st =  Student.Student(db)
-            if settings["Set_Credits"]:
-                schedule_template = settings["Credits"]
-            else:
-                schedule_template = {
-                "Fall": 15,
-                "Spring": 15,
-                "Summer": 3
-                }
-            schedule, classlist = st.generate_schedule(inputFilePath, schedule_template)
-            excelOutputFilePath = f"Path to Graduation {inputStudentID}.xlsx"
-            errorcheck = ew.savetofile(schedule,classlist,excelOutputFilePath,excelTemplateFilePath ) # Not sure about what the output filename should be
-            print(inputFilePath)
-            print(inputStudentID)
         else:
             # Displays Error Message
             qtw.QMessageBox.warning(self, "Error", "File Not Found")
@@ -177,6 +161,24 @@ class OutputWindow(qtw.QWidget):
     #    This loads the Finalized Excel File into the Outout GUI QTable
     def generateSchedule(self):
     #def generateSchedule(self, excel_file_path , excel_file_name):
+    
+        ew=excelwriter.ExcelWriter()
+        st =  Student.Student(db)
+        if settings["Set_Credits"]:
+            schedule_template = settings["Credits"]
+        else:
+            schedule_template = {
+            "Fall": 15,
+            "Spring": 15,
+            "Summer": 3
+            }
+        schedule, classlist = st.generate_schedule(inputFilePath, schedule_template)
+        excelOutputFilePath = f"Path to Graduation {inputStudentID}.xlsx"
+        errorcheck = ew.savetofile(schedule,classlist,excelOutputFilePath,excelTemplateFilePath ) # Not sure about what the output filename should be
+        #print(inputFilePath)
+        #print(inputStudentID)
+
+    
         excelWorkbook = openpyxl.load_workbook(excelOutputFilePath)
         excelWorkSheet = excelWorkbook.active
         # Also, the'Browse' for Output Button is now ENABLED
