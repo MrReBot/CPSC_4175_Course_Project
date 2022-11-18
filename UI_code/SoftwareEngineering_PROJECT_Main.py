@@ -483,22 +483,16 @@ class ElectiveWindow(qtw.QWidget):
         defaultGamesElectiveList = gamesElectiveData.split("\n")
         defaultGamesElectivesFile.close()
 
-        print(defaultGamesElectiveList)
-        #print("Games" + str(degreeTackGames))
-
         defaultCyberElectivesFile = open("../AI_Module\DefaultElectives_Database_CyberSecurityTrack.txt", "r")
         cyberElectiveData = defaultCyberElectivesFile.read()
         defaultCyberElectiveList = cyberElectiveData.split("\n")
         defaultCyberElectivesFile.close()
 
-        print(defaultCyberElectiveList)
-        #print("Cyber" + str(degreeTrackCyberSecurity))
-
-        if degreeTackGames:
+        if settings["Major"] =="Computer Science - Games Programming":
             self.ui.ChooseElective_cbx.clear()
             self.ui.ChooseElective_cbx.addItems(defaultGamesElectiveList)
             print(defaultGamesElectiveList)
-        elif degreeTrackCyberSecurity:
+        elif settings["Major"] =="Computer Science - Cyber Security":
             self.ui.ChooseElective_cbx.clear()
             self.ui.ChooseElective_cbx.addItems(defaultCyberElectiveList)
 
