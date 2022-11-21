@@ -16,16 +16,20 @@ from openpyxl.formula.translate import Translator
 #   This allows a File Path check
 import os.path as fp
 
-sys.path.insert(1, '..') # Makes it so we can access Database.py
+sys.path.insert(1, 'Data') # Makes it so we can access Database.py
 import Database
-db = Database.Database("../database.txt")
+db = Database.Database("Data/database.txt")
 import Student # Import Brandon's Student Class to be able to call his Python program
 import excelwriter
+
+# Gets access to AI Module
+sys.path.insert(1, 'Data') # Makes it so we can access AI_main.py
+import AI_main
 
 # Import Eriq's Finalized EXCEL document so it can be displayed in UI
 #sys.path.insert(1, '..') # Makes it so we can access Eriq's Excel File
 excelOutputFilePath = "" # Path to the output file
-excelTemplateFilePath = "../Sandbox/Path To Graduation Template.xlsx" # Template file to base outputs on
+excelTemplateFilePath = "Data/Path To Graduation Template.xlsx" # Template file to base outputs on
 
 # Global variable for storing Settings, Manually Chosen ELectives/Hours, and Chosen Degree Track
 settings = {"Set_Credits":False, "Manual Elective":False, "Major":""}
@@ -84,7 +88,7 @@ class InputWindow(qtw.QWidget):
 
         # Checks to see what Degree Track was Chosen
         settings["Major"] = self.ui.ChooseDegree_cbx.currentText()
-    
+
 
         # Checks if File Path exists and runs program if TRUE
         filePath_exists = fp.exists(inputFilePath)
@@ -161,7 +165,7 @@ class OutputWindow(qtw.QWidget):
     #    This loads the Finalized Excel File into the Outout GUI QTable
     def generateSchedule(self):
     #def generateSchedule(self, excel_file_path , excel_file_name):
-    
+
         ew=excelwriter.ExcelWriter()
         st =  Student.Student(db)
         if settings["Set_Credits"]:
@@ -178,7 +182,7 @@ class OutputWindow(qtw.QWidget):
         #print(inputFilePath)
         #print(inputStudentID)
 
-    
+
         excelWorkbook = openpyxl.load_workbook(excelOutputFilePath)
         excelWorkSheet = excelWorkbook.active
         # Also, the'Browse' for Output Button is now ENABLED
@@ -467,8 +471,10 @@ class ElectiveWindow(qtw.QWidget):
             if self.ui.ShowChosenElectives_listbox.count() == 3:
                 self.ui.AddElective_btn.setEnabled(False)
                 self.ui.Continue_btn.setEnabled(True)
-                # This shows what the Added Electives are <<<---------------
-                print(finalElectiveList)
+                # Adds Electives to Dynamic AI Databse for AI_main.py module <<<---------------
+                for addedElective in finalElectiveList:
+                    AI_main.saveToDynamicDatabase(settings["Major"], addedElective)
+                #print(finalElectiveList)
 
     # This defines the functionality of the 'Continue' button
     def continueToOutput(self):
@@ -478,23 +484,23 @@ class ElectiveWindow(qtw.QWidget):
     # This defines the functionality of the 'Start Selection' Button
     def startSelection(self):
         #Adds List of Available Electives at CSU
-        defaultGamesElectivesFile = open("../AI_Module\DefaultElectives_Database_GamesTrack.txt", "r")
-        gamesElectiveData = defaultGamesElectivesFile.read()
-        defaultGamesElectiveList = gamesElectiveData.split("\n")
-        defaultGamesElectivesFile.close()
+        defaultElectivesFile = open("Data/DefaultElectives_Database.txt", "r")
+        defaultElectiveData = defaultElectivesFile.read()
+        defaultElectiveList = defaultElectiveData.split("\n")
+        defaultElectivesFile.close()
 
-        defaultCyberElectivesFile = open("../AI_Module\DefaultElectives_Database_CyberSecurityTrack.txt", "r")
-        cyberElectiveData = defaultCyberElectivesFile.read()
-        defaultCyberElectiveList = cyberElectiveData.split("\n")
-        defaultCyberElectivesFile.close()
+        #defaultCyberElectivesFile = open("../AI_Module\DefaultElectives_Database_CyberSecurityTrack.txt", "r")
+        #cyberElectiveData = defaultCyberElectivesFile.read()
+        #defaultCyberElectiveList = cyberElectiveData.split("\n")
+        #defaultCyberElectivesFile.close()
+        self.ui.ChooseElective_cbx.clear()
+        self.ui.ChooseElective_cbx.addItems(defaultElectiveList)
+        #print(defaultElectiveList)
 
-        if settings["Major"] =="Computer Science - Games Programming":
-            self.ui.ChooseElective_cbx.clear()
-            self.ui.ChooseElective_cbx.addItems(defaultGamesElectiveList)
-            print(defaultGamesElectiveList)
-        elif settings["Major"] =="Computer Science - Cyber Security":
-            self.ui.ChooseElective_cbx.clear()
-            self.ui.ChooseElective_cbx.addItems(defaultCyberElectiveList)
+        #if settings["Major"] =="Computer Science - Games Programming":
+
+        #elif settings["Major"] =="Computer Science - Cyber Security":
+
 
         self.ui.StartSelection_btn.setEnabled(False)
         self.ui.AddElective_btn.setEnabled(True)
