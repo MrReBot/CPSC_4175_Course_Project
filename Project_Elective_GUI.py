@@ -36,7 +36,7 @@ class Ui_Elective_popupWindow_frm(object):
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Window, brush)
         Elective_popupWindow_frm.setPalette(palette)
         self.Elective_greeting_lbl = QtWidgets.QLabel(Elective_popupWindow_frm)
-        self.Elective_greeting_lbl.setGeometry(QtCore.QRect(20, 100, 265, 33))
+        self.Elective_greeting_lbl.setGeometry(QtCore.QRect(20, 100, 341, 33))
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(255, 255, 255))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -83,6 +83,7 @@ class Ui_Elective_popupWindow_frm(object):
         self.ChooseElective_cbx.setTabletTracking(False)
         self.ChooseElective_cbx.setFocusPolicy(QtCore.Qt.WheelFocus)
         self.ChooseElective_cbx.setCurrentText("")
+        self.ChooseElective_cbx.setInsertPolicy(QtWidgets.QComboBox.InsertAlphabetically)
         self.ChooseElective_cbx.setMinimumContentsLength(0)
         self.ChooseElective_cbx.setObjectName("ChooseElective_cbx")
         self.AddElective_btn = QtWidgets.QPushButton(Elective_popupWindow_frm)
@@ -115,7 +116,7 @@ class Ui_Elective_popupWindow_frm(object):
     def retranslateUi(self, Elective_popupWindow_frm):
         _translate = QtCore.QCoreApplication.translate
         Elective_popupWindow_frm.setWindowTitle(_translate("Elective_popupWindow_frm", "Form"))
-        self.Elective_greeting_lbl.setText(_translate("Elective_popupWindow_frm", "Choose 3 Electives"))
+        self.Elective_greeting_lbl.setText(_translate("Elective_popupWindow_frm", "Choose Your Electives"))
         self.Continue_btn.setText(_translate("Elective_popupWindow_frm", "Continue"))
         self.AddElective_btn.setText(_translate("Elective_popupWindow_frm", "Add Elective >"))
         self.StartSelection_btn.setText(_translate("Elective_popupWindow_frm", "Start Selection"))

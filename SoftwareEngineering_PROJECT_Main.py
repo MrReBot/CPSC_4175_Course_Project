@@ -101,6 +101,9 @@ class InputWindow(qtw.QWidget):
             #outputWindow.show()
 
             inputWindow.hide()
+            # This clears the Student ID box and filepath box
+            self.ui.InputStudentID_lineEdit.clear()
+            self.ui.InputFilePath_lineEdit.clear()
         else:
             # Displays Error Message
             qtw.QMessageBox.warning(self, "Error", "File Not Found")
@@ -179,8 +182,7 @@ class OutputWindow(qtw.QWidget):
         schedule, classlist = st.generate_schedule(inputFilePath, schedule_template)
         excelOutputFilePath = f"Path to Graduation {inputStudentID}.xlsx"
         errorcheck = ew.savetofile(schedule,classlist,excelOutputFilePath,excelTemplateFilePath ) # Not sure about what the output filename should be
-        #print(inputFilePath)
-        #print(inputStudentID)
+
 
 
         excelWorkbook = openpyxl.load_workbook(excelOutputFilePath)
@@ -308,22 +310,7 @@ class OutputWindow(qtw.QWidget):
                 column_Index += 1
             row_Index += 1
 
-
-        #finalScheduleOutputGUI = pd.read_excel(excel_file_path , excel_file_name)
-        #if finalScheduleOutputGUI.size == 0:
-        #    return
-
-        #finalScheduleOutputGUI.fillna('', inplace=True)
-        #self.ui.SchedulerOutput_tbl.setRowCount(finalScheduleOutputGUI.shape[0])
-        #self.ui.SchedulerOutput_tbl.setColumnCount(finalScheduleOutputGUI.shape[1])
-        #self.ui.SchedulerOutput_tbl.setHorizontalHeaderLabels(finalScheduleOutputGUI.columns)
-
-        #for tableRow in finalScheduleOutputGUI.iterrows():
-        #    tableRowValues = tableRow[1]
-        #    for column_Table_Index, table_row_value in enumerate(tableRowValues):
-        #        newTableItem = QTableWidgetItem(str(table_row_value))
-        #        self.ui.SchedulerOutput_tbl.setItem(tableRow[0], column_Table_Index, newTableItem)
-
+#------------------------------------------------------
 
     #  This handles the 'Return' button functionality
     def returnToMainMenu(self):
@@ -463,6 +450,7 @@ class ElectiveWindow(qtw.QWidget):
     # --- This stops after 3 electives are added and 'returns' the final Elective list
     def addElective(self):
         if  self.ui.ShowChosenElectives_listbox.count() < 4:
+            self.ui.AddElective_btn.setEnabled(True)
             selectedItem = self.ui.ChooseElective_cbx.currentText()
             self.ui.ShowChosenElectives_listbox.addItem(selectedItem)
             removedItemIndex = self.ui.ChooseElective_cbx.currentIndex()
@@ -474,37 +462,31 @@ class ElectiveWindow(qtw.QWidget):
                 # Adds Electives to Dynamic AI Databse for AI_main.py module <<<---------------
                 for addedElective in finalElectiveList:
                     AI_main.saveToDynamicDatabase(settings["Major"], addedElective)
-                #print(finalElectiveList)
+
 
     # This defines the functionality of the 'Continue' button
     def continueToOutput(self):
         electiveWindow.hide()
         outputWindow.show()
+        # This clears the ListBox containing the previous user's choices for electives
+        self.ui.ShowChosenElectives_listbox.clear()
+        self.ui.StartSelection_btn.setEnabled(True)
 
     # This defines the functionality of the 'Start Selection' Button
     def startSelection(self):
+
+        self.ui.AddElective_btn.setEnabled(True)
         #Adds List of Available Electives at CSU
         defaultElectivesFile = open("Data/DefaultElectives_Database.txt", "r")
         defaultElectiveData = defaultElectivesFile.read()
         defaultElectiveList = defaultElectiveData.split("\n")
         defaultElectivesFile.close()
 
-        #defaultCyberElectivesFile = open("../AI_Module\DefaultElectives_Database_CyberSecurityTrack.txt", "r")
-        #cyberElectiveData = defaultCyberElectivesFile.read()
-        #defaultCyberElectiveList = cyberElectiveData.split("\n")
-        #defaultCyberElectivesFile.close()
         self.ui.ChooseElective_cbx.clear()
         self.ui.ChooseElective_cbx.addItems(defaultElectiveList)
-        #print(defaultElectiveList)
-
-        #if settings["Major"] =="Computer Science - Games Programming":
-
-        #elif settings["Major"] =="Computer Science - Cyber Security":
-
-
         self.ui.StartSelection_btn.setEnabled(False)
         self.ui.AddElective_btn.setEnabled(True)
-
+        defaultElectiveList.clear()
 
 
 #----------------------------------------------------------------------------------
@@ -533,9 +515,15 @@ class AutoElectiveWindow(qtw.QWidget):
     # Defines the use of A.I. module to fill AUTO ELECTIVE combobox with courses choosen by A.I.
     def displayElectiveChosenByAI(self):
 
-        autoElectiveTestList = ["Elective1", "Elective2", "Elective3"]
+        # This calls the AI_Module method for auto-selecting from the DynamicDatabase (chooses 3 electives)
+        aiSelectedList = AI_main.chooseElectives(settings["Major"], 3)
+        # This saves the AI Selected List to the Dynamic Database
+        for aiSelectedElective in aiSelectedList:
+            AI_main.saveToDynamicDatabase(settings["Major"], aiSelectedElective)
+
+        #autoElectiveTestList = ["Elective1", "Elective2", "Elective3"]
         self.ui.AutoElective_listBox.clear()
-        self.ui.AutoElective_listBox.addItems(autoElectiveTestList)
+        self.ui.AutoElective_listBox.addItems(aiSelectedList)
         # Enables 'Continue' Button  and disables 'Show Electives' Button
         self.ui.AutoElectives_Continue_btn.setEnabled(True)
         self.ui.AutoElectives_Show_btn.setEnabled(False)

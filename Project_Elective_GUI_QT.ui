@@ -82,7 +82,7 @@
     <rect>
      <x>20</x>
      <y>100</y>
-     <width>265</width>
+     <width>341</width>
      <height>33</height>
     </rect>
    </property>
@@ -159,7 +159,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Choose 3 Electives</string>
+    <string>Choose Your Electives</string>
    </property>
    <property name="textFormat">
     <enum>Qt::AutoText</enum>
@@ -216,6 +216,9 @@
    </property>
    <property name="currentIndex">
     <number>-1</number>
+   </property>
+   <property name="insertPolicy">
+    <enum>QComboBox::InsertAlphabetically</enum>
    </property>
    <property name="minimumContentsLength">
     <number>0</number>
