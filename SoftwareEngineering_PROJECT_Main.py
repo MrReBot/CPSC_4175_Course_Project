@@ -35,6 +35,11 @@ excelTemplateFilePath = "Data/Path To Graduation Template.xlsx" # Template file 
 settings = {"Set_Credits":False, "Manual Elective":False, "Major":""}
 finalElectiveList = []
 
+#Sets the Scaling for the UI and all the child widgets to be correct, no matter the screen resolution
+qtw.QApplication.setAttribute(qtc.Qt.AA_EnableHighDpiScaling, True)
+qtw.QApplication.setAttribute(qtc.Qt.AA_UseHighDpiPixmaps, True)
+
+
 #---------------------------------------------------------------------------------
 #   This creates a CLASS that utlizes the Input_GUI python file to contruct the UI
 class InputWindow(qtw.QWidget):
@@ -44,6 +49,7 @@ class InputWindow(qtw.QWidget):
 
         self.ui = Ui_Input_window_frm()
         self.ui.setupUi(self)
+        self.setFixedSize(655,492)
         self.show()
 
         #
@@ -138,6 +144,7 @@ class OutputWindow(qtw.QWidget):
 
         self.ui = Ui_Output_window_frm()
         self.ui.setupUi(self)
+        self.setFixedSize(655,492)
 
         #
         #----------- Output UI Widget ACTION Definitions ---------------
@@ -354,6 +361,7 @@ class SettingsWindow(qtw.QWidget):
 
         self.ui = Ui_Settings_window_frm()
         self.ui.setupUi(self)
+        self.setFixedSize(332,246)
 
 
     #
@@ -423,6 +431,7 @@ class ElectiveWindow(qtw.QWidget):
 
         self.ui = Ui_Elective_popupWindow_frm()
         self.ui.setupUi(self)
+        self.setFixedSize(655,492)
 
 
 
@@ -498,6 +507,7 @@ class AutoElectiveWindow(qtw.QWidget):
 
         self.ui = Ui_AutoElective_popupWindow_frm()
         self.ui.setupUi(self)
+        self.setFixedSize(655,492)
 
     #
     #----------- AUTOELECTIVE UI Widget ACTION Definitions ---------------
