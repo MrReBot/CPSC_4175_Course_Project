@@ -7,7 +7,3 @@ Features: When run, the user is tasked to input a classlist.txt. After the progr
 will create an organized excel sheet of all of the classes that they wish to take.
 The program will be able to assign all classes a priority value based on what classes require it as a
 prerequisite.
-
-Known Bugs: When the program is run on a new computer it will occassionally run into trouble with having
-access to all the information stored in the class database. Run the file named "main.py" if this happens to
-recreate the database, as that may assist in fixing the bug.
