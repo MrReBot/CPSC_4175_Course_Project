@@ -15,6 +15,7 @@ import openpyxl
 from openpyxl.formula.translate import Translator
 #   This allows a File Path check
 import os.path as fp
+import os
 
 sys.path.insert(1, 'Data') # Makes it so we can access Database.py
 import Database
@@ -165,12 +166,18 @@ class OutputWindow(qtw.QWidget):
         #When check for prerequisites is clicked run the check schedule function
         self.ui.CheckSchedule_btn.clicked.connect(self.checkSchedule)
 
+        self.ui.OpenExcelFile_btn.clicked.connect(self.displayFile)
+
 
 
 
     #
     #----------- Output UI Widget Methods/Functions Definitions ---------------
     #
+
+    def displayFile(self):
+        excelOutputFilePath = f"Path to Graduation {inputStudentID}.xlsx"
+        os.system(f'start "" "{excelOutputFilePath}"')
 
     #    This loads the Finalized Excel File into the Outout GUI QTable
     def generateSchedule(self):
