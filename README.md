@@ -14,7 +14,7 @@ The program is also capable of checking for prerequisite errors in existing xlsx
 ## Install Instructions:
 1. Clone the project:
 ```bash
-  https://github.com/MrReBot/CPSC_4175_Course_Project
+  git clone https://github.com/MrReBot/CPSC_4175_Course_Project
 ```
 2. Open the folder and Install the requirements:
 ```bash
